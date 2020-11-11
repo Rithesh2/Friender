@@ -64,7 +64,9 @@ class LoginViewController: UIViewController {
             }
             else
             {
+                print(result!.user.uid)
                 self.transitionToHome(uid: result!.user.uid)
+                
             }
         }
         }

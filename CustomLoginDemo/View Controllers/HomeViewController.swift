@@ -63,7 +63,7 @@ class HomeViewController: UIViewController {
                     self.firstName = documentData?["firstname"] as! String
                     print(type(of: self.firstName))
                     print(self.firstName)
-                    self.homeText.text = "Hello" + self.firstName
+                    self.homeText.text = "Hello " + self.firstName
                 }
                 else{
                     print("error")
