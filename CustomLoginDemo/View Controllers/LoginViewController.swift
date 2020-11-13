@@ -82,11 +82,15 @@ class LoginViewController: UIViewController {
       
     
     func transitionToHome(uid: String){
-        
-          let homeViewController = storyboard?.instantiateViewController(identifier: Constants.Storyboard.homeViewController) as? HomeViewController
-          homeViewController?.uid = uid
-          view.window?.rootViewController = homeViewController
-          view.window?.makeKeyAndVisible()
+        let homeViewController = self.storyboard?.instantiateViewController(withIdentifier: "HomeVCTabBar") as? UITabBarController
+       // homeViewController?.uid = uid
+        view.window?.rootViewController = homeViewController
+        view.window?.makeKeyAndVisible()
+            
+          //let homeViewController = storyboard?.instantiateViewController(identifier: Constants.Storyboard.homeViewController) as? HomeViewController
+        //homeViewController?.uid = uid
+        //view.window?.rootViewController = homeViewController
+        //view.window?.makeKeyAndVisible()
      
        
       }
