@@ -22,7 +22,7 @@ class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-     
+        homeText.setNeedsDisplay()
         print(firstName)
         
       
@@ -34,7 +34,7 @@ class HomeViewController: UIViewController {
              setUpElements()
    
        
-        homeText.setNeedsDisplay()
+        
     }
     func setUpElements()
     {
