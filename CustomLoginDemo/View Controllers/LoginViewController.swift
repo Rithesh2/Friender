@@ -6,9 +6,12 @@
 //  Copyright © 2020 Rohit Ravi. All rights reserved.
 //
 
+
 import UIKit
-import FirebaseFirestore
 import FirebaseAuth
+import FirebaseFirestore
+import Firebase
+
 
 class LoginViewController: UIViewController {
 
@@ -64,7 +67,7 @@ class LoginViewController: UIViewController {
             }
             else
             {
-                print(result!.user.uid)
+                
                 self.transitionToHome(uid: result!.user.uid)
                 
             }
@@ -82,8 +85,11 @@ class LoginViewController: UIViewController {
       
     
     func transitionToHome(uid: String){
-        let homeViewController = self.storyboard?.instantiateViewController(withIdentifier: "HomeVCTabBar") as? UITabBarController
-       // homeViewController?.uid = uid
+      
+        
+        let homeViewController = self.storyboard?.instantiateViewController(withIdentifier: "HomeVCTabBar") as? CustomTabBarController
+    
+        homeViewController?.fUser = MyUser(uid: uid)
         view.window?.rootViewController = homeViewController
         view.window?.makeKeyAndVisible()
             

@@ -9,7 +9,7 @@
 import UIKit
 
 class NewMatchesViewController: UIViewController {
-
+    var fUser = MyUser(uid: "")
     override func viewDidLoad() {
         super.viewDidLoad()
 

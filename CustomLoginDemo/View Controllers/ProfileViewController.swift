@@ -9,10 +9,12 @@
 import UIKit
 
 class ProfileViewController: UIViewController {
-
+    var fUser = MyUser(uid: "")
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        let tbvc = self.tabBarController  as! CustomTabBarController
+        fUser = tbvc.fUser
+        print("profile" + fUser.uid)
         // Do any additional setup after loading the view.
     }
     

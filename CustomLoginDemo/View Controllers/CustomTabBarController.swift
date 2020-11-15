@@ -1,18 +1,19 @@
 //
-//  PreviousMatchesViewController.swift
+//  CustomTabBarController.swift
 //  CustomLoginDemo
 //
-//  Created by Divya Kunisetty on 11/12/20.
+//  Created by Rohit Ravi on 11/14/20.
 //  Copyright © 2020 Rohit Ravi. All rights reserved.
 //
 
 import UIKit
 
-class PreviousMatchesViewController: UIViewController {
+class CustomTabBarController: UITabBarController {
     var fUser = MyUser(uid: "")
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        print(fUser.uid)
+
         // Do any additional setup after loading the view.
     }
     
