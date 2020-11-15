@@ -8,11 +8,17 @@
 
 import UIKit
 
-class NewMatchesViewController: UIViewController {
-    var fUser = MyUser(uid: "")
+class NewMatchesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    @IBOutlet var table: UITableView!,
+    
+    //var fUser = MyUser(uid: "")
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        table.delegate = self
+        table.dataSource = self
+    
+    tableView(<#T##tableView: UITableView##UITableView#>, numberOfRowsInSection: <#T##Int#>)
+        return 3
         // Do any additional setup after loading the view.
     }
     
