@@ -503,7 +503,8 @@
 				2C07584724CE3FF200E51662 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
+			path = /Users/ritheshkannan/Documents/app2/CustomLoginDemo;
+			sourceTree = "<absolute>";
 		};
 		2C07584B24CE3FF500E51662 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
