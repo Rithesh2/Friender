@@ -9,10 +9,10 @@
 import UIKit
 
 class CustomTabBarController: UITabBarController {
-    var fUser = MyUser(uid: "")
+    var fUser: MyUser? = nil
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(fUser.uid)
+        print(fUser!.uid)
 
         // Do any additional setup after loading the view.
     }

@@ -21,7 +21,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var errorLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+     
         // Do any additional setup after loading the view.
         setUpElements()
     }
@@ -43,8 +43,8 @@ class LoginViewController: UIViewController {
            return nil
            
        }
-  
 
+    
     @IBAction func loginTapped(_ sender: Any) {
         //Validate Text Fields
         let error = validateFields()
@@ -86,12 +86,26 @@ class LoginViewController: UIViewController {
     
     func transitionToHome(uid: String){
       
-        
+
         let homeViewController = self.storyboard?.instantiateViewController(withIdentifier: "HomeVCTabBar") as? CustomTabBarController
-    
-        homeViewController?.fUser = MyUser(uid: uid)
-        view.window?.rootViewController = homeViewController
-        view.window?.makeKeyAndVisible()
+        let db = Firestore.firestore()
+         db.collection("users").document(uid).getDocument { (document, error) in
+             if error == nil{
+                 //Check the document exists
+                 if document != nil && document!.exists == true{
+                     let documentData = document!.data()
+                     let firstName = documentData?["firstname"] as! String
+                     let lastName = documentData?["lastname"] as! String
+                    homeViewController?.fUser = MyUser(uid: uid, firstName: firstName, lastName: lastName, preferences: [])
+                    self.view.window?.rootViewController = homeViewController
+                    self.view.window?.makeKeyAndVisible()
+                 }
+                 else{
+                     print("error")
+                 }
+             }
+         }
+        
             
           //let homeViewController = storyboard?.instantiateViewController(identifier: Constants.Storyboard.homeViewController) as? HomeViewController
         //homeViewController?.uid = uid

@@ -9,10 +9,11 @@
 import UIKit
 
 class NewMatchesViewController: UIViewController {
-    var fUser = MyUser(uid: "")
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        let tbvc = self.tabBarController  as! CustomTabBarController
+        let fUser = tbvc.fUser
+        print("newMatches" + fUser!.uid)
         // Do any additional setup after loading the view.
     }
     
