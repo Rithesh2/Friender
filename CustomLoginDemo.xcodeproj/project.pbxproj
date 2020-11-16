@@ -21,6 +21,7 @@
 		2C07587824CE4D9800E51662 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C07587724CE4D9800E51662 /* Utilities.swift */; };
 		2C07587B24CE616900E51662 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2C07587A24CE616900E51662 /* GoogleService-Info.plist */; };
 		2C07587D24CE86C500E51662 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C07587C24CE86C500E51662 /* Constants.swift */; };
+		2C3D77D12562624F0082A274 /* CustomUITableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C3D77D02562624F0082A274 /* CustomUITableViewCell.xib */; };
 		2C858BAD2561CD2F00491F42 /* PreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C858BAC2561CD2F00491F42 /* PreferencesViewController.swift */; };
 		2C96C0882560FB6C00E7191F /* MyUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C96C0872560FB6C00E7191F /* MyUser.swift */; };
 		2C96C08A2560FEDD00E7191F /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C96C0892560FEDD00E7191F /* CustomTabBarController.swift */; };
@@ -71,6 +72,7 @@
 		2C07587724CE4D9800E51662 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		2C07587A24CE616900E51662 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2C07587C24CE86C500E51662 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		2C3D77D02562624F0082A274 /* CustomUITableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CustomUITableViewCell.xib; path = "../../../../../../Downloads/Friender-tableviews/CustomLoginDemo/View Controllers/CustomUITableViewCell.xib"; sourceTree = "<group>"; };
 		2C858BAC2561CD2F00491F42 /* PreferencesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesViewController.swift; sourceTree = "<group>"; };
 		2C96C0872560FB6C00E7191F /* MyUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyUser.swift; sourceTree = "<group>"; };
 		2C96C0892560FEDD00E7191F /* CustomTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
@@ -192,6 +194,7 @@
 				2C07587024CE40B700E51662 /* SignUpViewController.swift */,
 				2C07587224CE40D500E51662 /* LoginViewController.swift */,
 				2C07587424CE40F500E51662 /* HomeViewController.swift */,
+				2C3D77D02562624F0082A274 /* CustomUITableViewCell.xib */,
 				F1459FEC255E71FD002A5F71 /* PreviousMatchesViewController.swift */,
 				2C858BAC2561CD2F00491F42 /* PreferencesViewController.swift */,
 				F1459FF1255E7211002A5F71 /* NewMatchesViewController.swift */,
@@ -340,6 +343,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C3D77D12562624F0082A274 /* CustomUITableViewCell.xib in Resources */,
 				2C07584D24CE3FF500E51662 /* LaunchScreen.storyboard in Resources */,
 				2CF9DC1B24CE9F5700258DD8 /* loginbg.mp4 in Resources */,
 				2C07587B24CE616900E51662 /* GoogleService-Info.plist in Resources */,
