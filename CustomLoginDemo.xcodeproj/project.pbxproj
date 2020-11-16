@@ -24,6 +24,7 @@
 		2C858BAD2561CD2F00491F42 /* PreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C858BAC2561CD2F00491F42 /* PreferencesViewController.swift */; };
 		2C96C0882560FB6C00E7191F /* MyUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C96C0872560FB6C00E7191F /* MyUser.swift */; };
 		2C96C08A2560FEDD00E7191F /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C96C0892560FEDD00E7191F /* CustomTabBarController.swift */; };
+		2C9FC9282562571F0047B635 /* CustomUITableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C9FC9272562571E0047B635 /* CustomUITableViewCell.xib */; };
 		2CF9DC1B24CE9F5700258DD8 /* loginbg.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 2CF9DC1A24CE9F5700258DD8 /* loginbg.mp4 */; };
 		6212290E665A37CE36A1014D /* Pods_CustomLoginDemo_CustomLoginDemoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6760F2A990830ADEB3276346 /* Pods_CustomLoginDemo_CustomLoginDemoUITests.framework */; };
 		9A359EF9692B173F54F1C893 /* Pods_CustomLoginDemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9E613E2CB7D1AAD1389498E /* Pods_CustomLoginDemoTests.framework */; };
@@ -74,6 +75,7 @@
 		2C858BAC2561CD2F00491F42 /* PreferencesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesViewController.swift; sourceTree = "<group>"; };
 		2C96C0872560FB6C00E7191F /* MyUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyUser.swift; sourceTree = "<group>"; };
 		2C96C0892560FEDD00E7191F /* CustomTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
+		2C9FC9272562571E0047B635 /* CustomUITableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CustomUITableViewCell.xib; path = "../../../../../../Downloads/Friender-tableviews/CustomLoginDemo/View Controllers/CustomUITableViewCell.xib"; sourceTree = "<group>"; };
 		2CF9DC1A24CE9F5700258DD8 /* loginbg.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = loginbg.mp4; sourceTree = "<group>"; };
 		329C2C031B16DE0D456D157F /* Pods-CustomLoginDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CustomLoginDemoTests.debug.xcconfig"; path = "Target Support Files/Pods-CustomLoginDemoTests/Pods-CustomLoginDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
 		6760F2A990830ADEB3276346 /* Pods_CustomLoginDemo_CustomLoginDemoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CustomLoginDemo_CustomLoginDemoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -193,6 +195,7 @@
 				2C07587224CE40D500E51662 /* LoginViewController.swift */,
 				2C07587424CE40F500E51662 /* HomeViewController.swift */,
 				F1459FEC255E71FD002A5F71 /* PreviousMatchesViewController.swift */,
+				2C9FC9272562571E0047B635 /* CustomUITableViewCell.xib */,
 				2C858BAC2561CD2F00491F42 /* PreferencesViewController.swift */,
 				F1459FF1255E7211002A5F71 /* NewMatchesViewController.swift */,
 				F1459FF6255E722B002A5F71 /* ProfileViewController.swift */,
@@ -340,6 +343,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C9FC9282562571F0047B635 /* CustomUITableViewCell.xib in Resources */,
 				2C07584D24CE3FF500E51662 /* LaunchScreen.storyboard in Resources */,
 				2CF9DC1B24CE9F5700258DD8 /* loginbg.mp4 in Resources */,
 				2C07587B24CE616900E51662 /* GoogleService-Info.plist in Resources */,
