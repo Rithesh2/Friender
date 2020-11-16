@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 //
 //  NewMatchesViewController.swift
 //  CustomLoginDemo
@@ -35,9 +36,33 @@ class NewMatchesViewController: UIViewController, UITableViewDataSource, UITable
 >>>>>>> tableviews
 >>>>>>> cce14259e91377285fd955454aed6bd1ba3e1cf3
         // Do any additional setup after loading the view.
+=======
+ import UIKit
+
+ class NewMatchesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    
+    @IBOutlet weak var tableView: UITableView!
+    //how do we pass our user names? (question)
+    let userNames = MyUser(uid: "")
+    
+    //how do we pass our user pictures? (question)
+    let userPictures = []
+    
+    
+    //how do we pass our user contacts? (question)
+    let contacts = []
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        //register our custom cell for a tableview
+        self.tableView.register(UINib(nibName: "CustomUITableViewCell", bundle: nil), forCellReuseIdentifier: "customUser")
+
+>>>>>>> 0bc64a425a1eb24c5a3c94458d08f813550c178e
     }
     func tableView(tableView: UITableView,)
     
+<<<<<<< HEAD
     /*
     // MARK: - Navigation
     // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -92,6 +117,12 @@ class TableTableViewCell: UITableViewCell {
         //we want number of users update automatically
         return userNames.count
     }
+=======
+    func tableView(  tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        //we want number of users update automatically
+        return userNames.count
+    }
+>>>>>>> 0bc64a425a1eb24c5a3c94458d08f813550c178e
 
     func tableView(  tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell =
@@ -118,6 +149,7 @@ class CustomTableViewCell: UITableViewCell {
     
     @IBOutlet weak var userName: UILabel!
     @IBOutlet weak var userPicture: UIImageView!
+<<<<<<< HEAD
 }
 import UIKit
 
@@ -195,4 +227,6 @@ class CustomTableViewCell: UITableViewCell {
     
     @IBOutlet weak var userName: UILabel!
     @IBOutlet weak var userPicture: UIImageView!
+=======
+>>>>>>> 0bc64a425a1eb24c5a3c94458d08f813550c178e
 }
