@@ -9,7 +9,9 @@
 import Foundation
 
 struct MyUser {
-   var uid: String
-
+    var uid: String
+    var firstName: String
+    var lastName: String
+    var preferences: Array<String>
     
 }

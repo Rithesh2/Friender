@@ -102,7 +102,7 @@ class SignUpViewController: UIViewController {
                     }
                     
                     //Transition to the home screen
-                        self.transitionToHome(uid: result!.user.uid)
+                    self.transitionToPreferences(uid: result!.user.uid)
                     
                 }
             }
@@ -122,11 +122,32 @@ class SignUpViewController: UIViewController {
         errorLabel.alpha = 1
     }
     
-    func transitionToHome(uid: String){
-        let homeViewController = storyboard?.instantiateViewController(identifier: Constants.Storyboard.homeViewController) as? HomeViewController
-         homeViewController?.uid = uid
-        view.window?.rootViewController = homeViewController
-        view.window?.makeKeyAndVisible()
-        
+    func transitionToPreferences(uid: String){
+        let pFVC = self.storyboard?.instantiateViewController(identifier: "preferencesController") as? PreferencesViewController
+        let db = Firestore.firestore()
+         db.collection("users").document(uid).getDocument { (document, error) in
+             if error == nil{
+                 //Check the document exists
+                 if document != nil && document!.exists == true{
+                     let documentData = document!.data()
+                     let firstName = documentData?["firstname"] as! String
+                     let lastName = documentData?["lastname"] as! String
+                    pFVC?.fUser = MyUser(uid: uid, firstName: firstName, lastName: lastName, preferences: [])
+                    self.navigationController?.pushViewController(pFVC!, animated: true)
+                 }
+                 else{
+                     print("error")
+                 }
+             }
+         }
+
+
     }
+    
+    func transitionToHome(uid: String){
+      
+
+        let homeViewController = self.storyboard?.instantiateViewController(withIdentifier: "HomeVCTabBar") as? CustomTabBarController
+ 
+}
 }

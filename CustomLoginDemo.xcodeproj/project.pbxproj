@@ -21,6 +21,7 @@
 		2C07587824CE4D9800E51662 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C07587724CE4D9800E51662 /* Utilities.swift */; };
 		2C07587B24CE616900E51662 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2C07587A24CE616900E51662 /* GoogleService-Info.plist */; };
 		2C07587D24CE86C500E51662 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C07587C24CE86C500E51662 /* Constants.swift */; };
+		2C858BAD2561CD2F00491F42 /* PreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C858BAC2561CD2F00491F42 /* PreferencesViewController.swift */; };
 		2C96C0882560FB6C00E7191F /* MyUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C96C0872560FB6C00E7191F /* MyUser.swift */; };
 		2C96C08A2560FEDD00E7191F /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C96C0892560FEDD00E7191F /* CustomTabBarController.swift */; };
 		2CF9DC1B24CE9F5700258DD8 /* loginbg.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 2CF9DC1A24CE9F5700258DD8 /* loginbg.mp4 */; };
@@ -70,6 +71,7 @@
 		2C07587724CE4D9800E51662 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		2C07587A24CE616900E51662 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2C07587C24CE86C500E51662 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		2C858BAC2561CD2F00491F42 /* PreferencesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesViewController.swift; sourceTree = "<group>"; };
 		2C96C0872560FB6C00E7191F /* MyUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyUser.swift; sourceTree = "<group>"; };
 		2C96C0892560FEDD00E7191F /* CustomTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
 		2CF9DC1A24CE9F5700258DD8 /* loginbg.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = loginbg.mp4; sourceTree = "<group>"; };
@@ -191,6 +193,7 @@
 				2C07587224CE40D500E51662 /* LoginViewController.swift */,
 				2C07587424CE40F500E51662 /* HomeViewController.swift */,
 				F1459FEC255E71FD002A5F71 /* PreviousMatchesViewController.swift */,
+				2C858BAC2561CD2F00491F42 /* PreferencesViewController.swift */,
 				F1459FF1255E7211002A5F71 /* NewMatchesViewController.swift */,
 				F1459FF6255E722B002A5F71 /* ProfileViewController.swift */,
 				2C07587C24CE86C500E51662 /* Constants.swift */,
@@ -474,6 +477,7 @@
 				2C07584124CE3FF200E51662 /* AppDelegate.swift in Sources */,
 				F1459FF2255E7211002A5F71 /* NewMatchesViewController.swift in Sources */,
 				2C96C0882560FB6C00E7191F /* MyUser.swift in Sources */,
+				2C858BAD2561CD2F00491F42 /* PreferencesViewController.swift in Sources */,
 				2C07587824CE4D9800E51662 /* Utilities.swift in Sources */,
 				2C07587124CE40B700E51662 /* SignUpViewController.swift in Sources */,
 				F1459FF7255E722B002A5F71 /* ProfileViewController.swift in Sources */,

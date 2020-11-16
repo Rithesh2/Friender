@@ -8,6 +8,7 @@
 
 import UIKit
 
+<<<<<<< HEAD
 class NewMatchesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     @IBOutlet var table: UITableView!,
     
@@ -19,6 +20,14 @@ class NewMatchesViewController: UIViewController, UITableViewDataSource, UITable
     
     tableView(<#T##tableView: UITableView##UITableView#>, numberOfRowsInSection: <#T##Int#>)
         return 3
+=======
+class NewMatchesViewController: UIViewController {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        let tbvc = self.tabBarController  as! CustomTabBarController
+        let fUser = tbvc.fUser
+        print("newMatches" + fUser!.uid)
+>>>>>>> ffdbac909bb93e09046b09b28240952515759cf3
         // Do any additional setup after loading the view.
     }
     

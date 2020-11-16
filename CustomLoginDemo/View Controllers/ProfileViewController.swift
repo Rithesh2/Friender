@@ -9,12 +9,16 @@
 import UIKit
 
 class ProfileViewController: UIViewController {
-    var fUser = MyUser(uid: "")
+  
+    @IBOutlet weak var userNameLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         let tbvc = self.tabBarController  as! CustomTabBarController
-        fUser = tbvc.fUser
-        print("profile" + fUser.uid)
+        let fUser = tbvc.fUser
+        let userFullName = fUser!.firstName + " " + fUser!.lastName
+        userNameLabel.text = userFullName
+ 
+
         // Do any additional setup after loading the view.
     }
     
