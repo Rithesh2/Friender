@@ -61,7 +61,7 @@ class TableTableViewCell: UITableViewCell {
  import UIKit
 
  class NewMatchesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-    
+    var fUser = MyUser(uid: "")
     @IBOutlet weak var tableView: UITableView!
     //how do we pass our user names? (question)
     let userNames = MyUser(uid: "")
@@ -75,7 +75,8 @@ class TableTableViewCell: UITableViewCell {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        let tbvc = self.tabBarController  as! CustomTabBarController
+        fUser = tbvc.fUser
         //register our custom cell for a tableview
         self.tableView.register(UINib(nibName: "CustomUITableViewCell", bundle: nil), forCellReuseIdentifier: "customUser")
 
