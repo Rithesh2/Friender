@@ -1,44 +1,44 @@
  import UIKit
 
  class NewMatchesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-    
+    var fUser: MyUser? = nil
     @IBOutlet weak var tableView: UITableView!
     //how do we pass our user names? (question)
-    let userNames = MyUser(uid: "")
+
     
     //how do we pass our user pictures? (question)
-    let userPictures = []
+    //let userPictures = []
     
     
     //how do we pass our user contacts? (question)
-    let contacts = []
+    //let contacts = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+     
         //register our custom cell for a tableview
-        self.tableView.register(UINib(nibName: "CustomUITableViewCell", bundle: nil), forCellReuseIdentifier: "customUser")
+       // self.tableView.register(UINib(nibName: "CustomUITableViewCell", bundle: nil), forCellReuseIdentifier: "customUser")
 
     }
     
-    func tableView(  tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(  _ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         //we want number of users update automatically
-        return userNames.count
+        return 3
     }
 
-    func tableView(  tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func tableView(  _ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell =
             tableView.dequeueReusableCell(withIdentifier: "customUser", for: indexPath) as! CustomTableViewCell
         //can we say "cell.userPicture.image"? (question)
-        cell.userPicture.image = userPictures[indexPath.row]
-        cell.userName.text = userName[indexPath.row]
-        
+        //cell.userPicture.image = userPictures[indexPath.row]
+        cell.userName.text = fUser!.firstName + " " + fUser!.lastName
+        cell.userContact.text = "510-49494"
         return cell
         
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let contact = contacts[indexPath.row]
+        let contact = "510-00-45"
         print(contact)
     }
     
@@ -50,5 +50,6 @@
 class CustomTableViewCell: UITableViewCell {
     
     @IBOutlet weak var userName: UILabel!
+    @IBOutlet weak var userContact: UILabel!
     @IBOutlet weak var userPicture: UIImageView!
 }

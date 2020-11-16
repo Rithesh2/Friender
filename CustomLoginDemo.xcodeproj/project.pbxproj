@@ -195,9 +195,9 @@
 				2C07587224CE40D500E51662 /* LoginViewController.swift */,
 				2C07587424CE40F500E51662 /* HomeViewController.swift */,
 				2C3D77D02562624F0082A274 /* CustomUITableViewCell.xib */,
+				F1459FF1255E7211002A5F71 /* NewMatchesViewController.swift */,
 				F1459FEC255E71FD002A5F71 /* PreviousMatchesViewController.swift */,
 				2C858BAC2561CD2F00491F42 /* PreferencesViewController.swift */,
-				F1459FF1255E7211002A5F71 /* NewMatchesViewController.swift */,
 				F1459FF6255E722B002A5F71 /* ProfileViewController.swift */,
 				2C07587C24CE86C500E51662 /* Constants.swift */,
 			);
