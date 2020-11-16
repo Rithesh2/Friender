@@ -109,6 +109,21 @@
 			<key>orderHint</key>
 			<integer>14</integer>
 		</dict>
+		<key>MDFInternationalization.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>28</integer>
+		</dict>
+		<key>MDFTextAccessibility.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>26</integer>
+		</dict>
+		<key>MaterialComponents.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>29</integer>
+		</dict>
 		<key>Pods-CustomLoginDemo-CustomLoginDemoUITests.xcscheme</key>
 		<dict>
 			<key>isShown</key>
