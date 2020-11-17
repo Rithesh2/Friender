@@ -1,7 +1,12 @@
+
  import UIKit
+ import FirebaseAuth
+ import FirebaseFirestore
+ import Firebase
 
  class NewMatchesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     var fUser: MyUser? = nil
+    
     @IBOutlet weak var tableView: UITableView!
     //how do we pass our user names? (question)
 
@@ -15,9 +20,11 @@
     
     override func viewDidLoad() {
         super.viewDidLoad()
-     
+    
+        let tbvc = self.tabBarController  as! CustomTabBarController
+        fUser = tbvc.fUser
         //register our custom cell for a tableview
-       // self.tableView.register(UINib(nibName: "CustomUITableViewCell", bundle: nil), forCellReuseIdentifier: "customUser")
+       self.tableView.register(UINib(nibName: "CustomUITableViewCell", bundle: nil), forCellReuseIdentifier: "customUser")
 
     }
     
@@ -27,12 +34,14 @@
     }
 
     func tableView(  _ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell =
-            tableView.dequeueReusableCell(withIdentifier: "customUser", for: indexPath) as! CustomTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "customUser", for: indexPath) as! CustomTableViewCell
+       // let cell = tableView.dequeueReusableCell(withIdentifier: "customUser", for: indexPath)
         //can we say "cell.userPicture.image"? (question)
         //cell.userPicture.image = userPictures[indexPath.row]
+        
         cell.userName.text = fUser!.firstName + " " + fUser!.lastName
         cell.userContact.text = "510-49494"
+        //cell.textLabel?.text = "Hi"
         return cell
         
     }

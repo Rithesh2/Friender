@@ -99,10 +99,12 @@ class SignUpViewController: UIViewController {
                         if error != nil{
                             self.showError(message: "Error saving user data")
                         }
+                        
+                        
                     }
-                    
-                    //Transition to the home screen
                     self.transitionToPreferences(uid: result!.user.uid)
+                    //Transition to the home screen
+                    
                     
                 }
             }

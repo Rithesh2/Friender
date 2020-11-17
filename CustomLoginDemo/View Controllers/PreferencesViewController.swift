@@ -7,6 +7,9 @@
 //
 
 import UIKit
+import FirebaseAuth
+import FirebaseFirestore
+import Firebase
 
 class PreferencesViewController: UIViewController {
     var fUser: MyUser? = nil
@@ -36,6 +39,14 @@ class PreferencesViewController: UIViewController {
         }
     }
     
+    @IBAction func continueButton(_ sender: Any) {
+        let db = Firestore.firestore()
+        db.collection("users").document(fUser!.uid).updateData(["preferences": fUser!.preferences]){ (error) in
+            if error != nil{
+                print("error")
+                }
+        }
+    }
     
     @IBAction func musicButton(_ sender: Any) {
         appendToPreferencesList(preference: "music")
@@ -56,6 +67,7 @@ class PreferencesViewController: UIViewController {
     @IBAction func paintingButton(_ sender: Any) {
         appendToPreferencesList(preference: "painting")
     }
+
     @IBAction func technologyButton(_ sender: Any) {
         appendToPreferencesList(preference: "technology")
     }
