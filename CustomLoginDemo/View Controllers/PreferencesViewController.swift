@@ -35,7 +35,7 @@ class PreferencesViewController: UIViewController {
     }
     func checkForOptionsLimit() -> Bool
     {
-        let optionLimit = 20
+        let optionLimit = 6
         return fUser!.preferences.count <= optionLimit
     }
     
@@ -53,7 +53,24 @@ class PreferencesViewController: UIViewController {
         }
     }
     
+    func deleteFromPreferencesList(preference: String)
+    {
+            if let index =  fUser!.preferences.firstIndex(of: preference) {
+                fUser!.preferences.remove(at: index)
+            }
+            print(fUser!.preferences)
+        if (!checkForOptionsLimit())
+        {
+            errorLabel.text = "You have selected more than 6 options. Please deselect one."
+            errorLabel.isHidden = false
+        }
+        else{
+            errorLabel.isHidden = true
+        }
+    }
+    
     @IBAction func continueButton(_ sender: Any) {
+        
         let db = Firestore.firestore()
         db.collection("users").document(fUser!.uid).updateData(["preferences": fUser!.preferences]){ (error) in
                     if error != nil{
@@ -68,10 +85,13 @@ class PreferencesViewController: UIViewController {
             
             var users: [String: [String]] = [:]
             for document in querySnapshot!.documents {
+                
                 print(document.data()["preferences"]!)
                 let preferences = document.data()["preferences"] as! Array<String>
                 let ID = document.data()["uid"] as! String
                 users[ID] = preferences
+ 
+         
                 // print(users)
                 
                 //print(document.data())
@@ -92,6 +112,7 @@ class PreferencesViewController: UIViewController {
             self.transitionToHome(user: self.fUser!)
                
             }
+ 
     }
     
     func transitionToHome(user: MyUser){
@@ -105,135 +126,156 @@ class PreferencesViewController: UIViewController {
     }
         
     @IBAction func musicButton(_ sender: Any) {
-        appendToPreferencesList(preference: "music")
+ 
         guard let button = sender as? UIButton else { return }
         if music_selected
         {
+            appendToPreferencesList(preference: "music")
             button.tintColor = .yellow
             music_selected = false
         }
         else{
+            deleteFromPreferencesList(preference: "music")
             button.tintColor = .blue
             music_selected = true
+            
         }
     }
     
     @IBAction func swimmingButton(_ sender: Any) {
-        appendToPreferencesList(preference: "swimming")
+        
         guard let button = sender as? UIButton else { return }
         if swimming_selected
         {
+            appendToPreferencesList(preference: "swimming")
             button.tintColor = .yellow
             swimming_selected = false
         }
         else{
+            deleteFromPreferencesList(preference: "swimming")
             button.tintColor = .blue
             swimming_selected = true
         }
     }
         
     @IBAction func hikingButton(_ sender: Any) {
-        appendToPreferencesList(preference: "hiking")
+        
         guard let button = sender as? UIButton else { return }
         if hiking_selected
         {
+            appendToPreferencesList(preference: "hiking")
             button.tintColor = .yellow
             hiking_selected = false
         }
         else{
+            deleteFromPreferencesList(preference: "hiking")
             button.tintColor = .blue
             hiking_selected = true
         }
     }
     
     @IBAction func gardeningButton(_ sender: Any) {
-        appendToPreferencesList(preference: "gardening")
+        
         guard let button = sender as? UIButton else { return }
         if gardening_selected
         {
+            appendToPreferencesList(preference: "gardening")
             button.tintColor = .yellow
             gardening_selected = false
         }
         else{
+            deleteFromPreferencesList(preference: "gardening")
             button.tintColor = .blue
             gardening_selected = true
         }
     }
     @IBAction func bikingButton(_ sender: Any) {
-        appendToPreferencesList(preference: "biking")
+        
         guard let button = sender as? UIButton else { return }
         if biking_selected
         {
+            appendToPreferencesList(preference: "biking")
             button.tintColor = .yellow
             biking_selected = false
         }
         else{
+            deleteFromPreferencesList(preference: "biking")
             button.tintColor = .blue
             biking_selected = true
         }
     }
     @IBAction func paintingButton(_ sender: Any) {
-        appendToPreferencesList(preference: "painting")
+        
         guard let button = sender as? UIButton else { return }
         if painting_selected
         {
+            appendToPreferencesList(preference: "painting")
             button.tintColor = .yellow
             painting_selected = false
         }
         else{
+            deleteFromPreferencesList(preference: "painting")
             button.tintColor = .blue
             painting_selected = true
         }
     }
 
     @IBAction func technologyButton(_ sender: Any) {
-        appendToPreferencesList(preference: "technology")
+        
         guard let button = sender as? UIButton else { return }
         if technology_selected
         {
+            appendToPreferencesList(preference: "technology")
             button.tintColor = .yellow
             technology_selected = false
         }
         else{
+            deleteFromPreferencesList(preference: "technology")
             button.tintColor = .blue
             technology_selected = true
         }
     }
     @IBAction func dancingButton(_ sender: Any) {
-        appendToPreferencesList(preference: "dancing")
+        
         guard let button = sender as? UIButton else { return }
         if dancing_selected
         {
+            appendToPreferencesList(preference: "dancing")
             button.tintColor = .yellow
             dancing_selected = false
         }
         else{
+            deleteFromPreferencesList(preference: "dancing")
             button.tintColor = .blue
             dancing_selected = true
         }
     }
     @IBAction func eatingButton(_ sender: Any) {
-        appendToPreferencesList(preference: "eating")
+        
         guard let button = sender as? UIButton else { return }
         if eating_selected
         {
+            appendToPreferencesList(preference: "eating")
             button.tintColor = .yellow
             eating_selected = false
         }
         else{
+            deleteFromPreferencesList(preference: "eating")
             button.tintColor = .blue
             eating_selected = true
         }
     }
     @IBAction func campingButton(_ sender: Any) {
-        appendToPreferencesList(preference: "camping")
+        
         guard let button = sender as? UIButton else { return }
         if camping_selected
         {
+            appendToPreferencesList(preference: "camping")
             button.tintColor = .yellow
             camping_selected = false
         }
         else{
+            deleteFromPreferencesList(preference: "camping")
             button.tintColor = .blue
             camping_selected = true
         }
@@ -241,14 +283,16 @@ class PreferencesViewController: UIViewController {
     
 
     @IBAction func sportsButton(_ sender: Any) {
-        appendToPreferencesList(preference: "sports")
+        
         guard let button = sender as? UIButton else { return }
         if sports_selected
         {
+            appendToPreferencesList(preference: "sports")
             button.tintColor = .yellow
             sports_selected = false
         }
         else{
+            deleteFromPreferencesList(preference: "sports")
             button.tintColor = .blue
             sports_selected = true
         }
@@ -256,56 +300,64 @@ class PreferencesViewController: UIViewController {
     
 
     @IBAction func photographyButton(_ sender: Any) {
-        appendToPreferencesList(preference: "photography")
+        
         guard let button = sender as? UIButton else { return }
         if photography_selected
         {
+            appendToPreferencesList(preference: "photography")
             button.tintColor = .yellow
             photography_selected = false
         }
         else{
+            deleteFromPreferencesList(preference: "photography")
             button.tintColor = .blue
             photography_selected = true
         }
     }
 
     @IBAction func basketBallButton(_ sender: Any) {
-        appendToPreferencesList(preference: "basketball")
+        
         guard let button = sender as? UIButton else { return }
         if basketball_selected
         {
+            appendToPreferencesList(preference: "basketball")
             button.tintColor = .yellow
             basketball_selected = false
         }
         else{
+            deleteFromPreferencesList(preference: "basketball")
             button.tintColor = .blue
             basketball_selected = true
         }
     }
 
     @IBAction func readingButton(_ sender: Any) {
-        appendToPreferencesList(preference: "reading")
+        
         guard let button = sender as? UIButton else { return }
         if reading_selected
         {
+            appendToPreferencesList(preference: "reading")
             button.tintColor = .yellow
             reading_selected = false
         }
         else{
+            deleteFromPreferencesList(preference: "reading")
             button.tintColor = .blue
             reading_selected = true
         }
     }
 
     @IBAction func runningButton(_ sender: Any) {
-        appendToPreferencesList(preference: "running")
+        
         guard let button = sender as? UIButton else { return }
         if running_selected
         {
+            appendToPreferencesList(preference: "running")
             button.tintColor = .yellow
             running_selected = false
         }
         else{
+            deleteFromPreferencesList(preference: "running")
             button.tintColor = .blue
             running_selected = true
         }
