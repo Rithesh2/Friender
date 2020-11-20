@@ -13,5 +13,5 @@ struct MyUser {
     var firstName: String
     var lastName: String
     var preferences: Array<String>
-    
+    var matches: Array<String>
 }

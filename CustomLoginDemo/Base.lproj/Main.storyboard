@@ -110,7 +110,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="jG3-qX-iSb" kind="relationship" relationship="rootViewController" id="152-oJ-efJ"/>
+                        <segue destination="jG3-qX-iSb" kind="relationship" relationship="rootViewController" destinationCreationSelector="matchSegue" id="152-oJ-efJ"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cU0-fG-GHt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -228,7 +228,7 @@
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cDL-rG-a62">
                                         <rect key="frame" x="0.0" y="210" width="334" height="50"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9gQ-Hv-ioi">
                                         <rect key="frame" x="0.0" y="280" width="334" height="50"/>
@@ -283,31 +283,28 @@
             <objects>
                 <viewController storyboardIdentifier="HomeVC" id="LSV-Di-QIJ" customClass="HomeViewController" customModule="CustomLoginDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bUX-gY-kp3">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="365-ak-rlF">
-                                <rect key="frame" x="160" y="406" width="0.0" height="0.0"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W6D-E1-aDp">
+                                <rect key="frame" x="186" y="381" width="42" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ucD-c5-7n8"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="365-ak-rlF" firstAttribute="centerY" secondItem="bUX-gY-kp3" secondAttribute="centerY" id="MDg-oc-AqC"/>
-                            <constraint firstItem="365-ak-rlF" firstAttribute="centerX" secondItem="bUX-gY-kp3" secondAttribute="centerX" id="pEs-HO-Wm1"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="gK2-v9-CdE"/>
                     <connections>
-                        <outlet property="homeText" destination="365-ak-rlF" id="aqE-Hh-ubW"/>
+                        <outlet property="userNameText" destination="W6D-E1-aDp" id="O7k-X3-XEs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jAW-Lh-ifP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2571" y="3727"/>
+            <point key="canvasLocation" x="911.59420289855075" y="3714.5089285714284"/>
         </scene>
         <!--New Matches-->
         <scene sceneID="Nb2-zS-vou">
@@ -350,6 +347,7 @@
                     <navigationItem key="navigationItem" title="New Matches" id="mSb-5r-hFl"/>
                     <connections>
                         <outlet property="tableView" destination="GCq-9j-eJG" id="Ohe-yx-onr"/>
+                        <segue destination="LSV-Di-QIJ" kind="presentation" identifier="matchSegue" id="DG6-0h-YaV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KrK-j0-O38" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
