@@ -13,26 +13,24 @@ import Firebase
 
 class HomeViewController: UIViewController {
 
-    @IBOutlet weak var homeText: UILabel!
-    var uid = ""
-    var firstName = ""
-    var lastName = ""
+
+    var match: String = ""
       
-
-
+   
+    @IBOutlet weak var userNameText: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        homeText.setNeedsDisplay()
-        print(firstName)
+        findFirstName(uid: match) { (fN) in
+            self.userNameText.text = fN
+        }
         
       
         // Do any additional setup after loading the view.
     }
     
     override func viewWillAppear(_ animated: Bool) {
-       
-             setUpElements()
-   
+          
        
         
     }
@@ -53,7 +51,9 @@ class HomeViewController: UIViewController {
  
         }
     */
-        
+        /*
+         working code
+     
         let db = Firestore.firestore()
         db.collection("users").document(uid).getDocument { (document, error) in
             if error == nil{
@@ -70,7 +70,7 @@ class HomeViewController: UIViewController {
                 }
             }
         }
- 
+         */
         
         /*
         retrieveUsers()
@@ -117,3 +117,4 @@ class HomeViewController: UIViewController {
     */
 
 }
+

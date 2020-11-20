@@ -32,6 +32,7 @@
 		F1459FED255E71FD002A5F71 /* PreviousMatchesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1459FEC255E71FD002A5F71 /* PreviousMatchesViewController.swift */; };
 		F1459FF2255E7211002A5F71 /* NewMatchesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1459FF1255E7211002A5F71 /* NewMatchesViewController.swift */; };
 		F1459FF7255E722B002A5F71 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1459FF6255E722B002A5F71 /* ProfileViewController.swift */; };
+		F1B54D4D2567682D00A8D59F /* MatchingAlgorithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B54D4C2567682D00A8D59F /* MatchingAlgorithm.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +90,7 @@
 		F1459FEC255E71FD002A5F71 /* PreviousMatchesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviousMatchesViewController.swift; sourceTree = "<group>"; };
 		F1459FF1255E7211002A5F71 /* NewMatchesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMatchesViewController.swift; sourceTree = "<group>"; };
 		F1459FF6255E722B002A5F71 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		F1B54D4C2567682D00A8D59F /* MatchingAlgorithm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchingAlgorithm.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,6 +195,7 @@
 				2C96C0892560FEDD00E7191F /* CustomTabBarController.swift */,
 				2C07587024CE40B700E51662 /* SignUpViewController.swift */,
 				2C07587224CE40D500E51662 /* LoginViewController.swift */,
+				F1B54D4C2567682D00A8D59F /* MatchingAlgorithm.swift */,
 				2C07587424CE40F500E51662 /* HomeViewController.swift */,
 				F1459FF1255E7211002A5F71 /* NewMatchesViewController.swift */,
 				F1459FEC255E71FD002A5F71 /* PreviousMatchesViewController.swift */,
@@ -488,6 +491,7 @@
 				2C07587324CE40D500E51662 /* LoginViewController.swift in Sources */,
 				2C07584324CE3FF200E51662 /* SceneDelegate.swift in Sources */,
 				2C96C08A2560FEDD00E7191F /* CustomTabBarController.swift in Sources */,
+				F1B54D4D2567682D00A8D59F /* MatchingAlgorithm.swift in Sources */,
 				2C07587524CE40F500E51662 /* HomeViewController.swift in Sources */,
 				2C07587D24CE86C500E51662 /* Constants.swift in Sources */,
 			);

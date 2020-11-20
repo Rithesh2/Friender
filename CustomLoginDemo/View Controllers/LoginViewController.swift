@@ -96,7 +96,9 @@ class LoginViewController: UIViewController {
                      let documentData = document!.data()
                      let firstName = documentData?["firstname"] as! String
                      let lastName = documentData?["lastname"] as! String
-                    homeViewController?.fUser = MyUser(uid: uid, firstName: firstName, lastName: lastName, preferences: [])
+                     let preferences = documentData?["preferences"] as! Array<String>
+                    let matches = documentData?["matches"] as! Array<String>
+                    homeViewController?.fUser = MyUser(uid: uid, firstName: firstName, lastName: lastName, preferences: preferences, matches: matches)
                     self.view.window?.rootViewController = homeViewController
                     self.view.window?.makeKeyAndVisible()
                  }
@@ -115,3 +117,4 @@ class LoginViewController: UIViewController {
        
       }
 }
+
