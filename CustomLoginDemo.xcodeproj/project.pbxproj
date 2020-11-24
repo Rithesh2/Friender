@@ -22,7 +22,6 @@
 		2C07587B24CE616900E51662 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2C07587A24CE616900E51662 /* GoogleService-Info.plist */; };
 		2C07587D24CE86C500E51662 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C07587C24CE86C500E51662 /* Constants.swift */; };
 		2C3D77DF25634B4E0082A274 /* CustomUITableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C3D77DE25634B4E0082A274 /* CustomUITableViewCell.xib */; };
-		2C4C3F9E256A6269001DE4D1 /* SignUpProfilePictureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4C3F9D256A6269001DE4D1 /* SignUpProfilePictureViewController.swift */; };
 		2C858BAD2561CD2F00491F42 /* PreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C858BAC2561CD2F00491F42 /* PreferencesViewController.swift */; };
 		2C96C0882560FB6C00E7191F /* MyUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C96C0872560FB6C00E7191F /* MyUser.swift */; };
 		2C96C08A2560FEDD00E7191F /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C96C0892560FEDD00E7191F /* CustomTabBarController.swift */; };
@@ -80,7 +79,6 @@
 		2C07587A24CE616900E51662 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2C07587C24CE86C500E51662 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		2C3D77DE25634B4E0082A274 /* CustomUITableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomUITableViewCell.xib; sourceTree = "<group>"; };
-		2C4C3F9D256A6269001DE4D1 /* SignUpProfilePictureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpProfilePictureViewController.swift; sourceTree = "<group>"; };
 		2C858BAC2561CD2F00491F42 /* PreferencesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesViewController.swift; sourceTree = "<group>"; };
 		2C96C0872560FB6C00E7191F /* MyUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyUser.swift; sourceTree = "<group>"; };
 		2C96C0892560FEDD00E7191F /* CustomTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
@@ -205,7 +203,6 @@
 			children = (
 				2C07584424CE3FF200E51662 /* ViewController.swift */,
 				2C96C0892560FEDD00E7191F /* CustomTabBarController.swift */,
-				2C4C3F9D256A6269001DE4D1 /* SignUpProfilePictureViewController.swift */,
 				2C07587024CE40B700E51662 /* SignUpViewController.swift */,
 				2C07587224CE40D500E51662 /* LoginViewController.swift */,
 				F1B54D4C2567682D00A8D59F /* MatchingAlgorithm.swift */,
@@ -503,7 +500,6 @@
 				F1851E43256B786D0005116E /* EditProfilePicViewController.swift in Sources */,
 				F1459FF2255E7211002A5F71 /* NewMatchesViewController.swift in Sources */,
 				2C96C0882560FB6C00E7191F /* MyUser.swift in Sources */,
-				2C4C3F9E256A6269001DE4D1 /* SignUpProfilePictureViewController.swift in Sources */,
 				2C858BAD2561CD2F00491F42 /* PreferencesViewController.swift in Sources */,
 				2C07587824CE4D9800E51662 /* Utilities.swift in Sources */,
 				2C07587124CE40B700E51662 /* SignUpViewController.swift in Sources */,

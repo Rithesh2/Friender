@@ -13,21 +13,21 @@ import Firebase
 
 class PreferencesViewController: UIViewController {
     var fUser: MyUser? = nil
-    var music_selected = true
-    var swimming_selected = true
-    var hiking_selected = true
-    var gardening_selected = true
-    var biking_selected = true
-    var painting_selected = true
-    var technology_selected = true
-    var dancing_selected = true
-    var eating_selected = true
-    var camping_selected = true
-    var sports_selected = true
-    var photography_selected = true
-    var basketball_selected = true
-    var reading_selected = true
-    var running_selected = true
+    var music_selected = false
+    var swimming_selected = false
+    var hiking_selected = false
+    var gardening_selected = false
+    var biking_selected = false
+    var painting_selected = false
+    var technology_selected = false
+    var dancing_selected = false
+    var eating_selected = false
+    var camping_selected = false
+    var sports_selected = false
+    var photography_selected = false
+    var basketball_selected = false
+    var reading_selected = false
+    var running_selected = false
     
     @IBOutlet weak var selectPreferencesLabel: UILabel!
     
@@ -55,21 +55,15 @@ class PreferencesViewController: UIViewController {
     func checkForOptionsLimit() -> Bool
     {
         let optionLimit = 6
-        return fUser!.preferences.count <= optionLimit
+        print(fUser!.preferences.count)
+        return fUser!.preferences.count < optionLimit
     }
     
     func appendToPreferencesList(preference: String)
     {
-        if(checkForOptionsLimit())
-        {
             fUser!.preferences.append(preference)
             print(fUser!.preferences)
-        }
-        else
-        {
-            errorLabel.text = "You have selected more than 6 options. Please deselect one."
-            errorLabel.isHidden = false
-        }
+
     }
     
     func deleteFromPreferencesList(preference: String)
@@ -78,6 +72,7 @@ class PreferencesViewController: UIViewController {
                 fUser!.preferences.remove(at: index)
             }
             print(fUser!.preferences)
+        /*
         if (!checkForOptionsLimit())
         {
             errorLabel.text = "You have selected more than 6 options. Please deselect one."
@@ -86,6 +81,7 @@ class PreferencesViewController: UIViewController {
         else{
             errorLabel.isHidden = true
         }
+ */
     }
     
     @IBAction func continueButton(_ sender: Any) {
@@ -147,156 +143,348 @@ class PreferencesViewController: UIViewController {
     @IBAction func musicButton(_ sender: Any) {
  
         guard let button = sender as? UIButton else { return }
-        if music_selected
+        if !music_selected
         {
-            appendToPreferencesList(preference: "music")
-            button.tintColor = .yellow
-            music_selected = false
+            if(checkForOptionsLimit())
+            {
+                errorLabel.isHidden = false
+                appendToPreferencesList(preference: "music")
+                button.tintColor = .yellow
+                music_selected = true
+            }
+            else
+            {
+                errorLabel.text = "You have selected more than 6 options. Please deselect one."
+                errorLabel.isHidden = false
+            }
+            
         }
         else{
             deleteFromPreferencesList(preference: "music")
             button.tintColor = .blue
-            music_selected = true
-            
+            music_selected = false
+            if(!checkForOptionsLimit())
+            {
+                errorLabel.text = "You have selected more than 6 options. Please deselect one."
+                errorLabel.isHidden = false
+            }
+            else{
+                errorLabel.isHidden = true
+            }
         }
     }
     
     @IBAction func swimmingButton(_ sender: Any) {
         
         guard let button = sender as? UIButton else { return }
-        if swimming_selected
+        if !swimming_selected
         {
-            appendToPreferencesList(preference: "swimming")
-            button.tintColor = .yellow
-            swimming_selected = false
+            if(checkForOptionsLimit())
+            {
+                errorLabel.isHidden = true
+                appendToPreferencesList(preference: "swimming")
+                button.tintColor = .yellow
+                swimming_selected = true
+            }
+            else
+            {
+                errorLabel.text = "You have selected more than 6 options. Please deselect one."
+                errorLabel.isHidden = false
+            }
+            
+           
         }
         else{
             deleteFromPreferencesList(preference: "swimming")
             button.tintColor = .blue
-            swimming_selected = true
+            swimming_selected = false
+            if(!checkForOptionsLimit())
+            {
+                errorLabel.text = "You have selected more than 6 options. Please deselect one."
+                errorLabel.isHidden = false
+            }
+            else{
+                errorLabel.isHidden = true
+            }
         }
     }
         
     @IBAction func hikingButton(_ sender: Any) {
         
         guard let button = sender as? UIButton else { return }
-        if hiking_selected
+        if !hiking_selected
         {
-            appendToPreferencesList(preference: "hiking")
-            button.tintColor = .yellow
-            hiking_selected = false
+            if(checkForOptionsLimit())
+            {
+                errorLabel.isHidden = true
+                appendToPreferencesList(preference: "hiking")
+                button.tintColor = .yellow
+                hiking_selected = true
+            }
+            else
+            {
+                errorLabel.text = "You have selected more than 6 options. Please deselect one."
+                errorLabel.isHidden = false
+            }
+            
+       
         }
         else{
             deleteFromPreferencesList(preference: "hiking")
             button.tintColor = .blue
-            hiking_selected = true
+            hiking_selected = false
+            if(!checkForOptionsLimit())
+            {
+                errorLabel.text = "You have selected more than 6 options. Please deselect one."
+                errorLabel.isHidden = false
+            }
+            else{
+                errorLabel.isHidden = true
+            }
         }
     }
     
     @IBAction func gardeningButton(_ sender: Any) {
         
         guard let button = sender as? UIButton else { return }
-        if gardening_selected
+        if !gardening_selected
         {
-            appendToPreferencesList(preference: "gardening")
-            button.tintColor = .yellow
-            gardening_selected = false
+            if(checkForOptionsLimit())
+            {
+                errorLabel.isHidden = true
+                appendToPreferencesList(preference: "gardening")
+                button.tintColor = .yellow
+                gardening_selected = true
+            }
+            else
+            {
+                errorLabel.text = "You have selected more than 6 options. Please deselect one."
+                errorLabel.isHidden = false
+            }
+            
+         
         }
         else{
             deleteFromPreferencesList(preference: "gardening")
             button.tintColor = .blue
-            gardening_selected = true
+            gardening_selected = false
+            if(!checkForOptionsLimit())
+            {
+                errorLabel.text = "You have selected more than 6 options. Please deselect one."
+                errorLabel.isHidden = false
+            }
+            else{
+                errorLabel.isHidden = true
+            }
         }
     }
     @IBAction func bikingButton(_ sender: Any) {
         
         guard let button = sender as? UIButton else { return }
-        if biking_selected
+        if !biking_selected
         {
-            appendToPreferencesList(preference: "biking")
-            button.tintColor = .yellow
-            biking_selected = false
+            if(checkForOptionsLimit())
+            {
+                errorLabel.isHidden = true
+                appendToPreferencesList(preference: "biking")
+                button.tintColor = .yellow
+                biking_selected = true
+            }
+            else
+            {
+                errorLabel.text = "You have selected more than 6 options. Please deselect one."
+                errorLabel.isHidden = false
+            }
+            
+           
         }
         else{
             deleteFromPreferencesList(preference: "biking")
             button.tintColor = .blue
-            biking_selected = true
+            biking_selected = false
+            if(!checkForOptionsLimit())
+            {
+                errorLabel.text = "You have selected more than 6 options. Please deselect one."
+                errorLabel.isHidden = false
+            }
+            else{
+                errorLabel.isHidden = true
+            }
         }
     }
     @IBAction func paintingButton(_ sender: Any) {
         
         guard let button = sender as? UIButton else { return }
-        if painting_selected
+        if !painting_selected
         {
-            appendToPreferencesList(preference: "painting")
-            button.tintColor = .yellow
-            painting_selected = false
+            if(checkForOptionsLimit())
+            {
+                errorLabel.isHidden = true
+                appendToPreferencesList(preference: "painting")
+                button.tintColor = .yellow
+                painting_selected = true
+            }
+            else
+            {
+                errorLabel.text = "You have selected more than 6 options. Please deselect one."
+                errorLabel.isHidden = false
+            }
+            
+        
         }
         else{
             deleteFromPreferencesList(preference: "painting")
             button.tintColor = .blue
-            painting_selected = true
+            painting_selected = false
+            if(!checkForOptionsLimit())
+            {
+                errorLabel.text = "You have selected more than 6 options. Please deselect one."
+                errorLabel.isHidden = false
+            }
+            else{
+                errorLabel.isHidden = true
+            }
         }
     }
 
     @IBAction func technologyButton(_ sender: Any) {
         
         guard let button = sender as? UIButton else { return }
-        if technology_selected
+        if !technology_selected
         {
-            appendToPreferencesList(preference: "technology")
-            button.tintColor = .yellow
-            technology_selected = false
+            if(checkForOptionsLimit())
+            {
+                errorLabel.isHidden = true
+                appendToPreferencesList(preference: "technology")
+                button.tintColor = .yellow
+                technology_selected = true
+            }
+            else
+            {
+                errorLabel.text = "You have selected more than 6 options. Please deselect one."
+                errorLabel.isHidden = false
+                
+            }
+            
+      
         }
         else{
             deleteFromPreferencesList(preference: "technology")
             button.tintColor = .blue
-            technology_selected = true
+            technology_selected = false
+            if(!checkForOptionsLimit())
+            {
+                errorLabel.text = "You have selected more than 6 options. Please deselect one."
+                errorLabel.isHidden = false
+            }
+            else{
+                errorLabel.isHidden = true
+            }
         }
     }
     @IBAction func dancingButton(_ sender: Any) {
         
         guard let button = sender as? UIButton else { return }
-        if dancing_selected
+        if !dancing_selected
         {
-            appendToPreferencesList(preference: "dancing")
-            button.tintColor = .yellow
-            dancing_selected = false
+    
+            if(checkForOptionsLimit())
+            {
+                errorLabel.isHidden = true
+                appendToPreferencesList(preference: "dancing")
+                button.tintColor = .yellow
+                dancing_selected = true
+            }
+            else
+            {
+                errorLabel.text = "You have selected more than 6 options. Please deselect one."
+                errorLabel.isHidden = false
+            }
+            
+          
         }
         else{
             deleteFromPreferencesList(preference: "dancing")
             button.tintColor = .blue
-            dancing_selected = true
+            dancing_selected = false
+            if(!checkForOptionsLimit())
+            {
+                errorLabel.text = "You have selected more than 6 options. Please deselect one."
+                errorLabel.isHidden = false
+            }
+            else{
+                errorLabel.isHidden = true
+            }
         }
     }
     @IBAction func eatingButton(_ sender: Any) {
         
         guard let button = sender as? UIButton else { return }
-        if eating_selected
+        if !eating_selected
         {
-            appendToPreferencesList(preference: "eating")
-            button.tintColor = .yellow
-            eating_selected = false
+
+            if(checkForOptionsLimit())
+            {
+                errorLabel.isHidden = true
+                appendToPreferencesList(preference: "eating")
+                button.tintColor = .yellow
+                eating_selected = true
+            }
+            else
+            {
+                errorLabel.text = "You have selected more than 6 options. Please deselect one."
+                errorLabel.isHidden = false
+            }
+            
+          
         }
         else{
             deleteFromPreferencesList(preference: "eating")
             button.tintColor = .blue
-            eating_selected = true
+            eating_selected = false
+            if(!checkForOptionsLimit())
+            {
+                errorLabel.text = "You have selected more than 6 options. Please deselect one."
+                errorLabel.isHidden = false
+            }
+            else{
+                errorLabel.isHidden = true
+            }
         }
     }
     @IBAction func campingButton(_ sender: Any) {
         
         guard let button = sender as? UIButton else { return }
-        if camping_selected
+        if !camping_selected
         {
-            appendToPreferencesList(preference: "camping")
-            button.tintColor = .yellow
-            camping_selected = false
+
+            if(checkForOptionsLimit())
+            {
+                errorLabel.isHidden = true
+                appendToPreferencesList(preference: "camping")
+                button.tintColor = .yellow
+                camping_selected = true
+            }
+            else
+            {
+                errorLabel.text = "You have selected more than 6 options. Please deselect one."
+                errorLabel.isHidden = false
+            }
+            
+      
         }
         else{
             deleteFromPreferencesList(preference: "camping")
             button.tintColor = .blue
-            camping_selected = true
+            camping_selected = false
+            if(!checkForOptionsLimit())
+            {
+                errorLabel.text = "You have selected more than 6 options. Please deselect one."
+                errorLabel.isHidden = false
+            }
+            else{
+                errorLabel.isHidden = true
+            }
         }
     }
     
@@ -304,16 +492,36 @@ class PreferencesViewController: UIViewController {
     @IBAction func sportsButton(_ sender: Any) {
         
         guard let button = sender as? UIButton else { return }
-        if sports_selected
+        if !sports_selected
         {
-            appendToPreferencesList(preference: "sports")
-            button.tintColor = .yellow
-            sports_selected = false
+
+            if(checkForOptionsLimit())
+            {
+                errorLabel.isHidden = true
+                appendToPreferencesList(preference: "sports")
+                button.tintColor = .yellow
+                sports_selected = true
+            }
+            else
+            {
+                errorLabel.text = "You have selected more than 6 options. Please deselect one."
+                errorLabel.isHidden = false
+            }
+            
+    
         }
         else{
             deleteFromPreferencesList(preference: "sports")
             button.tintColor = .blue
-            sports_selected = true
+            sports_selected = false
+            if(!checkForOptionsLimit())
+            {
+                errorLabel.text = "You have selected more than 6 options. Please deselect one."
+                errorLabel.isHidden = false
+            }
+            else{
+                errorLabel.isHidden = true
+            }
         }
     }
     
@@ -321,64 +529,144 @@ class PreferencesViewController: UIViewController {
     @IBAction func photographyButton(_ sender: Any) {
         
         guard let button = sender as? UIButton else { return }
-        if photography_selected
+        if !photography_selected
         {
-            appendToPreferencesList(preference: "photography")
-            button.tintColor = .yellow
-            photography_selected = false
+
+            if(checkForOptionsLimit())
+            {
+                errorLabel.isHidden = true
+                appendToPreferencesList(preference: "photography")
+                button.tintColor = .yellow
+                photography_selected = true
+            }
+            else
+            {
+                errorLabel.text = "You have selected more than 6 options. Please deselect one."
+                errorLabel.isHidden = false
+            }
+            
+          
         }
         else{
             deleteFromPreferencesList(preference: "photography")
             button.tintColor = .blue
-            photography_selected = true
+            photography_selected = false
+            if(!checkForOptionsLimit())
+            {
+                errorLabel.text = "You have selected more than 6 options. Please deselect one."
+                errorLabel.isHidden = false
+            }
+            else{
+                errorLabel.isHidden = true
+            }
         }
     }
 
     @IBAction func basketBallButton(_ sender: Any) {
         
         guard let button = sender as? UIButton else { return }
-        if basketball_selected
+        if !basketball_selected
         {
-            appendToPreferencesList(preference: "basketball")
-            button.tintColor = .yellow
-            basketball_selected = false
+
+            if(checkForOptionsLimit())
+            {
+                errorLabel.isHidden = true
+                appendToPreferencesList(preference: "basketball")
+                button.tintColor = .yellow
+                basketball_selected = true
+            }
+            else
+            {
+                errorLabel.text = "You have selected more than 6 options. Please deselect one."
+                errorLabel.isHidden = false
+            }
+            
+  
         }
         else{
             deleteFromPreferencesList(preference: "basketball")
             button.tintColor = .blue
-            basketball_selected = true
+            basketball_selected = false
+            if(!checkForOptionsLimit())
+            {
+                errorLabel.text = "You have selected more than 6 options. Please deselect one."
+                errorLabel.isHidden = false
+            }
+            else{
+                errorLabel.isHidden = true
+            }
         }
     }
 
     @IBAction func readingButton(_ sender: Any) {
         
         guard let button = sender as? UIButton else { return }
-        if reading_selected
+        if !reading_selected
         {
-            appendToPreferencesList(preference: "reading")
-            button.tintColor = .yellow
-            reading_selected = false
+  
+            if(checkForOptionsLimit())
+            {
+                errorLabel.isHidden = true
+                appendToPreferencesList(preference: "reading")
+                button.tintColor = .yellow
+                reading_selected = true
+            }
+            else
+            {
+                errorLabel.text = "You have selected more than 6 options. Please deselect one."
+                errorLabel.isHidden = false
+            }
+            
+
         }
         else{
             deleteFromPreferencesList(preference: "reading")
             button.tintColor = .blue
-            reading_selected = true
+            reading_selected = false
+            if(!checkForOptionsLimit())
+            {
+                errorLabel.text = "You have selected more than 6 options. Please deselect one."
+                errorLabel.isHidden = false
+            }
+            else{
+                errorLabel.isHidden = true
+            }
         }
     }
 
     @IBAction func runningButton(_ sender: Any) {
         
         guard let button = sender as? UIButton else { return }
-        if running_selected
+        if !running_selected
         {
-            appendToPreferencesList(preference: "running")
-            button.tintColor = .yellow
-            running_selected = false
+
+            if(checkForOptionsLimit())
+            {
+                errorLabel.isHidden = true
+                appendToPreferencesList(preference: "running")
+                button.tintColor = .yellow
+                running_selected = true
+            }
+            else
+            {
+                errorLabel.text = "You have selected more than 6 options. Please deselect one."
+                errorLabel.isHidden = false
+            }
+            
+
         }
         else{
             deleteFromPreferencesList(preference: "running")
             button.tintColor = .blue
-            running_selected = true
+            running_selected = false
+            if(!checkForOptionsLimit())
+            {
+                errorLabel.text = "You have selected more than 6 options. Please deselect one."
+                errorLabel.isHidden = false
+            }
+            else{
+                errorLabel.isHidden = true
+            }
         }
     }
     
