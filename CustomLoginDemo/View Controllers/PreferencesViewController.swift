@@ -28,11 +28,30 @@ class PreferencesViewController: UIViewController {
     var basketball_selected = true
     var reading_selected = true
     var running_selected = true
-    @IBOutlet weak var errorLabel: UILabel!
-    override func viewDidLoad() {
+    
+    @IBOutlet weak var selectPreferencesLabel: UILabel!
+    
+    var str = "please select six items"
+    override func viewDidLoad(){
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        let gesture = UITapGestureRecognizer(target:self, action: #selector(onClickView))
+        self.view.addGestureRecognizer(gesture)
     }
+    
+    @objc
+    func onClickView() {
+        for i in str{
+            selectPreferencesLabel.text! += "\(i)"
+            RunLoop.current.run(until: Date()+0.12)
+        }
+    }
+    
+    
+    @IBOutlet weak var errorLabel: UILabel!
+    //override func viewDidLoad() {
+        //super.viewDidLoad()
+        // Do any additional setup after loading the view.
+    //}
     func checkForOptionsLimit() -> Bool
     {
         let optionLimit = 6
@@ -374,3 +393,4 @@ class PreferencesViewController: UIViewController {
     */
 
 }
+
