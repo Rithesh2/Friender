@@ -444,7 +444,8 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="EDIT PREFERENCES"/>
                                 <connections>
-                                    <segue destination="PFT-Tc-gJn" kind="presentation" id="Awr-EI-VB6"/>
+                                    <action selector="editPreferenes:" destination="Mbi-ur-Egd" eventType="touchUpInside" id="nOh-bu-Tpv"/>
+                                    <segue destination="PFT-Tc-gJn" kind="presentation" identifier="editPreferencesSegue" id="Awr-EI-VB6"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="pencil.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="kYf-rt-leo">
@@ -681,7 +682,7 @@
         <!--Edit Preferences View Controller-->
         <scene sceneID="7Qx-Nm-XDO">
             <objects>
-                <viewController id="PFT-Tc-gJn" customClass="EditPreferencesViewController" sceneMemberID="viewController">
+                <viewController id="PFT-Tc-gJn" customClass="EditPreferencesViewController" customModule="CustomLoginDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HWm-5f-izE">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -691,6 +692,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="fd80ecec48eba2a9adb76e4133905879"/>
                                 <connections>
+                                    <action selector="eatingButton:" destination="PFT-Tc-gJn" eventType="touchUpInside" id="cHJ-qK-da4"/>
                                     <action selector="eatingButton:" destination="3bi-qv-3nN" eventType="touchUpInside" id="nT9-bd-sEl"/>
                                 </connections>
                             </button>
@@ -699,6 +701,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="f0e202e0e83cccf938ba82d35c85ed33"/>
                                 <connections>
+                                    <action selector="campingButton:" destination="PFT-Tc-gJn" eventType="touchUpInside" id="5kj-9W-big"/>
                                     <action selector="campingButton:" destination="3bi-qv-3nN" eventType="touchUpInside" id="bhq-dB-vw8"/>
                                 </connections>
                             </button>
@@ -707,6 +710,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="10684-200"/>
                                 <connections>
+                                    <action selector="sportsButton:" destination="PFT-Tc-gJn" eventType="touchUpInside" id="6Gm-5C-hlf"/>
                                     <action selector="sportsButton:" destination="3bi-qv-3nN" eventType="touchUpInside" id="kAM-yD-ClL"/>
                                 </connections>
                             </button>
@@ -716,6 +720,7 @@
                                 <state key="normal" title="Button" image="img_469468"/>
                                 <connections>
                                     <action selector="photographyButton:" destination="3bi-qv-3nN" eventType="touchUpInside" id="hIq-O8-arV"/>
+                                    <action selector="photographyButton:" destination="PFT-Tc-gJn" eventType="touchUpInside" id="xKX-b2-foE"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8OX-ru-9Dd">
@@ -724,6 +729,7 @@
                                 <state key="normal" title="Button" image="81412-200"/>
                                 <connections>
                                     <action selector="basketBallButton:" destination="3bi-qv-3nN" eventType="touchUpInside" id="7kb-dz-TXt"/>
+                                    <action selector="basketBallButton:" destination="PFT-Tc-gJn" eventType="touchUpInside" id="n9M-E3-RYC"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KN4-0y-LYw">
@@ -732,6 +738,7 @@
                                 <state key="normal" title="Button" image="130304"/>
                                 <connections>
                                     <action selector="readingButton:" destination="3bi-qv-3nN" eventType="touchUpInside" id="9RT-FL-fuj"/>
+                                    <action selector="readingButton:" destination="PFT-Tc-gJn" eventType="touchUpInside" id="cfp-bD-iSQ"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BZu-mE-aBH">
@@ -739,6 +746,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="1024px-Running_icon_-_Noun_Project_17825.svg"/>
                                 <connections>
+                                    <action selector="runningButton:" destination="PFT-Tc-gJn" eventType="touchUpInside" id="AGs-35-pJr"/>
                                     <action selector="runningButton:" destination="3bi-qv-3nN" eventType="touchUpInside" id="SYN-Co-rpy"/>
                                 </connections>
                             </button>
@@ -755,6 +763,7 @@
                                 <state key="normal" title="Button" image="3310358-200"/>
                                 <connections>
                                     <action selector="dancingButton:" destination="3bi-qv-3nN" eventType="touchUpInside" id="kst-4m-elj"/>
+                                    <action selector="dancingButton:" destination="PFT-Tc-gJn" eventType="touchUpInside" id="o0a-Yl-M8U"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lf0-wH-tEA">
@@ -763,6 +772,7 @@
                                 <state key="normal" image="img_543487"/>
                                 <connections>
                                     <action selector="technologyButton:" destination="3bi-qv-3nN" eventType="touchUpInside" id="LXE-wN-cL6"/>
+                                    <action selector="technologyButton:" destination="PFT-Tc-gJn" eventType="touchUpInside" id="a9I-Mm-qwt"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qPt-dr-Bpm">
@@ -770,6 +780,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="planting-1444113-1222073"/>
                                 <connections>
+                                    <action selector="gardeningButton:" destination="PFT-Tc-gJn" eventType="touchUpInside" id="QRz-MW-D6F"/>
                                     <action selector="gardeningButton:" destination="3bi-qv-3nN" eventType="touchUpInside" id="mRl-W3-HmI"/>
                                 </connections>
                             </button>
@@ -778,6 +789,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="15900-200"/>
                                 <connections>
+                                    <action selector="bikingButton:" destination="PFT-Tc-gJn" eventType="touchUpInside" id="7A2-xC-rrQ"/>
                                     <action selector="bikingButton:" destination="3bi-qv-3nN" eventType="touchUpInside" id="nMa-ih-QJ9"/>
                                 </connections>
                             </button>
@@ -786,6 +798,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="b3416cdaa1cf55b3c12d66498f5bc14d"/>
                                 <connections>
+                                    <action selector="paintingButton:" destination="PFT-Tc-gJn" eventType="touchUpInside" id="KMA-dN-bcL"/>
                                     <action selector="paintingButton:" destination="3bi-qv-3nN" eventType="touchUpInside" id="fjX-jj-gvW"/>
                                 </connections>
                             </button>
@@ -795,6 +808,7 @@
                                 <state key="normal" title="Button" image="45242-200"/>
                                 <connections>
                                     <action selector="hikingButton:" destination="3bi-qv-3nN" eventType="touchUpInside" id="UIR-St-Jrf"/>
+                                    <action selector="hikingButton:" destination="PFT-Tc-gJn" eventType="touchUpInside" id="iLY-7D-wLP"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cZg-6b-6En">
@@ -802,7 +816,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="684-200"/>
                                 <connections>
-                                    <action selector="swimmingButton:" destination="3bi-qv-3nN" eventType="touchUpInside" id="WeX-kr-DvN"/>
+                                    <action selector="swimmingButton:" destination="PFT-Tc-gJn" eventType="touchUpInside" id="nxq-hl-kSc"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="67D-CX-vcA">
@@ -810,13 +824,31 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="music+note+sound+icon-1320183235697157602"/>
                                 <connections>
-                                    <action selector="musicButton:" destination="3bi-qv-3nN" eventType="touchUpInside" id="odI-b3-eDB"/>
+                                    <action selector="musicButton:" destination="PFT-Tc-gJn" eventType="touchUpInside" id="4Po-wr-JJd"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="9h7-0y-3On"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <connections>
+                        <outlet property="basketballB" destination="8OX-ru-9Dd" id="dYa-h3-H6F"/>
+                        <outlet property="bikingB" destination="a0a-IP-iU3" id="cJK-8q-7Tl"/>
+                        <outlet property="campingB" destination="Uzu-RB-JTg" id="608-6b-DSL"/>
+                        <outlet property="dancingB" destination="IzR-cd-2cm" id="A4b-5S-I8s"/>
+                        <outlet property="eatingB" destination="uQK-1o-oSu" id="mMa-1h-PKB"/>
+                        <outlet property="errorLabel" destination="Qva-Hl-neB" id="sFw-Ci-rIZ"/>
+                        <outlet property="gardeningB" destination="qPt-dr-Bpm" id="ajJ-CN-Oxp"/>
+                        <outlet property="hikingB" destination="qsS-Z8-N0r" id="ZEg-0N-Uml"/>
+                        <outlet property="musicB" destination="67D-CX-vcA" id="YKw-vo-xwa"/>
+                        <outlet property="paintingB" destination="gU5-na-0T8" id="xHs-cG-yEu"/>
+                        <outlet property="photographyB" destination="BJb-Gg-1Eq" id="VQy-82-mME"/>
+                        <outlet property="readingB" destination="KN4-0y-LYw" id="XpI-UL-HgD"/>
+                        <outlet property="runningB" destination="BZu-mE-aBH" id="PF2-Dh-zHg"/>
+                        <outlet property="sportsB" destination="Uws-zp-3Z9" id="PKr-6v-Y8G"/>
+                        <outlet property="swimmingB" destination="cZg-6b-6En" id="wQo-7Q-Lkv"/>
+                        <outlet property="technologyB" destination="lf0-wH-tEA" id="dkM-SZ-9nV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2ZW-Qt-qlD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

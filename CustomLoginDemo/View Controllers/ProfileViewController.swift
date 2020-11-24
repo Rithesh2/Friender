@@ -11,10 +11,11 @@ import UIKit
 class ProfileViewController: UIViewController {
   
     @IBOutlet weak var userNameLabel: UILabel!
+    var fUser: MyUser? = nil
     override func viewDidLoad() {
         super.viewDidLoad()
         let tbvc = self.tabBarController  as! CustomTabBarController
-        let fUser = tbvc.fUser
+        fUser = tbvc.fUser
         let userFullName = fUser!.firstName + " " + fUser!.lastName
         userNameLabel.text = userFullName
  
@@ -23,6 +24,18 @@ class ProfileViewController: UIViewController {
     }
     
 
+    @IBAction func editPreferenes(_ sender: Any) {
+        performSegue(withIdentifier: "editPreferencesSegue", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "editPreferencesSegue" {
+            let vc: EditPreferencesViewController = segue.destination as! EditPreferencesViewController
+            vc.fUser = fUser
+
+        }
+    }
+    
     /*
     // MARK: - Navigation
 

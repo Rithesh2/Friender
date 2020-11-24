@@ -22,6 +22,7 @@
 		2C07587B24CE616900E51662 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2C07587A24CE616900E51662 /* GoogleService-Info.plist */; };
 		2C07587D24CE86C500E51662 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C07587C24CE86C500E51662 /* Constants.swift */; };
 		2C3D77DF25634B4E0082A274 /* CustomUITableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C3D77DE25634B4E0082A274 /* CustomUITableViewCell.xib */; };
+		2C4C3FBB256D70B0001DE4D1 /* EditPreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4C3FBA256D70B0001DE4D1 /* EditPreferencesViewController.swift */; };
 		2C858BAD2561CD2F00491F42 /* PreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C858BAC2561CD2F00491F42 /* PreferencesViewController.swift */; };
 		2C96C0882560FB6C00E7191F /* MyUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C96C0872560FB6C00E7191F /* MyUser.swift */; };
 		2C96C08A2560FEDD00E7191F /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C96C0892560FEDD00E7191F /* CustomTabBarController.swift */; };
@@ -36,7 +37,6 @@
 		F1851E3E256B78450005116E /* ProfilePicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1851E3D256B78450005116E /* ProfilePicViewController.swift */; };
 		F1851E43256B786D0005116E /* EditProfilePicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1851E42256B786D0005116E /* EditProfilePicViewController.swift */; };
 		F1851E48256B789E0005116E /* EditBioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1851E47256B789E0005116E /* EditBioViewController.swift */; };
-		F1851E50256B79330005116E /* EditPreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1851E4F256B79330005116E /* EditPreferencesViewController.swift */; };
 		F1B54D4D2567682D00A8D59F /* MatchingAlgorithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B54D4C2567682D00A8D59F /* MatchingAlgorithm.swift */; };
 /* End PBXBuildFile section */
 
@@ -79,6 +79,7 @@
 		2C07587A24CE616900E51662 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2C07587C24CE86C500E51662 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		2C3D77DE25634B4E0082A274 /* CustomUITableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomUITableViewCell.xib; sourceTree = "<group>"; };
+		2C4C3FBA256D70B0001DE4D1 /* EditPreferencesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPreferencesViewController.swift; sourceTree = "<group>"; };
 		2C858BAC2561CD2F00491F42 /* PreferencesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesViewController.swift; sourceTree = "<group>"; };
 		2C96C0872560FB6C00E7191F /* MyUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyUser.swift; sourceTree = "<group>"; };
 		2C96C0892560FEDD00E7191F /* CustomTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
@@ -99,7 +100,6 @@
 		F1851E3D256B78450005116E /* ProfilePicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePicViewController.swift; sourceTree = "<group>"; };
 		F1851E42256B786D0005116E /* EditProfilePicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfilePicViewController.swift; sourceTree = "<group>"; };
 		F1851E47256B789E0005116E /* EditBioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditBioViewController.swift; sourceTree = "<group>"; };
-		F1851E4F256B79330005116E /* EditPreferencesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPreferencesViewController.swift; sourceTree = "<group>"; };
 		F1B54D4C2567682D00A8D59F /* MatchingAlgorithm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchingAlgorithm.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -211,12 +211,12 @@
 				F1459FEC255E71FD002A5F71 /* PreviousMatchesViewController.swift */,
 				2C3D77DE25634B4E0082A274 /* CustomUITableViewCell.xib */,
 				2C858BAC2561CD2F00491F42 /* PreferencesViewController.swift */,
+				2C4C3FBA256D70B0001DE4D1 /* EditPreferencesViewController.swift */,
 				F1851E38256B77D90005116E /* BioViewController.swift */,
 				F1851E3D256B78450005116E /* ProfilePicViewController.swift */,
 				F1459FF6255E722B002A5F71 /* ProfileViewController.swift */,
 				F1851E42256B786D0005116E /* EditProfilePicViewController.swift */,
 				F1851E47256B789E0005116E /* EditBioViewController.swift */,
-				F1851E4F256B79330005116E /* EditPreferencesViewController.swift */,
 				2C07587C24CE86C500E51662 /* Constants.swift */,
 			);
 			path = "View Controllers";
@@ -511,7 +511,7 @@
 				F1851E39256B77D90005116E /* BioViewController.swift in Sources */,
 				2C96C08A2560FEDD00E7191F /* CustomTabBarController.swift in Sources */,
 				F1B54D4D2567682D00A8D59F /* MatchingAlgorithm.swift in Sources */,
-				F1851E50256B79330005116E /* EditPreferencesViewController.swift in Sources */,
+				2C4C3FBB256D70B0001DE4D1 /* EditPreferencesViewController.swift in Sources */,
 				2C07587524CE40F500E51662 /* HomeViewController.swift in Sources */,
 				2C07587D24CE86C500E51662 /* Constants.swift in Sources */,
 			);
