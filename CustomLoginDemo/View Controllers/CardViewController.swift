@@ -14,13 +14,23 @@ class CardViewController: UIViewController {
     @IBOutlet weak var nameLabel: UILabel!
     var divisor: CGFloat!
     var index = 1
-    var names: Array<String> = ["rohit", "divya", "rithesh"]
+    var fUser: MyUser? = nil
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        let tbvc = self.tabBarController  as! CustomTabBarController
+        fUser = tbvc.fUser
         card.layer.borderWidth = 10
         card.layer.borderColor = UIColor.red.cgColor
         divisor = (view.frame.width / 2) / 0.61//0.61 is the radians for 35 degrees
-        nameLabel.text = names[0]
+        self.findFirstName(uid: self.fUser!.matches[0]) { (fN) in
+            var fullName = fN + " "
+            self.findLastName(uid: self.fUser!.matches[0]) { (lastName) in
+                fullName += lastName
+                self.nameLabel.text = fullName
+            }
+        }
+       
         // Do any additional setup after loading the view.
     }
     
@@ -67,14 +77,24 @@ class CardViewController: UIViewController {
     func getNewCard(){
 
         UIView.animate(withDuration: 1, animations: {
-            self.nameLabel.text = self.names[self.index]
-            if(self.index == self.names.count-1)
-            {
-                self.index = 0
+            let match = self.fUser!.matches[self.index]
+            var fullName = ""
+            self.findFirstName(uid: match) { (fN) in
+                fullName = fN + " "
+                self.findLastName(uid: match) { (lastName) in
+                    fullName += lastName
+                    self.nameLabel.text = fullName
+                    if(self.index == self.fUser!.matches.count - 1)
+                    {
+                        self.index = 0
+                    }
+                    else{
+                        self.index = self.index + 1
+                    }
+                }
+ 
             }
-            else{
-                self.index = self.index + 1
-            }
+
             self.card.center = self.view.center
             self.card.alpha = 1
             self.card.transform = .identity
