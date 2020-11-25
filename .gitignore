@@ -4,7 +4,12 @@
 
 ## User settings
 xcuserdata/
+<<<<<<< HEAD
 .DS_Store
+=======
+.DS_store
+
+>>>>>>> 5e458cb320f4ec7dce775576d109c1969a1e4ab7
 ## compatibility with Xcode 8 and earlier (ignoring not required starting Xcode 9)
 *.xcscmblueprint
 *.xccheckout
