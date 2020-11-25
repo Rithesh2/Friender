@@ -30,23 +30,21 @@ class PreferencesViewController: UIViewController {
     var running_selected = false
     
     @IBOutlet weak var selectPreferencesLabel: UILabel!
-    
-    var str = "please select six items"
-    override func viewDidLoad(){
+    override func viewDidLoad() {
         super.viewDidLoad()
-        let gesture = UITapGestureRecognizer(target:self, action: #selector(onClickView))
-        self.view.addGestureRecognizer(gesture)
-    }
-    
-    @objc
-    func onClickView() {
-        for i in str{
-            selectPreferencesLabel.text! += "\(i)"
-            RunLoop.current.run(until: Date()+0.12)
+
+        selectPreferencesLabel.text = ""
+        let titleText = "please select six items"
+        var charIndex = 0.0
+        for letter in titleText{
+            Timer.scheduledTimer(withTimeInterval: 0.1 * charIndex, repeats: false) { (timer) in
+                self.selectPreferencesLabel.text?.append(letter)
+            }
+             charIndex += 1
         }
-    }
-    
-    
+
+       }
+
     @IBOutlet weak var errorLabel: UILabel!
     //override func viewDidLoad() {
         //super.viewDidLoad()
@@ -669,6 +667,15 @@ class PreferencesViewController: UIViewController {
             }
         }
     }
+    
+    
+    @IBAction func nextButton(_ sender: Any) {
+    }
+    
+    
+    
+    
+    
     
     /*
     // MARK: - Navigation
