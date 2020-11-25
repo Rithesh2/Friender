@@ -668,6 +668,15 @@ class PreferencesViewController: UIViewController {
         }
     }
     
+    
+    @IBAction func nextButton(_ sender: Any) {
+    }
+    
+    
+    
+    
+    
+    
     /*
     // MARK: - Navigation
 
