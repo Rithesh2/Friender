@@ -34,7 +34,7 @@ class PreferencesViewController: UIViewControllerX {
         super.viewDidLoad()
 
         selectPreferencesLabel.text = ""
-        let titleText = "please select six items"
+        let titleText = "please select six preferences"
         var charIndex = 0.0
         for letter in titleText{
             Timer.scheduledTimer(withTimeInterval: 0.08 * charIndex, repeats: false) { (timer) in
