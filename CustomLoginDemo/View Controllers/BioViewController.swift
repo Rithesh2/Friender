@@ -11,7 +11,7 @@ import FirebaseAuth
 import FirebaseFirestore
 import Firebase
 
-class BioViewController: UIViewController {
+class BioViewController: UIViewControllerX {
     @IBOutlet weak var enterBioLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()

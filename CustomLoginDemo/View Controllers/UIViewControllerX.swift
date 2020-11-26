@@ -1,19 +1,18 @@
 //
-//  PreviousMatchesViewController.swift
+//  UIViewControllerX.swift
 //  CustomLoginDemo
 //
-//  Created by Divya Kunisetty on 11/12/20.
+//  Created by Rohit Ravi on 11/25/20.
 //  Copyright © 2020 Rohit Ravi. All rights reserved.
 //
 
 import UIKit
 
-class PreviousMatchesViewController: UIViewControllerX {
+class UIViewControllerX: UIViewController {
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        let tbvc = self.tabBarController  as! CustomTabBarController
-        let fUser = tbvc.fUser
-        print("previousMatches" + fUser!.uid)
+        self.view.backgroundColor = UIColor.init(red: 255/255, green: 254/255, blue: 242/255, alpha: 1)
         // Do any additional setup after loading the view.
     }
     
@@ -29,4 +28,3 @@ class PreviousMatchesViewController: UIViewControllerX {
     */
 
 }
-

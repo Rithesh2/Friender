@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CardViewController: UIViewController {
+class CardViewController: UIViewControllerX {
 
     @IBOutlet weak var card: UIView!
     @IBOutlet weak var nameLabel: UILabel!

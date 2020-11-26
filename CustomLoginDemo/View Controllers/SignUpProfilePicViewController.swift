@@ -11,7 +11,7 @@ import FirebaseAuth
 import FirebaseFirestore
 import Firebase
 
-class SignUpProfilePictureViewController: UIViewController {
+class SignUpProfilePictureViewController: UIViewControllerX {
 
     @IBOutlet weak var uploadPFPLabel: UILabel!
     override func viewDidLoad() {

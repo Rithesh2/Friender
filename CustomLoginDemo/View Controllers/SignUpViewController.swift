@@ -11,7 +11,7 @@ import FirebaseAuth
 import FirebaseFirestore
 import Firebase
 
-class SignUpViewController: UIViewController {
+class SignUpViewController: UIViewControllerX {
 
     @IBOutlet weak var firstNameTextField: UITextField!
     @IBOutlet weak var lastNameTextField: UITextField!
@@ -22,7 +22,7 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var errorLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-     
+        self.view.backgroundColor = UIColor.init(red: 255/255, green: 254/255, blue: 242/255, alpha: 1)
         // Do any additional setup after loading the view.
         setUpElements()
     }

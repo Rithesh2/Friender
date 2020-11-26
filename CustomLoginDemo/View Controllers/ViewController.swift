@@ -8,7 +8,7 @@
 
 import UIKit
 import AVKit
-class ViewController: UIViewController {
+class ViewController: UIViewControllerX {
 
     var videoPlayer:AVPlayer?
     var videoPlayerLayer:AVPlayerLayer?
@@ -20,9 +20,9 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         setUpElements()
     }
-    override func viewWillAppear(_ animated: Bool) {
+   /* override func viewWillAppear(_ animated: Bool) {
         setUpVideo()
-    }
+    } */
     func setUpElements()
     {
         Utilities.styleFilledButton(signUpButton)

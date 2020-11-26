@@ -11,7 +11,7 @@ import FirebaseAuth
 import FirebaseFirestore
 import Firebase
 
-class EditPreferencesViewController: UIViewController {
+class EditPreferencesViewController: UIViewControllerX {
     var fUser: MyUser? = nil
     var music_selected = false
     var swimming_selected = false

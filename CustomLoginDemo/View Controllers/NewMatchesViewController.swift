@@ -4,7 +4,7 @@ import FirebaseAuth
 import FirebaseFirestore
 import Firebase
 
-class NewMatchesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class NewMatchesViewController: UIViewControllerX, UITableViewDataSource, UITableViewDelegate {
    var fUser: MyUser? = nil
    
    @IBOutlet weak var tableView: UITableView!

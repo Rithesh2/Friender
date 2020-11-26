@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ProfileViewController: UIViewController {
+class ProfileViewController: UIViewControllerX {
   
     @IBOutlet weak var userNameLabel: UILabel!
     var fUser: MyUser? = nil

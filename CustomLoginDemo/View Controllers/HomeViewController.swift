@@ -11,7 +11,7 @@ import FirebaseAuth
 import FirebaseFirestore
 import Firebase
 
-class HomeViewController: UIViewController {
+class HomeViewController: UIViewControllerX {
 
 
     var match: String = ""

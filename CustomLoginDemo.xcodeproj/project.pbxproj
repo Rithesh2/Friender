@@ -24,6 +24,7 @@
 		2C3D77DF25634B4E0082A274 /* CustomUITableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C3D77DE25634B4E0082A274 /* CustomUITableViewCell.xib */; };
 		2C4C3FBB256D70B0001DE4D1 /* EditPreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4C3FBA256D70B0001DE4D1 /* EditPreferencesViewController.swift */; };
 		2C4C3FC0256DBD70001DE4D1 /* CardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4C3FBF256DBD70001DE4D1 /* CardViewController.swift */; };
+		2C4C3FD0256F3D77001DE4D1 /* UIViewControllerX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4C3FCF256F3D77001DE4D1 /* UIViewControllerX.swift */; };
 		2C858BAD2561CD2F00491F42 /* PreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C858BAC2561CD2F00491F42 /* PreferencesViewController.swift */; };
 		2C96C0882560FB6C00E7191F /* MyUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C96C0872560FB6C00E7191F /* MyUser.swift */; };
 		2C96C08A2560FEDD00E7191F /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C96C0892560FEDD00E7191F /* CustomTabBarController.swift */; };
@@ -82,6 +83,7 @@
 		2C3D77DE25634B4E0082A274 /* CustomUITableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomUITableViewCell.xib; sourceTree = "<group>"; };
 		2C4C3FBA256D70B0001DE4D1 /* EditPreferencesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPreferencesViewController.swift; sourceTree = "<group>"; };
 		2C4C3FBF256DBD70001DE4D1 /* CardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewController.swift; sourceTree = "<group>"; };
+		2C4C3FCF256F3D77001DE4D1 /* UIViewControllerX.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerX.swift; sourceTree = "<group>"; };
 		2C858BAC2561CD2F00491F42 /* PreferencesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesViewController.swift; sourceTree = "<group>"; };
 		2C96C0872560FB6C00E7191F /* MyUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyUser.swift; sourceTree = "<group>"; };
 		2C96C0892560FEDD00E7191F /* CustomTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
@@ -204,6 +206,7 @@
 			isa = PBXGroup;
 			children = (
 				2C07584424CE3FF200E51662 /* ViewController.swift */,
+				2C4C3FCF256F3D77001DE4D1 /* UIViewControllerX.swift */,
 				2C96C0892560FEDD00E7191F /* CustomTabBarController.swift */,
 				2C07587024CE40B700E51662 /* SignUpViewController.swift */,
 				2C07587224CE40D500E51662 /* LoginViewController.swift */,
@@ -514,6 +517,7 @@
 				2C07584324CE3FF200E51662 /* SceneDelegate.swift in Sources */,
 				F1851E39256B77D90005116E /* BioViewController.swift in Sources */,
 				2C96C08A2560FEDD00E7191F /* CustomTabBarController.swift in Sources */,
+				2C4C3FD0256F3D77001DE4D1 /* UIViewControllerX.swift in Sources */,
 				F1B54D4D2567682D00A8D59F /* MatchingAlgorithm.swift in Sources */,
 				2C4C3FBB256D70B0001DE4D1 /* EditPreferencesViewController.swift in Sources */,
 				2C07587524CE40F500E51662 /* HomeViewController.swift in Sources */,
