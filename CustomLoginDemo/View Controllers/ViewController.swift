@@ -8,6 +8,10 @@
 
 import UIKit
 import AVKit
+import FirebaseAuth
+import FirebaseFirestore
+import Firebase
+
 class ViewController: UIViewControllerX {
 
     var videoPlayer:AVPlayer?
@@ -29,6 +33,30 @@ class ViewController: UIViewControllerX {
         Utilities.styleHollowButton(loginButton)
     }
     
+    @IBAction func resetButton(_ sender: Any) {
+        let db = Firestore.firestore()
+        db.collection("users").getDocuments() { (querySnapshot, err) in
+            if let err = err {
+                print("Error getting documents: \(err)")
+                return
+            }
+            
+            var copyDocuments = querySnapshot!.documents
+            print(copyDocuments)
+ 
+            for (index, element) in copyDocuments.enumerated() {
+                if(copyDocuments[index].data()["preferences"] == nil)
+                {
+                    querySnapshot!.documents[index].reference.delete()
+                    
+                }
+            }
+                // print(users)
+                
+                //print(document.data())
+                //print(document.get("preferences")!)
+            }
+    }
     func setUpVideo()
     {
         let bundlePath = Bundle.main.path(forResource: "loginbg", ofType: "mp4")
