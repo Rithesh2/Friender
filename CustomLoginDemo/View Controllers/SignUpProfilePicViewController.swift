@@ -21,7 +21,7 @@ class SignUpProfilePictureViewController: UIViewControllerX {
         let titleText = "please upload your profile picture"
         var charIndex = 0.0
         for letter in titleText{
-            Timer.scheduledTimer(withTimeInterval: 0.1 * charIndex, repeats: false) { (timer) in
+            Timer.scheduledTimer(withTimeInterval: 0.08 * charIndex, repeats: false) { (timer) in
                 self.uploadPFPLabel.text?.append(letter)
             }
              charIndex += 1

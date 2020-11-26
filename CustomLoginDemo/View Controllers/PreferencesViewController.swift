@@ -23,7 +23,7 @@ class PreferencesViewController: UIViewControllerX {
     var dancing_selected = false
     var eating_selected = false
     var camping_selected = false
-    var sports_selected = false
+    var workingout_selected = false
     var photography_selected = false
     var basketball_selected = false
     var reading_selected = false
@@ -37,7 +37,7 @@ class PreferencesViewController: UIViewControllerX {
         let titleText = "please select six items"
         var charIndex = 0.0
         for letter in titleText{
-            Timer.scheduledTimer(withTimeInterval: 0.1 * charIndex, repeats: false) { (timer) in
+            Timer.scheduledTimer(withTimeInterval: 0.08 * charIndex, repeats: false) { (timer) in
                 self.selectPreferencesLabel.text?.append(letter)
             }
              charIndex += 1
@@ -147,7 +147,7 @@ class PreferencesViewController: UIViewControllerX {
             {
                 errorLabel.isHidden = false
                 appendToPreferencesList(preference: "music")
-                button.tintColor = .yellow
+                button.tintColor = .systemTeal
                 music_selected = true
             }
             else
@@ -159,7 +159,7 @@ class PreferencesViewController: UIViewControllerX {
         }
         else{
             deleteFromPreferencesList(preference: "music")
-            button.tintColor = .blue
+            button.tintColor = .lightGray
             music_selected = false
             if(!checkForOptionsLimit())
             {
@@ -181,7 +181,7 @@ class PreferencesViewController: UIViewControllerX {
             {
                 errorLabel.isHidden = true
                 appendToPreferencesList(preference: "swimming")
-                button.tintColor = .yellow
+                button.tintColor = .systemTeal
                 swimming_selected = true
             }
             else
@@ -194,7 +194,7 @@ class PreferencesViewController: UIViewControllerX {
         }
         else{
             deleteFromPreferencesList(preference: "swimming")
-            button.tintColor = .blue
+            button.tintColor = .lightGray
             swimming_selected = false
             if(!checkForOptionsLimit())
             {
@@ -216,7 +216,7 @@ class PreferencesViewController: UIViewControllerX {
             {
                 errorLabel.isHidden = true
                 appendToPreferencesList(preference: "hiking")
-                button.tintColor = .yellow
+                button.tintColor = .systemTeal
                 hiking_selected = true
             }
             else
@@ -229,7 +229,7 @@ class PreferencesViewController: UIViewControllerX {
         }
         else{
             deleteFromPreferencesList(preference: "hiking")
-            button.tintColor = .blue
+            button.tintColor = .lightGray
             hiking_selected = false
             if(!checkForOptionsLimit())
             {
@@ -251,7 +251,7 @@ class PreferencesViewController: UIViewControllerX {
             {
                 errorLabel.isHidden = true
                 appendToPreferencesList(preference: "gardening")
-                button.tintColor = .yellow
+                button.tintColor = .systemTeal
                 gardening_selected = true
             }
             else
@@ -264,7 +264,7 @@ class PreferencesViewController: UIViewControllerX {
         }
         else{
             deleteFromPreferencesList(preference: "gardening")
-            button.tintColor = .blue
+            button.tintColor = .lightGray
             gardening_selected = false
             if(!checkForOptionsLimit())
             {
@@ -285,7 +285,7 @@ class PreferencesViewController: UIViewControllerX {
             {
                 errorLabel.isHidden = true
                 appendToPreferencesList(preference: "biking")
-                button.tintColor = .yellow
+                button.tintColor = .systemTeal
                 biking_selected = true
             }
             else
@@ -298,7 +298,7 @@ class PreferencesViewController: UIViewControllerX {
         }
         else{
             deleteFromPreferencesList(preference: "biking")
-            button.tintColor = .blue
+            button.tintColor = .lightGray
             biking_selected = false
             if(!checkForOptionsLimit())
             {
@@ -319,7 +319,7 @@ class PreferencesViewController: UIViewControllerX {
             {
                 errorLabel.isHidden = true
                 appendToPreferencesList(preference: "painting")
-                button.tintColor = .yellow
+                button.tintColor = .systemTeal
                 painting_selected = true
             }
             else
@@ -332,7 +332,7 @@ class PreferencesViewController: UIViewControllerX {
         }
         else{
             deleteFromPreferencesList(preference: "painting")
-            button.tintColor = .blue
+            button.tintColor = .lightGray
             painting_selected = false
             if(!checkForOptionsLimit())
             {
@@ -354,7 +354,7 @@ class PreferencesViewController: UIViewControllerX {
             {
                 errorLabel.isHidden = true
                 appendToPreferencesList(preference: "technology")
-                button.tintColor = .yellow
+                button.tintColor = .systemTeal
                 technology_selected = true
             }
             else
@@ -368,7 +368,7 @@ class PreferencesViewController: UIViewControllerX {
         }
         else{
             deleteFromPreferencesList(preference: "technology")
-            button.tintColor = .blue
+            button.tintColor = .lightGray
             technology_selected = false
             if(!checkForOptionsLimit())
             {
@@ -390,7 +390,7 @@ class PreferencesViewController: UIViewControllerX {
             {
                 errorLabel.isHidden = true
                 appendToPreferencesList(preference: "dancing")
-                button.tintColor = .yellow
+                button.tintColor = .systemTeal
                 dancing_selected = true
             }
             else
@@ -403,7 +403,7 @@ class PreferencesViewController: UIViewControllerX {
         }
         else{
             deleteFromPreferencesList(preference: "dancing")
-            button.tintColor = .blue
+            button.tintColor = .lightGray
             dancing_selected = false
             if(!checkForOptionsLimit())
             {
@@ -425,7 +425,7 @@ class PreferencesViewController: UIViewControllerX {
             {
                 errorLabel.isHidden = true
                 appendToPreferencesList(preference: "eating")
-                button.tintColor = .yellow
+                button.tintColor = .systemTeal
                 eating_selected = true
             }
             else
@@ -438,7 +438,7 @@ class PreferencesViewController: UIViewControllerX {
         }
         else{
             deleteFromPreferencesList(preference: "eating")
-            button.tintColor = .blue
+            button.tintColor = .lightGray
             eating_selected = false
             if(!checkForOptionsLimit())
             {
@@ -460,7 +460,7 @@ class PreferencesViewController: UIViewControllerX {
             {
                 errorLabel.isHidden = true
                 appendToPreferencesList(preference: "camping")
-                button.tintColor = .yellow
+                button.tintColor = .systemTeal
                 camping_selected = true
             }
             else
@@ -473,7 +473,7 @@ class PreferencesViewController: UIViewControllerX {
         }
         else{
             deleteFromPreferencesList(preference: "camping")
-            button.tintColor = .blue
+            button.tintColor = .lightGray
             camping_selected = false
             if(!checkForOptionsLimit())
             {
@@ -486,19 +486,19 @@ class PreferencesViewController: UIViewControllerX {
         }
     }
     
-
-    @IBAction func sportsButton(_ sender: Any) {
-        
+    
+    @IBAction func workingoutButton(_ sender: Any) {
+    
         guard let button = sender as? UIButton else { return }
-        if !sports_selected
+        if !workingout_selected
         {
 
             if(checkForOptionsLimit())
             {
                 errorLabel.isHidden = true
                 appendToPreferencesList(preference: "sports")
-                button.tintColor = .yellow
-                sports_selected = true
+                button.tintColor = .systemTeal
+                workingout_selected = true
             }
             else
             {
@@ -510,8 +510,8 @@ class PreferencesViewController: UIViewControllerX {
         }
         else{
             deleteFromPreferencesList(preference: "sports")
-            button.tintColor = .blue
-            sports_selected = false
+            button.tintColor = .lightGray
+            workingout_selected = false
             if(!checkForOptionsLimit())
             {
                 errorLabel.text = "You have selected more than 6 options. Please deselect one."
@@ -522,7 +522,6 @@ class PreferencesViewController: UIViewControllerX {
             }
         }
     }
-    
 
     @IBAction func photographyButton(_ sender: Any) {
         
@@ -534,7 +533,7 @@ class PreferencesViewController: UIViewControllerX {
             {
                 errorLabel.isHidden = true
                 appendToPreferencesList(preference: "photography")
-                button.tintColor = .yellow
+                button.tintColor = .systemTeal
                 photography_selected = true
             }
             else
@@ -547,7 +546,7 @@ class PreferencesViewController: UIViewControllerX {
         }
         else{
             deleteFromPreferencesList(preference: "photography")
-            button.tintColor = .blue
+            button.tintColor = .lightGray
             photography_selected = false
             if(!checkForOptionsLimit())
             {
@@ -570,7 +569,7 @@ class PreferencesViewController: UIViewControllerX {
             {
                 errorLabel.isHidden = true
                 appendToPreferencesList(preference: "basketball")
-                button.tintColor = .yellow
+                button.tintColor = .systemTeal
                 basketball_selected = true
             }
             else
@@ -583,7 +582,7 @@ class PreferencesViewController: UIViewControllerX {
         }
         else{
             deleteFromPreferencesList(preference: "basketball")
-            button.tintColor = .blue
+            button.tintColor = .lightGray
             basketball_selected = false
             if(!checkForOptionsLimit())
             {
@@ -606,7 +605,7 @@ class PreferencesViewController: UIViewControllerX {
             {
                 errorLabel.isHidden = true
                 appendToPreferencesList(preference: "reading")
-                button.tintColor = .yellow
+                button.tintColor = .systemTeal
                 reading_selected = true
             }
             else
@@ -619,7 +618,7 @@ class PreferencesViewController: UIViewControllerX {
         }
         else{
             deleteFromPreferencesList(preference: "reading")
-            button.tintColor = .blue
+            button.tintColor = .lightGray
             reading_selected = false
             if(!checkForOptionsLimit())
             {
@@ -642,7 +641,7 @@ class PreferencesViewController: UIViewControllerX {
             {
                 errorLabel.isHidden = true
                 appendToPreferencesList(preference: "running")
-                button.tintColor = .yellow
+                button.tintColor = .systemTeal
                 running_selected = true
             }
             else
@@ -655,7 +654,7 @@ class PreferencesViewController: UIViewControllerX {
         }
         else{
             deleteFromPreferencesList(preference: "running")
-            button.tintColor = .blue
+            button.tintColor = .lightGray
             running_selected = false
             if(!checkForOptionsLimit())
             {
