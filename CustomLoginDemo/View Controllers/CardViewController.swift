@@ -22,7 +22,7 @@ class CardViewController: UIViewControllerX {
         fUser = tbvc.fUser
         card.layer.borderWidth = 10
         card.layer.borderColor = UIColor.red.cgColor
-        divisor = (view.frame.width / 2) / 0.61//0.61 is the radians for 35 degrees
+        divisor = (view.frame.width / 2) / 0.435//0.61 is the radians for 35 degrees
         self.findFirstName(uid: self.fUser!.matches[0]) { (fN) in
             var fullName = fN + " "
             self.findLastName(uid: self.fUser!.matches[0]) { (lastName) in
@@ -51,7 +51,7 @@ class CardViewController: UIViewControllerX {
                     card.alpha = 0
                 })
                 card.alpha = 0
-                card.center = CGPoint(x: view.center.x + 300, y: card.center.y + 75)
+               // card.center = CGPoint(x: view.center.x + 300, y: card.center.y + 75)
                 DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
                     self.getNewCard()
                 }
@@ -76,7 +76,7 @@ class CardViewController: UIViewControllerX {
     
     func getNewCard(){
 
-        UIView.animate(withDuration: 1, animations: {
+        UIView.animate(withDuration: 0.7, animations: {
             let match = self.fUser!.matches[self.index]
             var fullName = ""
             self.findFirstName(uid: match) { (fN) in
