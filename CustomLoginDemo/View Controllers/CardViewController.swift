@@ -38,7 +38,7 @@ class CardViewController: UIViewControllerX {
         let card = sender.view!
         let point = sender.translation(in: view)
         let xFromCenter = card.center.x - view.center.x
-        let delay = 0.6
+        let delay = 0.5
         card.center = CGPoint(x: view.center.x + point.x, y: view.center.y + point.y)
         
         let scale = min(100/abs(xFromCenter), 1)
@@ -58,7 +58,7 @@ class CardViewController: UIViewControllerX {
                 return
             }
             else if card.center.x > (view.frame.width-75){
-                UIView.animate(withDuration: 0.3, animations: { card.center = CGPoint(x: card.center.x + 200, y: card.center.y + 75)
+                UIView.animate(withDuration: 0.5, animations: { card.center = CGPoint(x: card.center.x + 200, y: card.center.y + 75)
                     card.alpha = 0 
                 })
     
