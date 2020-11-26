@@ -19,6 +19,7 @@ class SignUpProfilePictureViewController: UIViewControllerX {
 
         uploadPFPLabel.text = ""
         let titleText = "please upload your profile picture"
+        uploadPFPLabel.textColor = UIColor.init(red: 101/255, green: 168/255, blue: 196/255, alpha: 1)
         var charIndex = 0.0
         for letter in titleText{
             Timer.scheduledTimer(withTimeInterval: 0.08 * charIndex, repeats: false) { (timer) in

@@ -13,11 +13,13 @@ import Firebase
 
 class BioViewController: UIViewControllerX {
     @IBOutlet weak var enterBioLabel: UILabel!
+    @IBOutlet weak var bioTextField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        Utilities.styleTextField(bioTextField)
         enterBioLabel.text = ""
-        let titleText = "please enter your bio"
+        let titleText = "Please Enter Your Bio"
+        enterBioLabel.textColor = UIColor.init(red: 101/255, green: 168/255, blue: 196/255, alpha: 1)
         var charIndex = 0.0
         for letter in titleText{
             Timer.scheduledTimer(withTimeInterval: 0.08 * charIndex, repeats: false) { (timer) in
