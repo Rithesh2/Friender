@@ -12,6 +12,7 @@ class CardViewController: UIViewControllerX {
 
     @IBOutlet weak var card: UIView!
     @IBOutlet weak var nameLabel: UILabel!
+    let cornerRadius = 30
     var divisor: CGFloat!
     var index = 1
     var fUser: MyUser? = nil
@@ -19,9 +20,18 @@ class CardViewController: UIViewControllerX {
     override func viewDidLoad() {
         super.viewDidLoad()
         let tbvc = self.tabBarController  as! CustomTabBarController
+        self.card.layer.cornerRadius = CGFloat(self.cornerRadius)
+      // self.card.layer.shadowColor = UIColor.init(red: 101/255, green: 168/255, blue: 196/255, alpha: 1).cgColor
+
+        self.card.layer.shadowColor = UIColor.black.cgColor
+        self.card.layer.shadowOpacity = 1
+        self.card.layer.shadowOffset = .zero
+        self.card.layer.shadowRadius = 10
+        self.card.layer.shadowPath = UIBezierPath(roundedRect: self.card.bounds, cornerRadius: CGFloat(self.cornerRadius)).cgPath
+
+        self.card.layer.shouldRasterize = true
+        self.card.layer.rasterizationScale = UIScreen.main.scale
         fUser = tbvc.fUser
-        card.layer.borderWidth = 10
-        card.layer.borderColor = UIColor.red.cgColor
         divisor = (view.frame.width / 2) / 0.435//0.61 is the radians for 35 degrees
         self.findFirstName(uid: self.fUser!.matches[0]) { (fN) in
             var fullName = fN + " "
