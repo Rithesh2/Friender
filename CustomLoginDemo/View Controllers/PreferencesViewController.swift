@@ -28,7 +28,7 @@ class PreferencesViewController: UIViewControllerX {
     var basketball_selected = false
     var reading_selected = false
     var running_selected = false
-    
+    let optionLimit = 6
     @IBOutlet weak var selectPreferencesLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,7 +53,6 @@ class PreferencesViewController: UIViewControllerX {
     //}
     func checkForOptionsLimit() -> Bool
     {
-        let optionLimit = 6
         print(fUser!.preferences.count)
         return fUser!.preferences.count < optionLimit
     }
@@ -84,6 +83,13 @@ class PreferencesViewController: UIViewControllerX {
     }
     
     @IBAction func continueButton(_ sender: Any) {
+        if (fUser!.preferences.count < optionLimit)
+        {
+            errorLabel.text = "Please make sure to click six preferences"
+            errorLabel.isHidden = false
+        }
+    }
+    @IBAction func continueButt(_ sender: Any) {
         
         let db = Firestore.firestore()
         db.collection("users").document(fUser!.uid).updateData(["preferences": fUser!.preferences]){ (error) in
