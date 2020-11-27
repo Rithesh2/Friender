@@ -22,6 +22,7 @@ class ProfileViewController: UIViewController {
 
   
 
+
     @IBOutlet weak var profilePicture: UIImageView!
 
     @IBOutlet weak var userNameLabel: UILabel!
@@ -32,7 +33,7 @@ class ProfileViewController: UIViewController {
 
         super.viewDidLoad()
 
-        profilePicture.layer.cornerRadius = 60
+        profilePicture.layer.cornerRadius = 40
 
         profilePicture.clipsToBounds = true
 
