@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BID-Hm-yNB">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BID-Hm-yNB">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -428,7 +428,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="EDIT PROFILE PICTURE"/>
                                 <connections>
-                                    <segue destination="LSb-7H-7Qg" kind="presentation" id="svL-vA-b0z"/>
+                                    <action selector="editProfilePicture:" destination="Mbi-ur-Egd" eventType="touchUpInside" id="HLs-B3-V1Q"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ao5-6q-lRo">
@@ -514,6 +514,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="dTY-Ir-p9C"/>
                     <connections>
+                        <outlet property="profilePicture" destination="rKK-31-GwB" id="tN0-Uf-V6y"/>
                         <outlet property="userNameLabel" destination="ZG1-UJ-9uL" id="J02-hO-aW9"/>
                     </connections>
                 </viewController>
@@ -944,14 +945,17 @@
         <!--Edit Profile Pic View Controller-->
         <scene sceneID="aNG-q5-EwK">
             <objects>
-                <viewController id="LSb-7H-7Qg" customClass="EditProfilePicViewController" sceneMemberID="viewController">
+                <viewController id="LSb-7H-7Qg" customClass="EditProfilePicViewController" customModule="CustomLoginDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="h3Y-cs-so6">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="please upload a profile picture" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yBr-AH-fSS">
                                 <rect key="frame" x="15" y="329" width="385" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" button="YES" staticText="YES"/>
+                                </accessibility>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -960,10 +964,13 @@
                         <viewLayoutGuide key="safeArea" id="l7A-pb-n27"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <connections>
+                        <outlet property="pictureLabel" destination="yBr-AH-fSS" id="ksQ-yW-Dma"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZSg-X0-GPy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5443" y="2331"/>
+            <point key="canvasLocation" x="5442.0289855072469" y="2330.3571428571427"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="cwG-6a-Y5z">
@@ -1020,7 +1027,6 @@
         <!--Navigation Controller-->
         <scene sceneID="eWT-QI-dLM">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dVX-1R-2M4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController id="hin-uE-7ef" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="B2c-V2-84h">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
@@ -1030,6 +1036,7 @@
                         <segue destination="tyF-0O-eCx" kind="relationship" relationship="rootViewController" id="VlI-Nd-VzG"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dVX-1R-2M4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="7116" y="-502"/>
         </scene>

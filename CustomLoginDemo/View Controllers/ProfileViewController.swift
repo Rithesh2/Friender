@@ -10,10 +10,13 @@ import UIKit
 
 class ProfileViewController: UIViewController {
   
+    @IBOutlet weak var profilePicture: UIImageView!
     @IBOutlet weak var userNameLabel: UILabel!
     var fUser: MyUser? = nil
     override func viewDidLoad() {
         super.viewDidLoad()
+        profilePicture.layer.cornerRadius = 60
+        profilePicture.clipsToBounds = true
         let tbvc = self.tabBarController  as! CustomTabBarController
         fUser = tbvc.fUser
         let userFullName = fUser!.firstName + " " + fUser!.lastName
@@ -23,7 +26,15 @@ class ProfileViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func editProfilePicture(_ sender: Any) {
+        let picker = UIImagePickerController()
+        
+        picker.sourceType  = .photoLibrary
+        picker.allowsEditing = true
+        picker.delegate = self
+        self.present(picker, animated: true, completion: nil)
+    }
+    
     @IBAction func editPreferenes(_ sender: Any) {
         performSegue(withIdentifier: "editPreferencesSegue", sender: self)
     }
@@ -48,3 +59,17 @@ class ProfileViewController: UIViewController {
 
 }
 
+extension ProfileViewController: UIImagePickerControllerDelegate,UINavigationControllerDelegate{
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let imageSelected = info[UIImagePickerController.InfoKey.editedImage] as? UIImage{
+            profilePicture.image = imageSelected
+        }
+        
+        if let imageOriginal = info[UIImagePickerController.InfoKey.originalImage] as? UIImage{
+            profilePicture.image = imageOriginal
+        }
+        
+        picker.dismiss(animated: true, completion: nil)
+    }
+}
