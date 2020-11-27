@@ -454,7 +454,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="EDIT PROFILE PICTURE"/>
                                 <connections>
-                                    <segue destination="LSb-7H-7Qg" kind="presentation" id="svL-vA-b0z"/>
+                                    <action selector="editProfilePicture:" destination="Mbi-ur-Egd" eventType="touchUpInside" id="fN4-iu-22E"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ao5-6q-lRo">
@@ -966,30 +966,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PuQ-QS-4HS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="7188" y="-502"/>
-        </scene>
-        <!--Edit Profile Pic View Controller-->
-        <scene sceneID="aNG-q5-EwK">
-            <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ZSg-X0-GPy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <viewController id="LSb-7H-7Qg" customClass="EditProfilePicViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="h3Y-cs-so6">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="please upload a profile picture" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yBr-AH-fSS">
-                                <rect key="frame" x="15" y="329" width="385" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="l7A-pb-n27"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                </viewController>
-            </objects>
-            <point key="canvasLocation" x="5443" y="2331"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="cwG-6a-Y5z">
