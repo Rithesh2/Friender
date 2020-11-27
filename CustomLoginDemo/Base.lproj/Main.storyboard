@@ -540,6 +540,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="dTY-Ir-p9C"/>
                     <connections>
+                        <outlet property="profilePicture" destination="rKK-31-GwB" id="SjG-9h-Rjo"/>
                         <outlet property="userNameLabel" destination="ZG1-UJ-9uL" id="J02-hO-aW9"/>
                     </connections>
                 </viewController>
