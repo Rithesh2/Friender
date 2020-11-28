@@ -28,13 +28,13 @@ class PreferencesViewController: UIViewControllerX {
     var basketball_selected = false
     var reading_selected = false
     var running_selected = false
-    let optionLimit = 6
+    let optionLimit = 3
     @IBOutlet weak var selectPreferencesLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         selectPreferencesLabel.text = ""
-        let titleText = "Please Select Six Preferences"
+        let titleText = "Please Select Three Preferences"
         selectPreferencesLabel.textColor =  UIColor.init(red: 101/255, green: 168/255, blue: 196/255, alpha: 1)
         var charIndex = 0.0
         for letter in titleText{
@@ -43,9 +43,25 @@ class PreferencesViewController: UIViewControllerX {
             }
              charIndex += 1
         }
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Continue", style: .plain, target: self, action: #selector(moveToNext))
+
 
        }
-
+    @objc private func moveToNext() {
+        // our custom stuff
+        if (fUser!.preferences.count < optionLimit)
+        {
+            errorLabel.text = "Please make sure to click three preferences"
+            errorLabel.isHidden = false
+        }
+        else
+        {
+        let vc = storyboard?.instantiateViewController(withIdentifier: "pfpController") as! SignUpProfilePictureViewController
+        vc.fUser = self.fUser
+        navigationController?.pushViewController(vc, animated: true)
+        }
+    }
     @IBOutlet weak var errorLabel: UILabel!
     //override func viewDidLoad() {
         //super.viewDidLoad()
@@ -53,6 +69,7 @@ class PreferencesViewController: UIViewControllerX {
     //}
     func checkForOptionsLimit() -> Bool
     {
+
         print(fUser!.preferences.count)
         return fUser!.preferences.count < optionLimit
     }
@@ -159,7 +176,7 @@ class PreferencesViewController: UIViewControllerX {
             }
             else
             {
-                errorLabel.text = "You have selected more than 6 options. Please deselect one."
+                errorLabel.text = "You have selected more than 3 options. Please deselect one."
                 errorLabel.isHidden = false
             }
             
@@ -170,7 +187,7 @@ class PreferencesViewController: UIViewControllerX {
             music_selected = false
             if(!checkForOptionsLimit())
             {
-                errorLabel.text = "You have selected more than 6 options. Please deselect one."
+                errorLabel.text = "You have selected more than 3 options. Please deselect one."
                 errorLabel.isHidden = false
             }
             else{
@@ -193,7 +210,7 @@ class PreferencesViewController: UIViewControllerX {
             }
             else
             {
-                errorLabel.text = "You have selected more than 6 options. Please deselect one."
+                errorLabel.text = "You have selected more than 3 options. Please deselect one."
                 errorLabel.isHidden = false
             }
             
@@ -205,7 +222,7 @@ class PreferencesViewController: UIViewControllerX {
             swimming_selected = false
             if(!checkForOptionsLimit())
             {
-                errorLabel.text = "You have selected more than 6 options. Please deselect one."
+                errorLabel.text = "You have selected more than 3 options. Please deselect one."
                 errorLabel.isHidden = false
             }
             else{
@@ -228,7 +245,7 @@ class PreferencesViewController: UIViewControllerX {
             }
             else
             {
-                errorLabel.text = "You have selected more than 6 options. Please deselect one."
+                errorLabel.text = "You have selected more than 3 options. Please deselect one."
                 errorLabel.isHidden = false
             }
             
@@ -240,7 +257,7 @@ class PreferencesViewController: UIViewControllerX {
             hiking_selected = false
             if(!checkForOptionsLimit())
             {
-                errorLabel.text = "You have selected more than 6 options. Please deselect one."
+                errorLabel.text = "You have selected more than 3 options. Please deselect one."
                 errorLabel.isHidden = false
             }
             else{
@@ -263,7 +280,7 @@ class PreferencesViewController: UIViewControllerX {
             }
             else
             {
-                errorLabel.text = "You have selected more than 6 options. Please deselect one."
+                errorLabel.text = "You have selected more than 3 options. Please deselect one."
                 errorLabel.isHidden = false
             }
             
@@ -275,7 +292,7 @@ class PreferencesViewController: UIViewControllerX {
             gardening_selected = false
             if(!checkForOptionsLimit())
             {
-                errorLabel.text = "You have selected more than 6 options. Please deselect one."
+                errorLabel.text = "You have selected more than 3 options. Please deselect one."
                 errorLabel.isHidden = false
             }
             else{
@@ -297,7 +314,7 @@ class PreferencesViewController: UIViewControllerX {
             }
             else
             {
-                errorLabel.text = "You have selected more than 6 options. Please deselect one."
+                errorLabel.text = "You have selected more than 3 options. Please deselect one."
                 errorLabel.isHidden = false
             }
             
@@ -309,7 +326,7 @@ class PreferencesViewController: UIViewControllerX {
             biking_selected = false
             if(!checkForOptionsLimit())
             {
-                errorLabel.text = "You have selected more than 6 options. Please deselect one."
+                errorLabel.text = "You have selected more than 3 options. Please deselect one."
                 errorLabel.isHidden = false
             }
             else{
@@ -331,7 +348,7 @@ class PreferencesViewController: UIViewControllerX {
             }
             else
             {
-                errorLabel.text = "You have selected more than 6 options. Please deselect one."
+                errorLabel.text = "You have selected more than 3 options. Please deselect one."
                 errorLabel.isHidden = false
             }
             
@@ -343,7 +360,7 @@ class PreferencesViewController: UIViewControllerX {
             painting_selected = false
             if(!checkForOptionsLimit())
             {
-                errorLabel.text = "You have selected more than 6 options. Please deselect one."
+                errorLabel.text = "You have selected more than 3 options. Please deselect one."
                 errorLabel.isHidden = false
             }
             else{
@@ -366,7 +383,7 @@ class PreferencesViewController: UIViewControllerX {
             }
             else
             {
-                errorLabel.text = "You have selected more than 6 options. Please deselect one."
+                errorLabel.text = "You have selected more than 3 options. Please deselect one."
                 errorLabel.isHidden = false
                 
             }
@@ -379,7 +396,7 @@ class PreferencesViewController: UIViewControllerX {
             technology_selected = false
             if(!checkForOptionsLimit())
             {
-                errorLabel.text = "You have selected more than 6 options. Please deselect one."
+                errorLabel.text = "You have selected more than 3 options. Please deselect one."
                 errorLabel.isHidden = false
             }
             else{
@@ -402,7 +419,7 @@ class PreferencesViewController: UIViewControllerX {
             }
             else
             {
-                errorLabel.text = "You have selected more than 6 options. Please deselect one."
+                errorLabel.text = "You have selected more than 3 options. Please deselect one."
                 errorLabel.isHidden = false
             }
             
@@ -414,7 +431,7 @@ class PreferencesViewController: UIViewControllerX {
             dancing_selected = false
             if(!checkForOptionsLimit())
             {
-                errorLabel.text = "You have selected more than 6 options. Please deselect one."
+                errorLabel.text = "You have selected more than 3 options. Please deselect one."
                 errorLabel.isHidden = false
             }
             else{
@@ -437,7 +454,7 @@ class PreferencesViewController: UIViewControllerX {
             }
             else
             {
-                errorLabel.text = "You have selected more than 6 options. Please deselect one."
+                errorLabel.text = "You have selected more than 3 options. Please deselect one."
                 errorLabel.isHidden = false
             }
             
@@ -449,7 +466,7 @@ class PreferencesViewController: UIViewControllerX {
             eating_selected = false
             if(!checkForOptionsLimit())
             {
-                errorLabel.text = "You have selected more than 6 options. Please deselect one."
+                errorLabel.text = "You have selected more than 3 options. Please deselect one."
                 errorLabel.isHidden = false
             }
             else{

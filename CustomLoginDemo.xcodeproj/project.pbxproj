@@ -37,7 +37,6 @@
 		F1459FF7255E722B002A5F71 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1459FF6255E722B002A5F71 /* ProfileViewController.swift */; };
 		F1851E39256B77D90005116E /* BioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1851E38256B77D90005116E /* BioViewController.swift */; };
 		F1851E3E256B78450005116E /* SignUpProfilePicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1851E3D256B78450005116E /* SignUpProfilePicViewController.swift */; };
-		F1851E43256B786D0005116E /* EditProfilePicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1851E42256B786D0005116E /* EditProfilePicViewController.swift */; };
 		F1851E48256B789E0005116E /* EditBioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1851E47256B789E0005116E /* EditBioViewController.swift */; };
 		F1B54D4D2567682D00A8D59F /* MatchingAlgorithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B54D4C2567682D00A8D59F /* MatchingAlgorithm.swift */; };
 /* End PBXBuildFile section */
@@ -102,7 +101,6 @@
 		F1459FF6255E722B002A5F71 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		F1851E38256B77D90005116E /* BioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BioViewController.swift; sourceTree = "<group>"; };
 		F1851E3D256B78450005116E /* SignUpProfilePicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpProfilePicViewController.swift; sourceTree = "<group>"; };
-		F1851E42256B786D0005116E /* EditProfilePicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfilePicViewController.swift; sourceTree = "<group>"; };
 		F1851E47256B789E0005116E /* EditBioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditBioViewController.swift; sourceTree = "<group>"; };
 		F1B54D4C2567682D00A8D59F /* MatchingAlgorithm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchingAlgorithm.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -221,7 +219,6 @@
 				F1851E3D256B78450005116E /* SignUpProfilePicViewController.swift */,
 				F1459FF6255E722B002A5F71 /* ProfileViewController.swift */,
 				2C4C3FBF256DBD70001DE4D1 /* CardViewController.swift */,
-				F1851E42256B786D0005116E /* EditProfilePicViewController.swift */,
 				F1851E47256B789E0005116E /* EditBioViewController.swift */,
 				2C07587C24CE86C500E51662 /* Constants.swift */,
 			);
@@ -503,7 +500,6 @@
 				2C07584524CE3FF200E51662 /* ViewController.swift in Sources */,
 				F1459FED255E71FD002A5F71 /* PreviousMatchesViewController.swift in Sources */,
 				2C07584124CE3FF200E51662 /* AppDelegate.swift in Sources */,
-				F1851E43256B786D0005116E /* EditProfilePicViewController.swift in Sources */,
 				F1459FF2255E7211002A5F71 /* NewMatchesViewController.swift in Sources */,
 				2C96C0882560FB6C00E7191F /* MyUser.swift in Sources */,
 				2C858BAD2561CD2F00491F42 /* PreferencesViewController.swift in Sources */,
