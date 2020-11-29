@@ -20,7 +20,7 @@ class SignUpProfilePictureViewController: UIViewControllerX {
         profilePicture.layer.cornerRadius = 40
         profilePicture.clipsToBounds = true
         uploadPFPLabel.text = ""
-        let titleText = "Please Upload Your Profile Picture"
+        let titleText = "Please Select Your Profile Picture"
         uploadPFPLabel.textColor = UIColor.init(red: 101/255, green: 168/255, blue: 196/255, alpha: 1)
         var charIndex = 0.0
         for letter in titleText{
