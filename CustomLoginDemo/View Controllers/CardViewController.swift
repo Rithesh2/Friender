@@ -32,7 +32,7 @@ class CardViewController: UIViewControllerX {
         self.card.layer.shouldRasterize = true
         self.card.layer.rasterizationScale = UIScreen.main.scale
         fUser = tbvc.fUser
-        divisor = (view.frame.width / 2) / 0.435//0.61 is the radians for 35 degrees
+        divisor = (view.frame.width / 2) / 0.261//0.61 is the radians for 35 degrees
         self.findFirstName(uid: self.fUser!.matches[0]) { (fN) in
             var fullName = fN + " "
             self.findLastName(uid: self.fUser!.matches[0]) { (lastName) in
