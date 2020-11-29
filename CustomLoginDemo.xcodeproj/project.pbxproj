@@ -32,12 +32,15 @@
 		6212290E665A37CE36A1014D /* Pods_CustomLoginDemo_CustomLoginDemoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6760F2A990830ADEB3276346 /* Pods_CustomLoginDemo_CustomLoginDemoUITests.framework */; };
 		9A359EF9692B173F54F1C893 /* Pods_CustomLoginDemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9E613E2CB7D1AAD1389498E /* Pods_CustomLoginDemoTests.framework */; };
 		C8B098AC0C3DF3E137312818 /* Pods_CustomLoginDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B555CF6C486785EAEBFD126C /* Pods_CustomLoginDemo.framework */; };
+		F112A23D2573151500BD5C94 /* SaySomethingFunnyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F112A23C2573151500BD5C94 /* SaySomethingFunnyViewController.swift */; };
 		F1459FED255E71FD002A5F71 /* PreviousMatchesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1459FEC255E71FD002A5F71 /* PreviousMatchesViewController.swift */; };
 		F1459FF2255E7211002A5F71 /* NewMatchesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1459FF1255E7211002A5F71 /* NewMatchesViewController.swift */; };
 		F1459FF7255E722B002A5F71 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1459FF6255E722B002A5F71 /* ProfileViewController.swift */; };
 		F1851E39256B77D90005116E /* BioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1851E38256B77D90005116E /* BioViewController.swift */; };
 		F1851E3E256B78450005116E /* SignUpProfilePicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1851E3D256B78450005116E /* SignUpProfilePicViewController.swift */; };
 		F1851E48256B789E0005116E /* EditBioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1851E47256B789E0005116E /* EditBioViewController.swift */; };
+		F19C09F025731AA200722C39 /* SelectAnimalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19C09EF25731AA200722C39 /* SelectAnimalViewController.swift */; };
+		F19C09F825731C4900722C39 /* ThreeWordsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19C09F725731C4900722C39 /* ThreeWordsViewController.swift */; };
 		F1B54D4D2567682D00A8D59F /* MatchingAlgorithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B54D4C2567682D00A8D59F /* MatchingAlgorithm.swift */; };
 /* End PBXBuildFile section */
 
@@ -96,12 +99,15 @@
 		B555CF6C486785EAEBFD126C /* Pods_CustomLoginDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CustomLoginDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8DC90333C57284ECAD6987E /* Pods-CustomLoginDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CustomLoginDemo.debug.xcconfig"; path = "Target Support Files/Pods-CustomLoginDemo/Pods-CustomLoginDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		DC861C0426163F552C26D65B /* Pods-CustomLoginDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CustomLoginDemoTests.release.xcconfig"; path = "Target Support Files/Pods-CustomLoginDemoTests/Pods-CustomLoginDemoTests.release.xcconfig"; sourceTree = "<group>"; };
+		F112A23C2573151500BD5C94 /* SaySomethingFunnyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaySomethingFunnyViewController.swift; sourceTree = "<group>"; };
 		F1459FEC255E71FD002A5F71 /* PreviousMatchesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviousMatchesViewController.swift; sourceTree = "<group>"; };
 		F1459FF1255E7211002A5F71 /* NewMatchesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMatchesViewController.swift; sourceTree = "<group>"; };
 		F1459FF6255E722B002A5F71 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		F1851E38256B77D90005116E /* BioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BioViewController.swift; sourceTree = "<group>"; };
 		F1851E3D256B78450005116E /* SignUpProfilePicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpProfilePicViewController.swift; sourceTree = "<group>"; };
 		F1851E47256B789E0005116E /* EditBioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditBioViewController.swift; sourceTree = "<group>"; };
+		F19C09EF25731AA200722C39 /* SelectAnimalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectAnimalViewController.swift; sourceTree = "<group>"; };
+		F19C09F725731C4900722C39 /* ThreeWordsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeWordsViewController.swift; sourceTree = "<group>"; };
 		F1B54D4C2567682D00A8D59F /* MatchingAlgorithm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchingAlgorithm.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -217,6 +223,9 @@
 				2C4C3FBA256D70B0001DE4D1 /* EditPreferencesViewController.swift */,
 				F1851E38256B77D90005116E /* BioViewController.swift */,
 				F1851E3D256B78450005116E /* SignUpProfilePicViewController.swift */,
+				F112A23C2573151500BD5C94 /* SaySomethingFunnyViewController.swift */,
+				F19C09EF25731AA200722C39 /* SelectAnimalViewController.swift */,
+				F19C09F725731C4900722C39 /* ThreeWordsViewController.swift */,
 				F1459FF6255E722B002A5F71 /* ProfileViewController.swift */,
 				2C4C3FBF256DBD70001DE4D1 /* CardViewController.swift */,
 				F1851E47256B789E0005116E /* EditBioViewController.swift */,
@@ -498,6 +507,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C07584524CE3FF200E51662 /* ViewController.swift in Sources */,
+				F19C09F025731AA200722C39 /* SelectAnimalViewController.swift in Sources */,
 				F1459FED255E71FD002A5F71 /* PreviousMatchesViewController.swift in Sources */,
 				2C07584124CE3FF200E51662 /* AppDelegate.swift in Sources */,
 				F1459FF2255E7211002A5F71 /* NewMatchesViewController.swift in Sources */,
@@ -507,6 +517,7 @@
 				2C4C3FC0256DBD70001DE4D1 /* CardViewController.swift in Sources */,
 				2C07587124CE40B700E51662 /* SignUpViewController.swift in Sources */,
 				F1459FF7255E722B002A5F71 /* ProfileViewController.swift in Sources */,
+				F112A23D2573151500BD5C94 /* SaySomethingFunnyViewController.swift in Sources */,
 				F1851E48256B789E0005116E /* EditBioViewController.swift in Sources */,
 				2C07587324CE40D500E51662 /* LoginViewController.swift in Sources */,
 				F1851E3E256B78450005116E /* SignUpProfilePicViewController.swift in Sources */,
@@ -518,6 +529,7 @@
 				2C4C3FBB256D70B0001DE4D1 /* EditPreferencesViewController.swift in Sources */,
 				2C07587524CE40F500E51662 /* HomeViewController.swift in Sources */,
 				2C07587D24CE86C500E51662 /* Constants.swift in Sources */,
+				F19C09F825731C4900722C39 /* ThreeWordsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

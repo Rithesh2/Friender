@@ -73,21 +73,21 @@ class BioViewController: UIViewControllerX {
                             print("error")
                             }
                     }
-            self.transitionToHome(user: self.fUser!)
+            //self.transitionToHome(user: self.fUser!)
                
             }
        }
        
     
-    func transitionToHome(user: MyUser){
+    //func transitionToHome(user: MyUser){
       
 
-        let homeViewController = self.storyboard?.instantiateViewController(withIdentifier: "HomeVCTabBar") as? CustomTabBarController
-        homeViewController?.fUser = user
-        self.view.window?.rootViewController = homeViewController
-        self.view.window?.makeKeyAndVisible()
+        //let homeViewController = self.storyboard?.instantiateViewController(withIdentifier: "HomeVCTabBar") as? CustomTabBarController
+        //homeViewController?.fUser = user
+        //self.view.window?.rootViewController = homeViewController
+        //self.view.window?.makeKeyAndVisible()
 
-    }
+    //}
 
 }
 
