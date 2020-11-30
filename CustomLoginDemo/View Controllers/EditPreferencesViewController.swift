@@ -213,19 +213,18 @@ class EditPreferencesViewController: UIViewControllerX {
                 //print(document.data())
                 //print(document.get("preferences")!)
             }
-            let matches = self.big(arr: self.fUser!.uid, dic: users)
-            for x in matches{
-                self.findFirstName(uid: x) { (fN) in
-                    print(fN)
-                }
+            
+            self.generateNewMatches(arr: self.fUser!.uid, dic: users) { (newMatches) in
+                let matches = newMatches
+                self.fUser!.matches = matches
+                db.collection("users").document(self.fUser!.uid).updateData(["matches": self.fUser!.matches]){ (error) in
+                            if error != nil{
+                                print("error")
+                                }
+                        }
+                self.transitionToHome(user: self.fUser!)
             }
-            self.fUser!.matches = matches
-            db.collection("users").document(self.fUser!.uid).updateData(["matches": self.fUser!.matches]){ (error) in
-                        if error != nil{
-                            print("error")
-                            }
-                    }
-            self.transitionToHome(user: self.fUser!)
+
                
             }
  

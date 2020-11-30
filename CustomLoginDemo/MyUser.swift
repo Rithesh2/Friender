@@ -14,5 +14,6 @@ struct MyUser {
     var lastName: String
     var preferences: Array<String>
     var matches: Array<String>
+    var pastMatches: Array<String>
 }
 

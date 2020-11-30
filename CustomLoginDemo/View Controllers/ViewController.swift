@@ -34,6 +34,7 @@ class ViewController: UIViewControllerX {
     }
     
     @IBAction func resetButton(_ sender: Any) {
+        
         let db = Firestore.firestore()
         db.collection("users").getDocuments() { (querySnapshot, err) in
             if let err = err {
@@ -56,6 +57,30 @@ class ViewController: UIViewControllerX {
                 //print(document.data())
                 //print(document.get("preferences")!)
             }
+        
+        
+        /*
+        var count = 0
+        db.collection("users").getDocuments() { (querySnapshot, err) in
+            if let err = err {
+                print("Error getting documents: \(err)")
+                return
+            }
+            
+ 
+            for document in querySnapshot!.documents {
+                if (count > 9)
+                {
+                    document.reference.delete()
+                }
+                count = count + 1
+            }
+                // print(users)
+                
+                //print(document.data())
+                //print(document.get("preferences")!)
+            }
+ */
     }
     func setUpVideo()
     {

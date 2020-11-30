@@ -7,6 +7,10 @@
 //
 
 import UIKit
+import FirebaseAuth
+import FirebaseFirestore
+import Firebase
+
 
 class CardViewController: UIViewControllerX {
 
@@ -110,6 +114,132 @@ class CardViewController: UIViewControllerX {
             self.card.transform = .identity
         })}
     
+    @IBAction func refreshButton(_ sender: Any) {
+        let db = Firestore.firestore()
+        db.collection("users").getDocuments() { (querySnapshot, err) in
+            if let err = err {
+                print("Error getting documents: \(err)")
+                return
+            }
+            
+            var users: [String: [String]] = [:]
+            for document in querySnapshot!.documents {
+                
+                print(document.data()["preferences"]!)
+                let preferences = document.data()["preferences"] as! Array<String>
+                let ID = document.data()["uid"] as! String
+                users[ID] = preferences
+ 
+         
+                // print(users)
+                
+                //print(document.data())
+                //print(document.get("preferences")!)
+            }
+            
+            db.collection("users").document(self.fUser!.uid).getDocument { (document, error) in
+                if error == nil{
+                    //Check the document exists
+                    if document != nil && document!.exists == true{
+                        let documentData = document!.data()
+                       if(documentData?["pastmatches"] != nil)
+                       {
+                            var pastMatches = documentData?["pastmatches"] as! Array<String>
+                        
+                        self.findMatches(uid: self.fUser!.uid) { (matches) in
+                            pastMatches.append(contentsOf: matches)
+                            self.fUser!.pastMatches = pastMatches
+                            db.collection("users").document(self.fUser!.uid).updateData(["pastmatches": self.fUser!.pastMatches]){ (error) in
+                                        if error != nil{
+                                            print("error")
+                                            }
+                                    }
+                        }
+                       }
+                        else
+                       {
+                        self.findMatches(uid: self.fUser!.uid) { (matches) in
+                            self.fUser!.pastMatches = matches
+                            db.collection("users").document(self.fUser!.uid).updateData(["pastmatches": self.fUser!.pastMatches]){ (error) in
+                                        if error != nil{
+                                            print("error")
+                                            }
+                                    }
+                        }
+                      
+                       }
+                        
+                        db.collection("users").getDocuments() { (querySnapshot, err) in
+                            if let err = err {
+                                print("Error getting documents: \(err)")
+                                return
+                            }
+                            
+                            var users: [String: [String]] = [:]
+                            for document in querySnapshot!.documents {
+                                
+                                print(document.data()["preferences"]!)
+                                let preferences = document.data()["preferences"] as! Array<String>
+                                let ID = document.data()["uid"] as! String
+                                users[ID] = preferences
+                 
+                         
+                                // print(users)
+                                
+                                //print(document.data())
+                                //print(document.get("preferences")!)
+                            }
+                            self.generateNewMatches(arr: self.fUser!.uid, dic: users) { (newMatches) in
+                                self.fUser!.matches = newMatches
+                                db.collection("users").document(self.fUser!.uid).updateData(["matches": self.fUser!.matches]){ (error) in
+                                            if error != nil{
+                                                print("error")
+                                                }
+                                        }
+                       
+                            }
+                            /*
+                            for x in matches{
+                                self.findFirstName(uid: x) { (fN) in
+                                    print(fN)
+                                }
+                            }
+                 */
+
+                              
+                            }
+                    
+
+                        
+                       
+                       
+                       
+                    }
+                    else{
+                        print("error")
+                    }
+                }
+          
+            }
+            
+            
+            
+            
+            self.generateNewMatches(arr: self.fUser!.uid, dic: users) { (newMatches) in
+                let matches = newMatches
+                self.fUser!.matches = matches
+                db.collection("users").document(self.fUser!.uid).updateData(["matches": self.fUser!.matches]){ (error) in
+                            if error != nil{
+                                print("error")
+                                }
+                        }
+                //self.transitionToHome(user: self.fUser!)
+            }
+          
+            //self.transitionToHome(user: self.fUser!)
+              
+            }
+    }
     /*
     // MARK: - Navigation
 

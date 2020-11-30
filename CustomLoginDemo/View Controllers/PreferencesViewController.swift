@@ -100,7 +100,7 @@ class PreferencesViewController: UIViewControllerX {
         }
  */
     }
-    
+    /*
     @IBAction func continueButton(_ sender: Any) {
         if (fUser!.preferences.count < optionLimit)
         {
@@ -153,7 +153,7 @@ class PreferencesViewController: UIViewControllerX {
             }
  
     }
-    
+    */
     func transitionToHome(user: MyUser){
       
 

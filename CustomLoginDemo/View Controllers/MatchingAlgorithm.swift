@@ -23,7 +23,7 @@ extension UIViewController{
     }
     
     
-    func big(arr:String, dic:[String: [String]]) -> Array<String>{
+    func generateNewMatches(arr:String, dic:[String: [String]], completion: @escaping (Array<String>) -> Void){
         var scores: [String: Int] = [:]
         
         for x in dic.keys{
@@ -50,15 +50,38 @@ extension UIViewController{
          }
          */
         var arrayOfUsers: Array<String> = []
-        for x in 0...2{
-            arrayOfUsers.append(numArray[x].1)
+        findPastMatches(uid: arr) { (matches) in
+            var count = 0
+            var index = 0
+            while(count <= 2 && index < numArray.count)
+            {
+                if(!(matches.contains(numArray[index].1)))
+                {
+                    count = count + 1
+                    arrayOfUsers.append(numArray[index].1)
+                }
+
+                index = index + 1
+            }
+            if(index == numArray.count)
+            {
+                self.findMatches(uid: arr) { (matches) in
+                    completion(matches)
+                }
+            }
+            else
+            {
+                completion(arrayOfUsers)
+            }
+
         }
-        return arrayOfUsers
+ 
         // print("You have a match: '\(a)' !")
         // for (array, score) in scores{
         //    print("The similarity between '\(array1)' and '\(array)' is '\(score)'")
         // }
     }
+    
     
     func findFirstName(uid: String, completion: @escaping (String) -> Void){
         let db = Firestore.firestore()
@@ -130,9 +153,14 @@ extension UIViewController{
                  //Check the document exists
                  if document != nil && document!.exists == true{
                      let documentData = document!.data()
-                     let match = documentData?["matches"] as! Array<String>
-                     matches =  match
+                    if(documentData?["matches"] != nil)
+                    {
+                        let match = documentData?["matches"] as! Array<String>
+                       matches =  match
+                    }
                     completion(matches)
+                    
+                    
                  }
                  else{
                      print("error")
@@ -142,5 +170,32 @@ extension UIViewController{
          }
       
     }
+    
+    func findPastMatches(uid: String, completion: @escaping (Array<String>) -> Void){
+        let db = Firestore.firestore()
+        var matches: Array<String> = []
+         db.collection("users").document(uid).getDocument { (document, error) in
+             if error == nil{
+                 //Check the document exists
+                 if document != nil && document!.exists == true{
+                     let documentData = document!.data()
+                    if(documentData?["pastmatches"] != nil)
+                    {
+                        let match = documentData?["pastmatches"] as! Array<String>
+                       matches =  match
+                    }
+                    completion(matches)
+                    
+                    
+                 }
+                 else{
+                     print("error")
+                 }
+             }
+       
+         }
+      
+    }
+    
 }
 
