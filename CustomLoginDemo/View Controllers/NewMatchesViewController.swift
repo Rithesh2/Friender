@@ -27,10 +27,15 @@ class NewMatchesViewController: UIViewControllerX, UITableViewDataSource, UITabl
       self.tableView.register(UINib(nibName: "CustomUITableViewCell", bundle: nil), forCellReuseIdentifier: "customUser")
 
    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated) // No need for semicolon
+        print(fUser!.pastMatches)
+        self.tableView.reloadData()
+    }
    
    func tableView(  _ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
        //we want number of users update automatically
-       return 3
+    return fUser!.pastMatches.count
    }
 
    func tableView(  _ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -38,7 +43,7 @@ class NewMatchesViewController: UIViewControllerX, UITableViewDataSource, UITabl
       // let cell = tableView.dequeueReusableCell(withIdentifier: "customUser", for: indexPath)
        //can we say "cell.userPicture.image"? (question)
        //cell.userPicture.image = userPictures[indexPath.row]
-       let match = fUser!.matches[indexPath.row]
+       let match = fUser!.pastMatches[indexPath.row]
        var fullName = ""
        self.findFirstName(uid: match) { (fN) in
            fullName = fN + " "
@@ -60,7 +65,7 @@ class NewMatchesViewController: UIViewControllerX, UITableViewDataSource, UITabl
    
    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
       // tableView.deselectRow(at: indexPath, animated: true)
-       print(fUser!.matches[indexPath.row])
+       print(fUser!.pastMatches[indexPath.row])
        performSegue(withIdentifier: "matchSegue", sender: self)
       // homeController?.match = fUser!.matches[indexPath.row]
     
@@ -70,7 +75,7 @@ class NewMatchesViewController: UIViewControllerX, UITableViewDataSource, UITabl
    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
        if segue.identifier == "matchSegue" {
            let vc: HomeViewController = segue.destination as! HomeViewController
-           vc.match = fUser!.matches[(tableView.indexPathForSelectedRow?.row)!]
+           vc.match = fUser!.pastMatches[(tableView.indexPathForSelectedRow?.row)!]
            tableView.deselectRow(at: tableView.indexPathForSelectedRow!, animated: true)
        }
    }
