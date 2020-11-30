@@ -73,9 +73,12 @@ class BioViewController: UIViewControllerX {
                             print("error")
                             }
                     }
-            self.transitionToHome(user: self.fUser!)
+            //self.transitionToHome(user: self.fUser!)
                
             }
+        let vc = storyboard?.instantiateViewController(withIdentifier: "threeWords") as! ThreeWordsViewController
+        vc.fUser = self.fUser
+        navigationController?.pushViewController(vc, animated: true)
        }
        
     
