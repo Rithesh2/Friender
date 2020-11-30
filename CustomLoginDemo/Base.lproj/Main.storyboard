@@ -1012,7 +1012,7 @@
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BTd-Mc-7SG">
-                                <rect key="frame" x="184" y="361" width="80" height="76"/>
+                                <rect key="frame" x="130" y="390" width="154" height="116"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" systemColor="systemGrayColor"/>
                                 <imageReference key="image" image="person.circle" catalog="system" symbolScale="small"/>
