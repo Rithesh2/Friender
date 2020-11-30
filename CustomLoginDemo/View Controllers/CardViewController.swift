@@ -13,26 +13,26 @@ import Firebase
 
 
 class CardViewController: UIViewControllerX {
-
+    
     @IBOutlet weak var card: UIView!
     @IBOutlet weak var nameLabel: UILabel!
     let cornerRadius = 30
     var divisor: CGFloat!
     var index = 1
     var fUser: MyUser? = nil
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         let tbvc = self.tabBarController  as! CustomTabBarController
         self.card.layer.cornerRadius = CGFloat(self.cornerRadius)
-      // self.card.layer.shadowColor = UIColor.init(red: 101/255, green: 168/255, blue: 196/255, alpha: 1).cgColor
-
+        // self.card.layer.shadowColor = UIColor.init(red: 101/255, green: 168/255, blue: 196/255, alpha: 1).cgColor
+        
         self.card.layer.shadowColor = UIColor.black.cgColor
         self.card.layer.shadowOpacity = 1
         self.card.layer.shadowOffset = .zero
         self.card.layer.shadowRadius = 10
         self.card.layer.shadowPath = UIBezierPath(roundedRect: self.card.bounds, cornerRadius: CGFloat(self.cornerRadius)).cgPath
-
+        
         self.card.layer.shouldRasterize = true
         self.card.layer.rasterizationScale = UIScreen.main.scale
         fUser = tbvc.fUser
@@ -44,7 +44,7 @@ class CardViewController: UIViewControllerX {
                 self.nameLabel.text = fullName
             }
         }
-       
+        
         // Do any additional setup after loading the view.
     }
     
@@ -65,7 +65,7 @@ class CardViewController: UIViewControllerX {
                     card.alpha = 0
                 })
                 card.alpha = 0
-               // card.center = CGPoint(x: view.center.x + 300, y: card.center.y + 75)
+                // card.center = CGPoint(x: view.center.x + 300, y: card.center.y + 75)
                 DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
                     self.getNewCard()
                 }
@@ -75,7 +75,7 @@ class CardViewController: UIViewControllerX {
                 UIView.animate(withDuration: 0.5, animations: { card.center = CGPoint(x: card.center.x + 200, y: card.center.y + 75)
                     card.alpha = 0 
                 })
-    
+                
                 DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
                     self.getNewCard()
                 }
@@ -89,7 +89,7 @@ class CardViewController: UIViewControllerX {
     }
     
     func getNewCard(){
-
+        
         UIView.animate(withDuration: 0.7, animations: {
             let match = self.fUser!.matches[self.index]
             var fullName = ""
@@ -106,9 +106,9 @@ class CardViewController: UIViewControllerX {
                         self.index = self.index + 1
                     }
                 }
- 
+                
             }
-
+            
             self.card.center = self.view.center
             self.card.alpha = 1
             self.card.transform = .identity
@@ -129,8 +129,8 @@ class CardViewController: UIViewControllerX {
                 let preferences = document.data()["preferences"] as! Array<String>
                 let ID = document.data()["uid"] as! String
                 users[ID] = preferences
- 
-         
+                
+                
                 // print(users)
                 
                 //print(document.data())
@@ -142,39 +142,45 @@ class CardViewController: UIViewControllerX {
                     //Check the document exists
                     if document != nil && document!.exists == true{
                         let documentData = document!.data()
-                       if(documentData?["pastmatches"] != nil)
-                       {
+                        if(documentData?["pastmatches"] != nil)
+                        {
                             var pastMatches = documentData?["pastmatches"] as! Array<String>
-                        
-                        self.findMatches(uid: self.fUser!.uid) { (matches) in
-                            pastMatches.append(contentsOf: matches)
-                            self.fUser!.pastMatches = pastMatches
-                            db.collection("users").document(self.fUser!.uid).updateData(["pastmatches": self.fUser!.pastMatches]){ (error) in
-                                        if error != nil{
-                                            print("error")
-                                            }
+                            
+                            self.findMatches(uid: self.fUser!.uid) { (matches) in
+                                let pastMatchesSet = Set(pastMatches)
+                                let matchesSet = Set(matches)
+                                if(!matchesSet.isSubset(of: pastMatchesSet))
+                                {
+                                    pastMatches.append(contentsOf: matches)
+                                }
+
+                                self.fUser!.pastMatches = pastMatches
+                                db.collection("users").document(self.fUser!.uid).updateData(["pastmatches": self.fUser!.pastMatches]){ (error) in
+                                    if error != nil{
+                                        print("error")
                                     }
+                                }
+                            }
                         }
-                       }
                         else
-                       {
-                        self.findMatches(uid: self.fUser!.uid) { (matches) in
-                            self.fUser!.pastMatches = matches
-                            db.collection("users").document(self.fUser!.uid).updateData(["pastmatches": self.fUser!.pastMatches]){ (error) in
-                                        if error != nil{
-                                            print("error")
-                                            }
+                        {
+                            self.findMatches(uid: self.fUser!.uid) { (matches) in
+                                self.fUser!.pastMatches = matches
+                                db.collection("users").document(self.fUser!.uid).updateData(["pastmatches": self.fUser!.pastMatches]){ (error) in
+                                    if error != nil{
+                                        print("error")
                                     }
+                                }
+                            }
+                            
                         }
-                      
-                       }
                         
                         db.collection("users").getDocuments() { (querySnapshot, err) in
                             if let err = err {
                                 print("Error getting documents: \(err)")
                                 return
                             }
-                            
+                            /*
                             var users: [String: [String]] = [:]
                             for document in querySnapshot!.documents {
                                 
@@ -182,72 +188,67 @@ class CardViewController: UIViewControllerX {
                                 let preferences = document.data()["preferences"] as! Array<String>
                                 let ID = document.data()["uid"] as! String
                                 users[ID] = preferences
-                 
-                         
+                                
+                                
                                 // print(users)
                                 
                                 //print(document.data())
                                 //print(document.get("preferences")!)
                             }
-                            self.generateNewMatches(arr: self.fUser!.uid, dic: users) { (newMatches) in
+ */
+                            self.generateNewMatches(arr: self.fUser!.uid, dic: users) { (newMatches, isNewMatch) in
                                 self.fUser!.matches = newMatches
                                 db.collection("users").document(self.fUser!.uid).updateData(["matches": self.fUser!.matches]){ (error) in
-                                            if error != nil{
-                                                print("error")
-                                                }
-                                        }
-                       
+                                    if error != nil{
+                                        print("error")
+                                    }
+                                }
+                                
                             }
                             /*
-                            for x in matches{
-                                self.findFirstName(uid: x) { (fN) in
-                                    print(fN)
-                                }
-                            }
-                 */
-
-                              
-                            }
-                    
-
-                        
-                       
-                       
-                       
+                             for x in matches{
+                             self.findFirstName(uid: x) { (fN) in
+                             print(fN)
+                             }
+                             }
+                             */
+                            
+                            
+                        }
                     }
                     else{
                         print("error")
                     }
                 }
-          
+                
             }
             
             
             
-            
-            self.generateNewMatches(arr: self.fUser!.uid, dic: users) { (newMatches) in
+            /*
+            self.generateNewMatches(arr: self.fUser!.uid, dic: users) { (newMatches, isNewMatch) in
                 let matches = newMatches
                 self.fUser!.matches = matches
                 db.collection("users").document(self.fUser!.uid).updateData(["matches": self.fUser!.matches]){ (error) in
-                            if error != nil{
-                                print("error")
-                                }
-                        }
+                    if error != nil{
+                        print("error")
+                    }
+                }
                 //self.transitionToHome(user: self.fUser!)
             }
-          
+            */
             //self.transitionToHome(user: self.fUser!)
-              
-            }
+            
+        }
     }
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation  before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation  before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destination.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }

@@ -214,7 +214,7 @@ class EditPreferencesViewController: UIViewControllerX {
                 //print(document.get("preferences")!)
             }
             
-            self.generateNewMatches(arr: self.fUser!.uid, dic: users) { (newMatches) in
+            self.generateNewMatches(arr: self.fUser!.uid, dic: users) { (newMatches, isNewMatch) in
                 let matches = newMatches
                 self.fUser!.matches = matches
                 db.collection("users").document(self.fUser!.uid).updateData(["matches": self.fUser!.matches]){ (error) in

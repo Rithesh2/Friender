@@ -23,7 +23,7 @@ extension UIViewController{
     }
     
     
-    func generateNewMatches(arr:String, dic:[String: [String]], completion: @escaping (Array<String>) -> Void){
+    func generateNewMatches(arr:String, dic:[String: [String]], completion: @escaping (Array<String>, Bool) -> Void){
         var scores: [String: Int] = [:]
         
         for x in dic.keys{
@@ -66,12 +66,12 @@ extension UIViewController{
             if(index == numArray.count)
             {
                 self.findMatches(uid: arr) { (matches) in
-                    completion(matches)
+                    completion(matches, true)
                 }
             }
             else
             {
-                completion(arrayOfUsers)
+                completion(arrayOfUsers, false)
             }
 
         }
