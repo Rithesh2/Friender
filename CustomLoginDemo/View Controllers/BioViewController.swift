@@ -34,7 +34,7 @@ class BioViewController: UIViewControllerX {
        }
     @objc private func moveToNext() {
         // our custom stuff
-        
+       /*
         let db = Firestore.firestore()
         db.collection("users").document(fUser!.uid).updateData(["preferences": fUser!.preferences]){ (error) in
                     if error != nil{
@@ -74,8 +74,8 @@ class BioViewController: UIViewControllerX {
                             }
                     }
             //self.transitionToHome(user: self.fUser!)
-               
-            }
+              
+            }*/
         let vc = storyboard?.instantiateViewController(withIdentifier: "threeWords") as! ThreeWordsViewController
         vc.fUser = self.fUser
         navigationController?.pushViewController(vc, animated: true)

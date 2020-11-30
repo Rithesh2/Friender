@@ -976,7 +976,7 @@
         <!--Three Words View Controller-->
         <scene sceneID="g1F-KA-yaD">
             <objects>
-                <viewController id="XEB-o9-wYt" customClass="ThreeWordsViewController" customModule="CustomLoginDemo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="threeWords" id="XEB-o9-wYt" customClass="ThreeWordsViewController" customModule="CustomLoginDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jrV-Hc-kbW">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1127,7 +1127,7 @@
         <!--Select Animal View Controller-->
         <scene sceneID="Llh-Da-YK8">
             <objects>
-                <viewController id="LtR-jJ-e8W" customClass="SelectAnimalViewController" customModule="CustomLoginDemo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="selectAnimal" id="LtR-jJ-e8W" customClass="SelectAnimalViewController" customModule="CustomLoginDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wxg-sV-ppU">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1166,7 +1166,7 @@
         <!--Say Something Funny View Controller-->
         <scene sceneID="b1z-x3-UcI">
             <objects>
-                <viewController id="lqv-dE-lOt" customClass="SaySomethingFunnyViewController" customModule="CustomLoginDemo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="saySomethingFunny" id="lqv-dE-lOt" customClass="SaySomethingFunnyViewController" customModule="CustomLoginDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="IOZ-h9-fJ9">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
