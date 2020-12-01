@@ -15,7 +15,7 @@
 
 
 import UIKit
-
+import FirebaseStorage
 
 
 class ProfileViewController: UIViewControllerX {
@@ -28,6 +28,7 @@ class ProfileViewController: UIViewControllerX {
     @IBOutlet weak var userNameLabel: UILabel!
 
     var fUser: MyUser? = nil
+    var image: UIImage? = nil
 
     override func viewDidLoad() {
 
@@ -68,7 +69,8 @@ class ProfileViewController: UIViewControllerX {
         picker.delegate = self
 
         self.present(picker, animated: true, completion: nil)
-
+        
+        
     }
 
     
@@ -128,7 +130,7 @@ extension ProfileViewController: UIImagePickerControllerDelegate,UINavigationCon
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
 
         if let imageSelected = info[UIImagePickerController.InfoKey.editedImage] as? UIImage{
-
+            image = imageSelected
             profilePicture.image = imageSelected
 
         }
@@ -136,7 +138,7 @@ extension ProfileViewController: UIImagePickerControllerDelegate,UINavigationCon
         
 
         if let imageOriginal = info[UIImagePickerController.InfoKey.originalImage] as? UIImage{
-
+            image = imageOriginal
             profilePicture.image = imageOriginal
 
         }
