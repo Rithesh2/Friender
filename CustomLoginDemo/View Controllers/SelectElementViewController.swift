@@ -11,19 +11,18 @@ import FirebaseAuth
 import FirebaseFirestore
 import Firebase
 
-class SelectAnimalViewController: UIViewControllerX {
+class SelectElementViewController: UIViewControllerX {
     var fUser: MyUser? = nil
-    
     
     @IBOutlet weak var selectAnimalLabel: UILabel!
     
-    @IBOutlet weak var enterAnswer: UITextField!
+    @IBOutlet weak var enterAnswer: UITextField!    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         Utilities.styleTextField(enterAnswer)
         selectAnimalLabel.text = ""
-        let titleText = "What Animal Represents You?"
+        let titleText = "Choose an Element (Earth, Air, Fire, Water)"
         selectAnimalLabel.textColor = UIColor.init(red: 101/255, green: 168/255, blue: 196/255, alpha: 1)
         var charIndex = 0.0
         for letter in titleText{
@@ -40,7 +39,7 @@ class SelectAnimalViewController: UIViewControllerX {
     @objc private func moveToNext() {
         // our custom stuff
 
-        let vc = storyboard?.instantiateViewController(withIdentifier: "selectElement") as! SelectElementViewController
+        let vc = storyboard?.instantiateViewController(withIdentifier: "selectPrefContact") as! SelectPrefContactViewController
         vc.fUser = self.fUser
         navigationController?.pushViewController(vc, animated: true)
        }

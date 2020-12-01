@@ -1,34 +1,23 @@
-//
-//  SelectAnimalViewController.swift
-//  CustomLoginDemo
-//
-//  Created by Divya Kunisetty on 11/28/20.
-//  Copyright © 2020 Rohit Ravi. All rights reserved.
-//
-
 import UIKit
 import FirebaseAuth
 import FirebaseFirestore
 import Firebase
 
-class SelectAnimalViewController: UIViewControllerX {
+class SelectPrefContactViewController: UIViewControllerX {
     var fUser: MyUser? = nil
     
-    
-    @IBOutlet weak var selectAnimalLabel: UILabel!
-    
+    @IBOutlet weak var selectPrefContactLabel: UILabel!
     @IBOutlet weak var enterAnswer: UITextField!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         Utilities.styleTextField(enterAnswer)
-        selectAnimalLabel.text = ""
-        let titleText = "What Animal Represents You?"
-        selectAnimalLabel.textColor = UIColor.init(red: 101/255, green: 168/255, blue: 196/255, alpha: 1)
+        selectPrefContactLabel.text = ""
+        let titleText = "What is Your Preferred Mode of Contact?"
+        selectPrefContactLabel.textColor = UIColor.init(red: 101/255, green: 168/255, blue: 196/255, alpha: 1)
         var charIndex = 0.0
         for letter in titleText{
             Timer.scheduledTimer(withTimeInterval: 0.08 * charIndex, repeats: false) { (timer) in
-                self.selectAnimalLabel.text?.append(letter)
+                self.selectPrefContactLabel.text?.append(letter)
             }
              charIndex += 1
         }
@@ -40,7 +29,7 @@ class SelectAnimalViewController: UIViewControllerX {
     @objc private func moveToNext() {
         // our custom stuff
 
-        let vc = storyboard?.instantiateViewController(withIdentifier: "selectElement") as! SelectElementViewController
+        let vc = storyboard?.instantiateViewController(withIdentifier: "saySomethingFunny") as! SaySomethingFunnyViewController
         vc.fUser = self.fUser
         navigationController?.pushViewController(vc, animated: true)
        }
@@ -56,5 +45,6 @@ class SelectAnimalViewController: UIViewControllerX {
         // Pass the selected object to the new view controller.
     }
     */
+
 
 

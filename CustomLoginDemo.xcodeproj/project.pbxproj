@@ -41,6 +41,8 @@
 		F19C0A38257476B500722C39 /* ThreeWordsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19C0A37257476B400722C39 /* ThreeWordsViewController.swift */; };
 		F19C0A3D257476D800722C39 /* SelectAnimalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19C0A3C257476D800722C39 /* SelectAnimalViewController.swift */; };
 		F19C0A42257476EF00722C39 /* SaySomethingFunnyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19C0A41257476EF00722C39 /* SaySomethingFunnyViewController.swift */; };
+		F19C0A652576CFE400722C39 /* SelectElementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19C0A642576CFE400722C39 /* SelectElementViewController.swift */; };
+		F19C0A6A2576D02200722C39 /* SelectPrefContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19C0A692576D02200722C39 /* SelectPrefContactViewController.swift */; };
 		F1B54D4D2567682D00A8D59F /* MatchingAlgorithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B54D4C2567682D00A8D59F /* MatchingAlgorithm.swift */; };
 /* End PBXBuildFile section */
 
@@ -108,6 +110,8 @@
 		F19C0A37257476B400722C39 /* ThreeWordsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeWordsViewController.swift; sourceTree = "<group>"; };
 		F19C0A3C257476D800722C39 /* SelectAnimalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectAnimalViewController.swift; sourceTree = "<group>"; };
 		F19C0A41257476EF00722C39 /* SaySomethingFunnyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaySomethingFunnyViewController.swift; sourceTree = "<group>"; };
+		F19C0A642576CFE400722C39 /* SelectElementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectElementViewController.swift; sourceTree = "<group>"; };
+		F19C0A692576D02200722C39 /* SelectPrefContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectPrefContactViewController.swift; sourceTree = "<group>"; };
 		F1B54D4C2567682D00A8D59F /* MatchingAlgorithm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchingAlgorithm.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -225,6 +229,8 @@
 				F1851E3D256B78450005116E /* SignUpProfilePicViewController.swift */,
 				F19C0A37257476B400722C39 /* ThreeWordsViewController.swift */,
 				F19C0A3C257476D800722C39 /* SelectAnimalViewController.swift */,
+				F19C0A642576CFE400722C39 /* SelectElementViewController.swift */,
+				F19C0A692576D02200722C39 /* SelectPrefContactViewController.swift */,
 				F19C0A41257476EF00722C39 /* SaySomethingFunnyViewController.swift */,
 				F1459FF6255E722B002A5F71 /* ProfileViewController.swift */,
 				2C4C3FBF256DBD70001DE4D1 /* CardViewController.swift */,
@@ -523,8 +529,10 @@
 				2C07587324CE40D500E51662 /* LoginViewController.swift in Sources */,
 				F1851E3E256B78450005116E /* SignUpProfilePicViewController.swift in Sources */,
 				2C07584324CE3FF200E51662 /* SceneDelegate.swift in Sources */,
+				F19C0A652576CFE400722C39 /* SelectElementViewController.swift in Sources */,
 				F1851E39256B77D90005116E /* BioViewController.swift in Sources */,
 				2C96C08A2560FEDD00E7191F /* CustomTabBarController.swift in Sources */,
+				F19C0A6A2576D02200722C39 /* SelectPrefContactViewController.swift in Sources */,
 				2C4C3FD0256F3D77001DE4D1 /* UIViewControllerX.swift in Sources */,
 				F1B54D4D2567682D00A8D59F /* MatchingAlgorithm.swift in Sources */,
 				2C4C3FBB256D70B0001DE4D1 /* EditPreferencesViewController.swift in Sources */,
