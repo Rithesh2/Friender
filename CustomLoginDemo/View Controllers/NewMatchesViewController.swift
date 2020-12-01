@@ -24,13 +24,21 @@ class NewMatchesViewController: UIViewControllerX, UITableViewDataSource, UITabl
        let tbvc = self.tabBarController  as! CustomTabBarController
        fUser = tbvc.fUser
        //register our custom cell for a tableview
+    self.findPastMatches(uid: fUser!.uid) { (pastMatches) in
+        self.fUser!.pastMatches = pastMatches
+    }
       self.tableView.register(UINib(nibName: "CustomUITableViewCell", bundle: nil), forCellReuseIdentifier: "customUser")
 
    }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated) // No need for semicolon
         print(fUser!.pastMatches)
-        self.tableView.reloadData()
+        self.findPastMatches(uid: fUser!.uid) { (pastMatches) in
+            self.fUser!.pastMatches = pastMatches
+            self.tableView.reloadData()
+      
+        }
+        
     }
    
    func tableView(  _ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
