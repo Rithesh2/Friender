@@ -33,6 +33,13 @@ class BioViewController: UIViewControllerX {
 
        }
     @objc private func moveToNext() {
+        
+        let db = Firestore.firestore()
+        db.collection("users").document(self.fUser!.uid).updateData(["Bio": self.bioTextField.text ?? String()]){ (error) in
+                                                    if error != nil{
+                                                        print("error")
+                                                    }
+                                                }
         // our custom stuff
        /*
         let db = Firestore.firestore()

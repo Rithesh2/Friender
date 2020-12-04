@@ -36,7 +36,13 @@ class ThreeWordsViewController: UIViewControllerX {
         // Do any additional setup after loading the view.
     @objc private func moveToNext() {
         // our custom stuff
-
+        let db = Firestore.firestore()
+        db.collection("users").document(self.fUser!.uid).updateData(["ThreeWords": self.enterAnswer.text ?? String()]){ (error) in
+                                                    if error != nil{
+                                                        print("error")
+                                                    }
+                                                }
+        
         let vc = storyboard?.instantiateViewController(withIdentifier: "selectAnimal") as! SelectAnimalViewController
         vc.fUser = self.fUser
         navigationController?.pushViewController(vc, animated: true)

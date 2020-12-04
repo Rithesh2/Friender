@@ -37,7 +37,14 @@ class SelectElementViewController: UIViewControllerX {
        }
         // Do any additional setup after loading the view.
     @objc private func moveToNext() {
+
         // our custom stuff
+        let db = Firestore.firestore()
+        db.collection("users").document(self.fUser!.uid).updateData(["Element": self.enterAnswer.text ?? String()]){ (error) in
+                                                    if error != nil{
+                                                        print("error")
+                                                    }
+                                                }
 
         let vc = storyboard?.instantiateViewController(withIdentifier: "selectPrefContact") as! SelectPrefContactViewController
         vc.fUser = self.fUser
