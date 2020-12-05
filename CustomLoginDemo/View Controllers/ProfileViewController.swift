@@ -51,11 +51,11 @@ class ProfileViewController: UIViewControllerX {
 
         userNameLabel.text = userFullName
         
-        Animal.text = fUser!.Animal
-        Joke.text = fUser!.Joke
-        Bio.text = fUser!.Bio
-        Element.text = fUser!.Element
-        threeWords.text = fUser!.ThreeWords
+        Animal.text = "Animal: " + fUser!.Animal
+        Joke.text = "Joke: " + fUser!.Joke
+        Bio.text = "Bio: " + fUser!.Bio
+        Element.text = "Element: " + fUser!.Element
+        threeWords.text = "Three Words: " + fUser!.ThreeWords
         
 
  
