@@ -183,7 +183,7 @@ class CardViewController: UIViewControllerX {
 
                                                     }
 
-                                                    else if(self.fUser!.preferences[0] == "reading")
+                                                    else if(preferences[0] == "reading")
 
                                                     {
 
@@ -413,7 +413,7 @@ class CardViewController: UIViewControllerX {
 
                                                     }
 
-                                                    else if(self.fUser!.preferences[2] == "photography")
+                                                    else if(preferences[2] == "photography")
 
                                                     {
 
@@ -988,7 +988,7 @@ class CardViewController: UIViewControllerX {
 
                                                         }
 
-                                                        else if(self.fUser!.preferences[0] == "reading")
+                                                        else if(preferences[0] == "reading")
 
                                                         {
 
@@ -1218,7 +1218,7 @@ class CardViewController: UIViewControllerX {
 
                                                         }
 
-                                                        else if(fUser!.preferences[2] == "photography")
+                                                        else if(preferences[2] == "photography")
 
                                                         {
 
