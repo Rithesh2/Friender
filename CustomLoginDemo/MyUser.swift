@@ -15,5 +15,11 @@ struct MyUser {
     var preferences: Array<String>
     var matches: Array<String>
     var pastMatches: Array<String>
+    var Animal: String
+    var Bio: String
+    var Contact: String
+    var Joke: String
+    var ThreeWords: String
+    var Element: String
 }
 

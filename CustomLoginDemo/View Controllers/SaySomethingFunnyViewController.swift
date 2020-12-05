@@ -37,7 +37,7 @@ class SaySomethingFunnyViewController: UIViewControllerX {
        }
         // Do any additional setup after loading the view.
     @objc private func moveToNext() {
-        
+        self.fUser!.Joke = self.enterAnswer.text ?? String()
         let db = Firestore.firestore()
         db.collection("users").document(self.fUser!.uid).updateData(["Joke": self.EnterAnswer.text ?? String()]){ (error) in
                                                     if error != nil{

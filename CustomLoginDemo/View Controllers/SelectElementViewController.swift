@@ -39,6 +39,7 @@ class SelectElementViewController: UIViewControllerX {
     @objc private func moveToNext() {
 
         // our custom stuff
+        self.fUser!.Element = self.enterAnswer.text ?? String()
         let db = Firestore.firestore()
         db.collection("users").document(self.fUser!.uid).updateData(["Element": self.enterAnswer.text ?? String()]){ (error) in
                                                     if error != nil{

@@ -134,7 +134,8 @@ class SignUpViewController: UIViewControllerX {
                      let documentData = document!.data()
                      let firstName = documentData?["firstname"] as! String
                      let lastName = documentData?["lastname"] as! String
-                    pFVC?.fUser = MyUser(uid: uid, firstName: firstName, lastName: lastName, preferences: [], matches: [], pastMatches: [])
+                  
+                    pFVC?.fUser = MyUser(uid: uid, firstName: firstName, lastName: lastName, preferences: [], matches: [], pastMatches: [], Animal: "", Bio: "", Contact: "", Joke: "",ThreeWords: "", Element: "")
                     self.navigationController?.pushViewController(pFVC!, animated: true)
                  }
                  else{

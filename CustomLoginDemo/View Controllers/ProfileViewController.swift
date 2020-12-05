@@ -21,8 +21,13 @@ import FirebaseStorage
 class ProfileViewController: UIViewControllerX {
 
   
-
-
+    @IBOutlet weak var Bio: UILabel!
+    @IBOutlet weak var Element: UILabel!
+    @IBOutlet weak var Joke: UILabel!
+    
+    @IBOutlet weak var threeWords: UILabel!
+    @IBOutlet weak var Animal: UILabel!
+    
     @IBOutlet weak var profilePicture: UIImageView!
 
     @IBOutlet weak var userNameLabel: UILabel!
@@ -45,6 +50,13 @@ class ProfileViewController: UIViewControllerX {
         let userFullName = fUser!.firstName + " " + fUser!.lastName
 
         userNameLabel.text = userFullName
+        
+        Animal.text = fUser!.Animal
+        Joke.text = fUser!.Joke
+        Bio.text = fUser!.Bio
+        Element.text = fUser!.Element
+        threeWords.text = fUser!.ThreeWords
+        
 
  
 

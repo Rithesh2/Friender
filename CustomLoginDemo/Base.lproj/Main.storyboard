@@ -501,14 +501,14 @@
                                 <rect key="frame" x="163" y="340.5" width="20" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="pencil.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="zUN-M9-rn1">
-                                <rect key="frame" x="133" y="589" width="20" height="20"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="45242-200" translatesAutoresizingMaskIntoConstraints="NO" id="zdx-w9-x7H">
                                 <rect key="frame" x="277" y="378" width="94" height="75"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="pencil.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="zUN-M9-rn1">
+                                <rect key="frame" x="133" y="589" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="11-512" translatesAutoresizingMaskIntoConstraints="NO" id="zLL-We-2CQ">
                                 <rect key="frame" x="162" y="374" width="92" height="82"/>
@@ -579,7 +579,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x12-yx-0FP">
-                                <rect key="frame" x="186" y="750" width="46" height="21"/>
+                                <rect key="frame" x="186" y="438" width="46" height="312"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Galvji" family="Galvji" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -605,7 +605,12 @@
                     </view>
                     <navigationItem key="navigationItem" id="dTY-Ir-p9C"/>
                     <connections>
+                        <outlet property="Animal" destination="NpB-1t-EkY" id="hGg-Rk-imt"/>
+                        <outlet property="Bio" destination="8Ou-cq-qFl" id="kZm-ps-J3H"/>
+                        <outlet property="Element" destination="TfK-Ph-1br" id="pZP-aJ-jP3"/>
+                        <outlet property="Joke" destination="LhH-fc-lNK" id="hNs-U6-4qw"/>
                         <outlet property="profilePicture" destination="rKK-31-GwB" id="SjG-9h-Rjo"/>
+                        <outlet property="threeWords" destination="x12-yx-0FP" id="GMG-Lk-jHp"/>
                         <outlet property="userNameLabel" destination="ZG1-UJ-9uL" id="J02-hO-aW9"/>
                     </connections>
                 </viewController>
