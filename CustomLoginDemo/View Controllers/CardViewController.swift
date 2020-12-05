@@ -57,6 +57,18 @@ class CardViewController: UIViewControllerX {
         self.card.layer.rasterizationScale = UIScreen.main.scale
         fUser = tbvc.fUser
         divisor = (view.frame.width / 2) / 0.261//0.61 is the radians for 35 degrees
+        if self.fUser!.Element == "fire"{
+            self.card.backgroundColor = .systemRed
+        }
+        if self.fUser!.Element == "air"{
+            self.card.backgroundColor = .systemGray
+        }
+        if self.fUser!.Element == "water"{
+            self.card.backgroundColor = .systemBlue
+        }
+        if self.fUser!.Element == "earth"{
+            self.card.backgroundColor = .systemGreen
+        }
         self.findFirstName(uid: self.fUser!.matches[0]) { (fN) in
             var fullName = fN + " "
             self.findLastName(uid: self.fUser!.matches[0]) { (lastName) in
@@ -861,6 +873,18 @@ class CardViewController: UIViewControllerX {
     func getNewCard(){
         
         UIView.animate(withDuration: 0.7, animations: {
+            if self.fUser!.Element == "fire"{
+                self.card.backgroundColor = .systemRed
+            }
+            if self.fUser!.Element == "air"{
+                self.card.backgroundColor = .systemGray
+            }
+            if self.fUser!.Element == "water"{
+                self.card.backgroundColor = .systemBlue
+            }
+            if self.fUser!.Element == "earth"{
+                self.card.backgroundColor = .systemGreen
+            }
             let match = self.fUser!.matches[self.index]
             var fullName = ""
             self.findFirstName(uid: match) { (fN) in
