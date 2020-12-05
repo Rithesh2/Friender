@@ -12,7 +12,7 @@ extension UIViewController{
         var count = 0
         for x in array1{
             var i = 0
-            while i<3{
+            while i<6{
                 if x == array2[i]{
                     count += 1
                 }
