@@ -14,6 +14,11 @@ import Firebase
 
 class CardViewController: UIViewControllerX {
     
+    @IBOutlet weak var bio: UITextField!
+    @IBOutlet weak var contact: UITextField!
+    @IBOutlet weak var Joke: UITextField!
+    @IBOutlet weak var threeWords: UITextField!
+    @IBOutlet weak var animal: UITextField!
     @IBOutlet weak var card: UIView!
     @IBOutlet weak var nameLabel: UILabel!
     let cornerRadius = 30
@@ -42,6 +47,13 @@ class CardViewController: UIViewControllerX {
             self.findLastName(uid: self.fUser!.matches[0]) { (lastName) in
                 fullName += lastName
                 self.nameLabel.text = fullName
+                
+                self.findAnimal(uid: self.fUser!.matches[0]){(animal) in
+                    self.animal.text = animal
+                    
+                 //   self.findBio(uid: self.fUser!.mat, completion: <#T##(String) -> Void#>)
+                }
+                
             }
         }
         
