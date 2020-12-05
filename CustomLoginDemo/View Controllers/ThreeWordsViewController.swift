@@ -20,7 +20,7 @@ class ThreeWordsViewController: UIViewControllerX {
         super.viewDidLoad()
         Utilities.styleTextField(enterAnswer)
         threeWordsLabel.text = ""
-        let titleText = "What Three Words Would You Use To Describe You?"
+        let titleText = "Enter 3 Words That Describe You"
         threeWordsLabel.textColor = UIColor.init(red: 101/255, green: 168/255, blue: 196/255, alpha: 1)
         var charIndex = 0.0
         for letter in titleText{
