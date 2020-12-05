@@ -76,15 +76,15 @@ class CardViewController: UIViewControllerX {
                 self.nameLabel.text = fullName
                 
                 self.findAnimal(uid: self.fUser!.matches[0]){(animal) in
-                    self.animal.text = animal
+                    self.animal.text = "Animal: " + animal
                     
                     self.findBio(uid: self.fUser!.matches[0]){ (bio) in self.bio.text = bio
                         
-                        self.findJoke(uid:self.fUser!.matches[0]){ (joke) in self.Joke.text = joke
+                        self.findJoke(uid:self.fUser!.matches[0]){ (joke) in self.Joke.text = "Joke: " + joke
                             
-                            self.findContact(uid:self.fUser!.matches[0]){ (contact) in self.contact.text = contact
+                            self.findContact(uid:self.fUser!.matches[0]){ (contact) in self.contact.text = "contact: " + contact
                                 
-                                self.findThree(uid:self.fUser!.matches[0]){ (three) in self.threeWords.text = three
+                                self.findThree(uid:self.fUser!.matches[0]){ (three) in self.threeWords.text = "Three Words: " + three
                                     
                                     self.findImage(uid:self.fUser!.matches[0]){(image) in
                                         self.profilePic.setImage(from: image)
@@ -893,15 +893,15 @@ class CardViewController: UIViewControllerX {
                     fullName += lastName
                     self.nameLabel.text = fullName
                     self.findAnimal(uid: match){(animal) in
-                        self.animal.text = animal
+                        self.animal.text = "animal: " + animal
                         
-                        self.findBio(uid: match){ (bio) in self.bio.text = bio
+                        self.findBio(uid: match){ (bio) in self.bio.text = "bio: " + bio
                             
-                            self.findJoke(uid:match){ (joke) in self.Joke.text = joke
+                            self.findJoke(uid:match){ (joke) in self.Joke.text = "joke: " + joke
                                 
-                                self.findContact(uid:match){ (contact) in self.contact.text = contact
+                                self.findContact(uid:match){ (contact) in self.contact.text = "contact: " + contact
                                     
-                                    self.findThree(uid:match){ (three) in self.threeWords.text = three
+                                    self.findThree(uid:match){ (three) in self.threeWords.text = "three words: " + three
                                         
                                         self.findImage(uid:match){(image) in
                                             self.profilePic.setImage(from: image)
