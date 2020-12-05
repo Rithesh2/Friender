@@ -27,24 +27,35 @@ class ProfileViewController: UIViewControllerX {
     @IBOutlet weak var p3: UIImageView!
     @IBOutlet weak var p2: UIImageView!
     @IBOutlet weak var p1: UIImageView!
-    @IBOutlet weak var Bio: UILabel!
-    @IBOutlet weak var Element: UILabel!
-    @IBOutlet weak var Joke: UILabel!
+    @IBOutlet weak var Bio: UITextField!
+    @IBOutlet weak var Element: UITextField!
+    @IBOutlet weak var Joke: UITextField!
     
-    @IBOutlet weak var threeWords: UILabel!
-    @IBOutlet weak var Animal: UILabel!
+    @IBOutlet weak var threeWords: UITextField!
+    @IBOutlet weak var Animal: UITextField!
     
     @IBOutlet weak var profilePicture: UIImageView!
 
     @IBOutlet weak var userNameLabel: UILabel!
-
+    let cornerRadius = 30
     var fUser: MyUser? = nil
     var image: UIImage? = nil
-
+    @IBOutlet weak var card: UIView!
+    
     override func viewDidLoad() {
 
         super.viewDidLoad()
-
+        self.card.layer.cornerRadius = CGFloat(self.cornerRadius)
+        // self.card.layer.shadowColor = UIColor.init(red: 101/255, green: 168/255, blue: 196/255, alpha: 1).cgColor
+        
+        self.card.layer.shadowColor = UIColor.black.cgColor
+        self.card.layer.shadowOpacity = 1
+        self.card.layer.shadowOffset = .zero
+        self.card.layer.shadowRadius = 10
+        self.card.layer.shadowPath = UIBezierPath(roundedRect: self.card.bounds, cornerRadius: CGFloat(self.cornerRadius)).cgPath
+        
+        self.card.layer.shouldRasterize = true
+        self.card.layer.rasterizationScale = UIScreen.main.scale
         profilePicture.layer.cornerRadius = 40
 
         profilePicture.clipsToBounds = true
