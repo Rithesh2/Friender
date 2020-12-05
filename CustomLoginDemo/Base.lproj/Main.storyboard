@@ -558,60 +558,30 @@
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qgx-eZ-NBu">
-                                <rect key="frame" x="42" y="500" width="81" height="87"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HQA-Zy-28r">
+                                <rect key="frame" x="42" y="396" width="95" height="94"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="Button" image="planting-1444113-1222073"/>
-                                <connections>
-                                    <action selector="gardeningButton:" destination="3bi-qv-3nN" eventType="touchUpInside" id="3Sr-18-Apz"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qgk-Vw-NqO">
-                                <rect key="frame" x="158" y="485" width="116" height="118"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DJq-Bg-Tya">
+                                <rect key="frame" x="169" y="500" width="95" height="94"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="Button" image="15900-200"/>
-                                <connections>
-                                    <action selector="bikingButton:" destination="3bi-qv-3nN" eventType="touchUpInside" id="Fsw-6v-gno"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OTo-9f-hPg">
-                                <rect key="frame" x="304" y="516" width="81" height="71"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GV7-KN-7bh">
+                                <rect key="frame" x="42" y="493" width="95" height="94"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="Button" image="b3416cdaa1cf55b3c12d66498f5bc14d"/>
-                                <connections>
-                                    <action selector="paintingButton:" destination="3bi-qv-3nN" eventType="touchUpInside" id="8rp-lg-wDH"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kqT-hS-yX7">
-                                <rect key="frame" x="296" y="396" width="96" height="82"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kQa-jb-DDr">
+                                <rect key="frame" x="169" y="396" width="95" height="94"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="Button" image="45242-200"/>
-                                <connections>
-                                    <action selector="hikingButton:" destination="3bi-qv-3nN" eventType="touchUpInside" id="8JR-Oc-dep"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n5P-fs-ZlK">
-                                <rect key="frame" x="163" y="385" width="98" height="105"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Pln-Ue-fMd">
+                                <rect key="frame" x="290" y="396" width="95" height="94"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" image="684-200"/>
-                                <connections>
-                                    <action selector="swimmingButton:" destination="3bi-qv-3nN" eventType="touchUpInside" id="8x6-1D-z46"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hQq-tr-5Db">
-                                <rect key="frame" x="42" y="396" width="83" height="90"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qsd-dM-C5r">
+                                <rect key="frame" x="290" y="498" width="95" height="94"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" image="music+note+sound+icon-1320183235697157602"/>
-                                <connections>
-                                    <action selector="musicButton:" destination="3bi-qv-3nN" eventType="touchUpInside" id="4Hb-rE-2k6"/>
-                                </connections>
-                            </button>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="bq4-Hd-HrZ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -622,6 +592,12 @@
                         <outlet property="Bio" destination="8Ou-cq-qFl" id="kZm-ps-J3H"/>
                         <outlet property="Element" destination="TfK-Ph-1br" id="pZP-aJ-jP3"/>
                         <outlet property="Joke" destination="LhH-fc-lNK" id="hNs-U6-4qw"/>
+                        <outlet property="p1" destination="HQA-Zy-28r" id="wCg-wG-Po3"/>
+                        <outlet property="p2" destination="kQa-jb-DDr" id="OpM-bn-YoP"/>
+                        <outlet property="p3" destination="Pln-Ue-fMd" id="HCi-np-vU5"/>
+                        <outlet property="p4" destination="GV7-KN-7bh" id="ElJ-Hi-EtS"/>
+                        <outlet property="p5" destination="DJq-Bg-Tya" id="HWy-jB-aDj"/>
+                        <outlet property="p6" destination="qsd-dM-C5r" id="05D-U2-DIr"/>
                         <outlet property="profilePicture" destination="rKK-31-GwB" id="SjG-9h-Rjo"/>
                         <outlet property="threeWords" destination="x12-yx-0FP" id="GMG-Lk-jHp"/>
                         <outlet property="userNameLabel" destination="ZG1-UJ-9uL" id="J02-hO-aW9"/>
