@@ -1335,30 +1335,49 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" image="40486"/>
+                                <connections>
+                                    <action selector="earthButton:" destination="smg-4H-9Bt" eventType="touchUpInside" id="cGJ-eq-5iR"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cAw-Sa-pAf">
                                 <rect key="frame" x="240" y="439" width="114" height="106"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" image="63123"/>
+                                <connections>
+                                    <action selector="waterButton:" destination="smg-4H-9Bt" eventType="touchUpInside" id="9ZC-lp-djd"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zuo-0B-C7o">
                                 <rect key="frame" x="61" y="617" width="114" height="106"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" image="air-3"/>
+                                <connections>
+                                    <action selector="airButton:" destination="smg-4H-9Bt" eventType="touchUpInside" id="dTe-lJ-Ffa"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kK1-uw-AOJ">
                                 <rect key="frame" x="224" y="597" width="146" height="126"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" image="Fire-512"/>
+                                <connections>
+                                    <action selector="fireButton:" destination="smg-4H-9Bt" eventType="touchUpInside" id="cmU-MQ-ynr"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tVN-MV-VHL">
                                 <rect key="frame" x="20" y="318" width="374" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Galvji-Bold" family="Galvji" pointSize="27"/>
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X1E-Pw-pLO">
+                                <rect key="frame" x="186" y="795" width="42" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" systemColor="systemRedColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -1369,7 +1388,12 @@
                         <barButtonItem key="rightBarButtonItem" title="Continue" id="MRw-uo-oLm"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="airB" destination="Zuo-0B-C7o" id="bs6-1P-K21"/>
+                        <outlet property="earthB" destination="adW-eX-ToB" id="bYo-hK-9YG"/>
+                        <outlet property="errorLabel" destination="X1E-Pw-pLO" id="rvQ-GP-VgB"/>
+                        <outlet property="fireB" destination="kK1-uw-AOJ" id="Ndx-Lh-knG"/>
                         <outlet property="selectAnimalLabel" destination="tVN-MV-VHL" id="fCG-b1-SIh"/>
+                        <outlet property="waterB" destination="cAw-Sa-pAf" id="pnp-48-Ejp"/>
                         <segue destination="lge-us-qan" kind="show" id="MQy-Te-OQ2"/>
                     </connections>
                 </viewController>
