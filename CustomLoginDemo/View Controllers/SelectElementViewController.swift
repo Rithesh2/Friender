@@ -20,9 +20,9 @@ class SelectElementViewController: UIViewControllerX {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        Utilities.styleTextField(enterAnswer)
+        //Utilities.styleTextField(enterAnswer)
         selectAnimalLabel.text = ""
-        let titleText = "Choose an Element (Earth, Air, Fire, Water)"
+        let titleText = "Choose an Element"
         selectAnimalLabel.textColor = UIColor.init(red: 101/255, green: 168/255, blue: 196/255, alpha: 1)
         var charIndex = 0.0
         for letter in titleText{
