@@ -1301,6 +1301,7 @@
                         <outlet property="card" destination="2th-6n-gey" id="dW1-3f-Gd5"/>
                         <outlet property="contact" destination="nU1-5C-5a1" id="PaV-va-W77"/>
                         <outlet property="nameLabel" destination="XPx-jU-QVM" id="613-yp-ls4"/>
+                        <outlet property="profilePic" destination="rik-bD-evn" id="OzT-54-XmS"/>
                         <outlet property="threeWords" destination="tYU-eU-mka" id="d9i-Q6-fTN"/>
                     </connections>
                 </viewController>

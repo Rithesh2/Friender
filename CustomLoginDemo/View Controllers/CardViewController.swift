@@ -14,6 +14,7 @@ import Firebase
 
 class CardViewController: UIViewControllerX {
     
+    @IBOutlet weak var profilePic: UIImageView!
     @IBOutlet weak var bio: UITextField!
     @IBOutlet weak var contact: UITextField!
     @IBOutlet weak var Joke: UITextField!
@@ -57,7 +58,12 @@ class CardViewController: UIViewControllerX {
                             
                             self.findContact(uid:self.fUser!.matches[0]){ (contact) in self.contact.text = contact
                                 
-                                self.findThree(uid:self.fUser!.matches[0]){ (three) in self.threeWords.text = three}
+                                self.findThree(uid:self.fUser!.matches[0]){ (three) in self.threeWords.text = three
+                                    
+                                    self.findImage(uid:self.fUser!.matches[0]){(image) in
+                                        self.profilePic.setImage(from: image)
+                                    }
+                                }
                         }
                     }
                 }
@@ -130,6 +136,9 @@ class CardViewController: UIViewControllerX {
                                     
                                     self.findThree(uid:match){ (three) in self.threeWords.text = three
                                         
+                                        self.findImage(uid:self.fUser!.matches[0]){(image) in
+                                            self.profilePic.setImage(from: image)
+                                        
                                         if(self.index == self.fUser!.matches.count - 1)
                                         {
                                             self.index = 0
@@ -138,6 +147,8 @@ class CardViewController: UIViewControllerX {
                                             self.index = self.index + 1
                                         }
 
+                                        }
+                                        
                                     }
                             }
                         }

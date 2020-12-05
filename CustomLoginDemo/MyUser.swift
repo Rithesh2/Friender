@@ -21,5 +21,6 @@ struct MyUser {
     var Joke: String
     var ThreeWords: String
     var Element: String
+    var image: String
 }
 

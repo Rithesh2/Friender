@@ -56,8 +56,10 @@ class ProfileViewController: UIViewControllerX {
         Bio.text = "Bio: " + fUser!.Bio
         Element.text = "Element: " + fUser!.Element
         threeWords.text = "Three Words: " + fUser!.ThreeWords
+        profilePicture.setImage(from: fUser!.image)
+        //profilePicture.load(url: URL(​fileURLWithPath: fUser!.image))
         
-
+        
  
 
 

@@ -104,8 +104,9 @@ class LoginViewController: UIViewControllerX {
                     let Joke = documentData?["Joke"] as! String
                     let ThreeWords = documentData?["ThreeWords"] as! String
                     let Element = documentData?["Element"] as! String
+                    let Image = documentData?["imageurl"] as! String
                     
-                    homeViewController?.fUser = MyUser(uid: uid, firstName: firstName, lastName: lastName, preferences: preferences, matches: matches, pastMatches: [], Animal: Animal, Bio: Bio, Contact: Contact, Joke: Joke,ThreeWords: ThreeWords, Element: Element)
+                    homeViewController?.fUser = MyUser(uid: uid, firstName: firstName, lastName: lastName, preferences: preferences, matches: matches, pastMatches: [], Animal: Animal, Bio: Bio, Contact: Contact, Joke: Joke,ThreeWords: ThreeWords, Element: Element, image: Image)
                     self.view.window?.rootViewController = homeViewController
                     self.view.window?.makeKeyAndVisible()
                  }
