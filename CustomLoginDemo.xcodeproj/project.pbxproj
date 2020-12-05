@@ -10,7 +10,6 @@
 		2C07584124CE3FF200E51662 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C07584024CE3FF200E51662 /* AppDelegate.swift */; };
 		2C07584324CE3FF200E51662 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C07584224CE3FF200E51662 /* SceneDelegate.swift */; };
 		2C07584524CE3FF200E51662 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C07584424CE3FF200E51662 /* ViewController.swift */; };
-		2C07584824CE3FF200E51662 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C07584624CE3FF200E51662 /* Main.storyboard */; };
 		2C07584A24CE3FF500E51662 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C07584924CE3FF500E51662 /* Assets.xcassets */; };
 		2C07584D24CE3FF500E51662 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C07584B24CE3FF500E51662 /* LaunchScreen.storyboard */; };
 		2C07585824CE3FF600E51662 /* CustomLoginDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C07585724CE3FF600E51662 /* CustomLoginDemoTests.swift */; };
@@ -23,7 +22,6 @@
 		2C07587D24CE86C500E51662 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C07587C24CE86C500E51662 /* Constants.swift */; };
 		2C3D77DF25634B4E0082A274 /* CustomUITableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C3D77DE25634B4E0082A274 /* CustomUITableViewCell.xib */; };
 		2C4C3FBB256D70B0001DE4D1 /* EditPreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4C3FBA256D70B0001DE4D1 /* EditPreferencesViewController.swift */; };
-		2C4C3FC0256DBD70001DE4D1 /* CardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4C3FBF256DBD70001DE4D1 /* CardViewController.swift */; };
 		2C4C3FD0256F3D77001DE4D1 /* UIViewControllerX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4C3FCF256F3D77001DE4D1 /* UIViewControllerX.swift */; };
 		2C858BAD2561CD2F00491F42 /* PreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C858BAC2561CD2F00491F42 /* PreferencesViewController.swift */; };
 		2C96C0882560FB6C00E7191F /* MyUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C96C0872560FB6C00E7191F /* MyUser.swift */; };
@@ -34,7 +32,6 @@
 		C8B098AC0C3DF3E137312818 /* Pods_CustomLoginDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B555CF6C486785EAEBFD126C /* Pods_CustomLoginDemo.framework */; };
 		F1459FED255E71FD002A5F71 /* PreviousMatchesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1459FEC255E71FD002A5F71 /* PreviousMatchesViewController.swift */; };
 		F1459FF2255E7211002A5F71 /* NewMatchesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1459FF1255E7211002A5F71 /* NewMatchesViewController.swift */; };
-		F1459FF7255E722B002A5F71 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1459FF6255E722B002A5F71 /* ProfileViewController.swift */; };
 		F1851E39256B77D90005116E /* BioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1851E38256B77D90005116E /* BioViewController.swift */; };
 		F1851E3E256B78450005116E /* SignUpProfilePicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1851E3D256B78450005116E /* SignUpProfilePicViewController.swift */; };
 		F1851E48256B789E0005116E /* EditBioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1851E47256B789E0005116E /* EditBioViewController.swift */; };
@@ -68,7 +65,6 @@
 		2C07584024CE3FF200E51662 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2C07584224CE3FF200E51662 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		2C07584424CE3FF200E51662 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		2C07584724CE3FF200E51662 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2C07584924CE3FF500E51662 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2C07584C24CE3FF500E51662 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2C07584E24CE3FF500E51662 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -86,7 +82,6 @@
 		2C07587C24CE86C500E51662 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		2C3D77DE25634B4E0082A274 /* CustomUITableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomUITableViewCell.xib; sourceTree = "<group>"; };
 		2C4C3FBA256D70B0001DE4D1 /* EditPreferencesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPreferencesViewController.swift; sourceTree = "<group>"; };
-		2C4C3FBF256DBD70001DE4D1 /* CardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewController.swift; sourceTree = "<group>"; };
 		2C4C3FCF256F3D77001DE4D1 /* UIViewControllerX.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerX.swift; sourceTree = "<group>"; };
 		2C858BAC2561CD2F00491F42 /* PreferencesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesViewController.swift; sourceTree = "<group>"; };
 		2C96C0872560FB6C00E7191F /* MyUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyUser.swift; sourceTree = "<group>"; };
@@ -103,7 +98,6 @@
 		DC861C0426163F552C26D65B /* Pods-CustomLoginDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CustomLoginDemoTests.release.xcconfig"; path = "Target Support Files/Pods-CustomLoginDemoTests/Pods-CustomLoginDemoTests.release.xcconfig"; sourceTree = "<group>"; };
 		F1459FEC255E71FD002A5F71 /* PreviousMatchesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviousMatchesViewController.swift; sourceTree = "<group>"; };
 		F1459FF1255E7211002A5F71 /* NewMatchesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMatchesViewController.swift; sourceTree = "<group>"; };
-		F1459FF6255E722B002A5F71 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		F1851E38256B77D90005116E /* BioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BioViewController.swift; sourceTree = "<group>"; };
 		F1851E3D256B78450005116E /* SignUpProfilePicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpProfilePicViewController.swift; sourceTree = "<group>"; };
 		F1851E47256B789E0005116E /* EditBioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditBioViewController.swift; sourceTree = "<group>"; };
@@ -183,7 +177,6 @@
 				2C07584024CE3FF200E51662 /* AppDelegate.swift */,
 				2C07584224CE3FF200E51662 /* SceneDelegate.swift */,
 				2C96C0872560FB6C00E7191F /* MyUser.swift */,
-				2C07584624CE3FF200E51662 /* Main.storyboard */,
 				2C07584924CE3FF500E51662 /* Assets.xcassets */,
 				2C07584B24CE3FF500E51662 /* LaunchScreen.storyboard */,
 				2C07584E24CE3FF500E51662 /* Info.plist */,
@@ -232,8 +225,6 @@
 				F19C0A642576CFE400722C39 /* SelectElementViewController.swift */,
 				F19C0A692576D02200722C39 /* SelectPrefContactViewController.swift */,
 				F19C0A41257476EF00722C39 /* SaySomethingFunnyViewController.swift */,
-				F1459FF6255E722B002A5F71 /* ProfileViewController.swift */,
-				2C4C3FBF256DBD70001DE4D1 /* CardViewController.swift */,
 				F1851E47256B789E0005116E /* EditBioViewController.swift */,
 				2C07587C24CE86C500E51662 /* Constants.swift */,
 			);
@@ -384,7 +375,6 @@
 				2CF9DC1B24CE9F5700258DD8 /* loginbg.mp4 in Resources */,
 				2C07587B24CE616900E51662 /* GoogleService-Info.plist in Resources */,
 				2C07584A24CE3FF500E51662 /* Assets.xcassets in Resources */,
-				2C07584824CE3FF200E51662 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -520,11 +510,9 @@
 				2C96C0882560FB6C00E7191F /* MyUser.swift in Sources */,
 				2C858BAD2561CD2F00491F42 /* PreferencesViewController.swift in Sources */,
 				2C07587824CE4D9800E51662 /* Utilities.swift in Sources */,
-				2C4C3FC0256DBD70001DE4D1 /* CardViewController.swift in Sources */,
 				2C07587124CE40B700E51662 /* SignUpViewController.swift in Sources */,
 				F19C0A42257476EF00722C39 /* SaySomethingFunnyViewController.swift in Sources */,
 				F19C0A38257476B500722C39 /* ThreeWordsViewController.swift in Sources */,
-				F1459FF7255E722B002A5F71 /* ProfileViewController.swift in Sources */,
 				F1851E48256B789E0005116E /* EditBioViewController.swift in Sources */,
 				2C07587324CE40D500E51662 /* LoginViewController.swift in Sources */,
 				F1851E3E256B78450005116E /* SignUpProfilePicViewController.swift in Sources */,
@@ -573,14 +561,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		2C07584624CE3FF200E51662 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2C07584724CE3FF200E51662 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		2C07584B24CE3FF500E51662 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
