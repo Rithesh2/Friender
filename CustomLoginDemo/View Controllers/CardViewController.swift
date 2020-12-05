@@ -14,6 +14,12 @@ import Firebase
 
 class CardViewController: UIViewControllerX {
     
+    @IBOutlet weak var p1: UIImageView!
+    @IBOutlet weak var p2: UIImageView!
+    @IBOutlet weak var p3: UIImageView!
+    @IBOutlet weak var p4: UIImageView!
+    @IBOutlet weak var p5: UIImageView!
+    @IBOutlet weak var p6: UIImageView!
     @IBOutlet weak var bio: UITextField!
     @IBOutlet weak var contact: UITextField!
     @IBOutlet weak var Joke: UITextField!
