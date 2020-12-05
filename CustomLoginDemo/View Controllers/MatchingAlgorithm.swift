@@ -239,6 +239,67 @@ extension UIViewController{
          }
       
     }
+    func findJoke(uid: String, completion: @escaping (String) -> Void){
+        let db = Firestore.firestore()
+        var fN = ""
+         db.collection("users").document(uid).getDocument { (document, error) in
+             if error == nil{
+                 //Check the document exists
+                 if document != nil && document!.exists == true{
+                     let documentData = document!.data()
+                     let firstName = documentData?["Joke"] as! String
+                     fN = firstName
+                    completion(fN)
+                 }
+                 else{
+                     print("error")
+                 }
+             }
+       
+         }
+      
+    }
+    func findContact(uid: String, completion: @escaping (String) -> Void){
+        let db = Firestore.firestore()
+        var fN = ""
+         db.collection("users").document(uid).getDocument { (document, error) in
+             if error == nil{
+                 //Check the document exists
+                 if document != nil && document!.exists == true{
+                     let documentData = document!.data()
+                     let firstName = documentData?["Contact"] as! String
+                     fN = firstName
+                    completion(fN)
+                 }
+                 else{
+                     print("error")
+                 }
+             }
+       
+         }
+      
+    }
+    
+    func findThree(uid: String, completion: @escaping (String) -> Void){
+        let db = Firestore.firestore()
+        var fN = ""
+         db.collection("users").document(uid).getDocument { (document, error) in
+             if error == nil{
+                 //Check the document exists
+                 if document != nil && document!.exists == true{
+                     let documentData = document!.data()
+                     let firstName = documentData?["ThreeWords"] as! String
+                     fN = firstName
+                    completion(fN)
+                 }
+                 else{
+                     print("error")
+                 }
+             }
+       
+         }
+      
+    }
     
 }
 

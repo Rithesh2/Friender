@@ -51,13 +51,22 @@ class CardViewController: UIViewControllerX {
                 self.findAnimal(uid: self.fUser!.matches[0]){(animal) in
                     self.animal.text = animal
                     
-                 //   self.findBio(uid: self.fUser!.mat, completion: <#T##(String) -> Void#>)
+                    self.findBio(uid: self.fUser!.matches[0]){ (bio) in self.bio.text = bio
+                        
+                        self.findJoke(uid:self.fUser!.matches[0]){ (joke) in self.Joke.text = joke
+                            
+                            self.findContact(uid:self.fUser!.matches[0]){ (contact) in self.contact.text = contact
+                                
+                                self.findThree(uid:self.fUser!.matches[0]){ (three) in self.threeWords.text = three}
+                        }
+                    }
                 }
                 
             }
         }
         
         // Do any additional setup after loading the view.
+    }
     }
     
     @IBAction func panCard(_ sender: UIPanGestureRecognizer) {
@@ -110,13 +119,31 @@ class CardViewController: UIViewControllerX {
                 self.findLastName(uid: match) { (lastName) in
                     fullName += lastName
                     self.nameLabel.text = fullName
-                    if(self.index == self.fUser!.matches.count - 1)
-                    {
-                        self.index = 0
+                    self.findAnimal(uid: match){(animal) in
+                        self.animal.text = animal
+                        
+                        self.findBio(uid: match){ (bio) in self.bio.text = bio
+                            
+                            self.findJoke(uid:match){ (joke) in self.Joke.text = joke
+                                
+                                self.findContact(uid:match){ (contact) in self.contact.text = contact
+                                    
+                                    self.findThree(uid:match){ (three) in self.threeWords.text = three
+                                        
+                                        if(self.index == self.fUser!.matches.count - 1)
+                                        {
+                                            self.index = 0
+                                        }
+                                        else{
+                                            self.index = self.index + 1
+                                        }
+
+                                    }
+                            }
+                        }
                     }
-                    else{
-                        self.index = self.index + 1
-                    }
+                    
+                }
                 }
                 
             }
