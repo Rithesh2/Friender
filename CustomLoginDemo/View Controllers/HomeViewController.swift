@@ -16,6 +16,7 @@ class HomeViewController: UIViewControllerX {
 
     var match: String = ""
       
+    @IBOutlet weak var card: UIView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var p2: UIImageView!
     @IBOutlet weak var p3: UIImageView!
@@ -32,8 +33,21 @@ class HomeViewController: UIViewControllerX {
     @IBOutlet weak var animal: UITextField!
     @IBOutlet weak var userNameText: UILabel!
     
+    let cornerRadius = 30
+    var divisor: CGFloat!
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.card.layer.cornerRadius = CGFloat(self.cornerRadius)
+        // self.card.layer.shadowColor = UIColor.init(red: 101/255, green: 168/255, blue: 196/255, alpha: 1).cgColor
+        
+        self.card.layer.shadowColor = UIColor.black.cgColor
+        self.card.layer.shadowOpacity = 1
+        self.card.layer.shadowOffset = .zero
+        self.card.layer.shadowRadius = 10
+        self.card.layer.shadowPath = UIBezierPath(roundedRect: self.card.bounds, cornerRadius: CGFloat(self.cornerRadius)).cgPath
+        
+        self.card.layer.shouldRasterize = true
+        self.card.layer.rasterizationScale = UIScreen.main.scale
         var fullName = ""
         self.findFirstName(uid: match) { (fN) in
             fullName = fN + " "

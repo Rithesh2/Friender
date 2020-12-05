@@ -410,6 +410,7 @@
                         <outlet property="Joke" destination="f2y-zK-ROP" id="wUp-08-zxe"/>
                         <outlet property="animal" destination="OcC-EM-YiF" id="sFU-Hl-3Do"/>
                         <outlet property="bio" destination="Xt9-Hq-nXy" id="PwT-ua-5sH"/>
+                        <outlet property="card" destination="b9b-Nn-gjA" id="CVP-df-Gaf"/>
                         <outlet property="contact" destination="QqV-5S-p1k" id="Tw2-Xr-2QS"/>
                         <outlet property="joke" destination="f2y-zK-ROP" id="gUP-y6-jR1"/>
                         <outlet property="nameLabel" destination="r3B-hm-py8" id="gxl-wz-HOP"/>
@@ -548,13 +549,6 @@
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TfK-Ph-1br">
-                                <rect key="frame" x="63" y="345" width="299" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Galvji" family="Galvji" pointSize="17"/>
-                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Ou-cq-qFl">
                                 <rect key="frame" x="63" y="300" width="299" height="23"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -602,7 +596,6 @@
                     <connections>
                         <outlet property="Animal" destination="NpB-1t-EkY" id="hGg-Rk-imt"/>
                         <outlet property="Bio" destination="8Ou-cq-qFl" id="kZm-ps-J3H"/>
-                        <outlet property="Element" destination="TfK-Ph-1br" id="pZP-aJ-jP3"/>
                         <outlet property="Joke" destination="LhH-fc-lNK" id="hNs-U6-4qw"/>
                         <outlet property="p1" destination="qag-hS-Fgd" id="dGq-qe-LGx"/>
                         <outlet property="p2" destination="xSE-DS-1Uy" id="77W-I4-pdq"/>
