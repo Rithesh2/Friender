@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BID-Hm-yNB">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BID-Hm-yNB">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -406,6 +406,22 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="gK2-v9-CdE"/>
+                    <connections>
+                        <outlet property="Joke" destination="f2y-zK-ROP" id="wUp-08-zxe"/>
+                        <outlet property="animal" destination="OcC-EM-YiF" id="sFU-Hl-3Do"/>
+                        <outlet property="bio" destination="Xt9-Hq-nXy" id="PwT-ua-5sH"/>
+                        <outlet property="contact" destination="QqV-5S-p1k" id="Tw2-Xr-2QS"/>
+                        <outlet property="joke" destination="f2y-zK-ROP" id="gUP-y6-jR1"/>
+                        <outlet property="nameLabel" destination="r3B-hm-py8" id="gxl-wz-HOP"/>
+                        <outlet property="p1" destination="iKL-Xc-Xaj" id="Qvv-2U-BQg"/>
+                        <outlet property="p2" destination="b2O-B8-DRo" id="y8L-0Z-J42"/>
+                        <outlet property="p3" destination="zC3-Jq-Vsz" id="V7h-3r-kVR"/>
+                        <outlet property="p4" destination="Mil-VX-Tph" id="pJP-ei-PxT"/>
+                        <outlet property="p5" destination="2jh-aH-utk" id="hZd-Lv-bmi"/>
+                        <outlet property="p6" destination="u0q-RT-uK3" id="qKd-Q5-YPN"/>
+                        <outlet property="profilePic" destination="CqX-hx-YHH" id="eXp-E9-lz5"/>
+                        <outlet property="threeWords" destination="GTO-Pn-X0Z" id="wRu-GD-E9Q"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jAW-Lh-ifP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
