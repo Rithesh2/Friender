@@ -10,7 +10,6 @@
 		2C07584124CE3FF200E51662 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C07584024CE3FF200E51662 /* AppDelegate.swift */; };
 		2C07584324CE3FF200E51662 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C07584224CE3FF200E51662 /* SceneDelegate.swift */; };
 		2C07584524CE3FF200E51662 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C07584424CE3FF200E51662 /* ViewController.swift */; };
-		2C07584824CE3FF200E51662 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C07584624CE3FF200E51662 /* Main.storyboard */; };
 		2C07584A24CE3FF500E51662 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C07584924CE3FF500E51662 /* Assets.xcassets */; };
 		2C07584D24CE3FF500E51662 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C07584B24CE3FF500E51662 /* LaunchScreen.storyboard */; };
 		2C07585824CE3FF600E51662 /* CustomLoginDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C07585724CE3FF600E51662 /* CustomLoginDemoTests.swift */; };
@@ -41,7 +40,6 @@
 		F19C0A38257476B500722C39 /* ThreeWordsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19C0A37257476B400722C39 /* ThreeWordsViewController.swift */; };
 		F19C0A3D257476D800722C39 /* SelectAnimalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19C0A3C257476D800722C39 /* SelectAnimalViewController.swift */; };
 		F19C0A42257476EF00722C39 /* SaySomethingFunnyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19C0A41257476EF00722C39 /* SaySomethingFunnyViewController.swift */; };
-		F19C0A652576CFE400722C39 /* SelectElementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19C0A642576CFE400722C39 /* SelectElementViewController.swift */; };
 		F19C0A6A2576D02200722C39 /* SelectPrefContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19C0A692576D02200722C39 /* SelectPrefContactViewController.swift */; };
 		F1B54D4D2567682D00A8D59F /* MatchingAlgorithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B54D4C2567682D00A8D59F /* MatchingAlgorithm.swift */; };
 /* End PBXBuildFile section */
@@ -68,7 +66,6 @@
 		2C07584024CE3FF200E51662 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2C07584224CE3FF200E51662 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		2C07584424CE3FF200E51662 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		2C07584724CE3FF200E51662 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2C07584924CE3FF500E51662 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2C07584C24CE3FF500E51662 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2C07584E24CE3FF500E51662 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -110,7 +107,6 @@
 		F19C0A37257476B400722C39 /* ThreeWordsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeWordsViewController.swift; sourceTree = "<group>"; };
 		F19C0A3C257476D800722C39 /* SelectAnimalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectAnimalViewController.swift; sourceTree = "<group>"; };
 		F19C0A41257476EF00722C39 /* SaySomethingFunnyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaySomethingFunnyViewController.swift; sourceTree = "<group>"; };
-		F19C0A642576CFE400722C39 /* SelectElementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectElementViewController.swift; sourceTree = "<group>"; };
 		F19C0A692576D02200722C39 /* SelectPrefContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectPrefContactViewController.swift; sourceTree = "<group>"; };
 		F1B54D4C2567682D00A8D59F /* MatchingAlgorithm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchingAlgorithm.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -183,7 +179,6 @@
 				2C07584024CE3FF200E51662 /* AppDelegate.swift */,
 				2C07584224CE3FF200E51662 /* SceneDelegate.swift */,
 				2C96C0872560FB6C00E7191F /* MyUser.swift */,
-				2C07584624CE3FF200E51662 /* Main.storyboard */,
 				2C07584924CE3FF500E51662 /* Assets.xcassets */,
 				2C07584B24CE3FF500E51662 /* LaunchScreen.storyboard */,
 				2C07584E24CE3FF500E51662 /* Info.plist */,
@@ -229,7 +224,6 @@
 				F1851E3D256B78450005116E /* SignUpProfilePicViewController.swift */,
 				F19C0A37257476B400722C39 /* ThreeWordsViewController.swift */,
 				F19C0A3C257476D800722C39 /* SelectAnimalViewController.swift */,
-				F19C0A642576CFE400722C39 /* SelectElementViewController.swift */,
 				F19C0A692576D02200722C39 /* SelectPrefContactViewController.swift */,
 				F19C0A41257476EF00722C39 /* SaySomethingFunnyViewController.swift */,
 				F1459FF6255E722B002A5F71 /* ProfileViewController.swift */,
@@ -384,7 +378,6 @@
 				2CF9DC1B24CE9F5700258DD8 /* loginbg.mp4 in Resources */,
 				2C07587B24CE616900E51662 /* GoogleService-Info.plist in Resources */,
 				2C07584A24CE3FF500E51662 /* Assets.xcassets in Resources */,
-				2C07584824CE3FF200E51662 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -529,7 +522,6 @@
 				2C07587324CE40D500E51662 /* LoginViewController.swift in Sources */,
 				F1851E3E256B78450005116E /* SignUpProfilePicViewController.swift in Sources */,
 				2C07584324CE3FF200E51662 /* SceneDelegate.swift in Sources */,
-				F19C0A652576CFE400722C39 /* SelectElementViewController.swift in Sources */,
 				F1851E39256B77D90005116E /* BioViewController.swift in Sources */,
 				2C96C08A2560FEDD00E7191F /* CustomTabBarController.swift in Sources */,
 				F19C0A6A2576D02200722C39 /* SelectPrefContactViewController.swift in Sources */,
@@ -573,14 +565,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		2C07584624CE3FF200E51662 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2C07584724CE3FF200E51662 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		2C07584B24CE3FF500E51662 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

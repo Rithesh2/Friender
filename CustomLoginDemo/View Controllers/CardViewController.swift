@@ -57,6 +57,18 @@ class CardViewController: UIViewControllerX {
         self.card.layer.rasterizationScale = UIScreen.main.scale
         fUser = tbvc.fUser
         divisor = (view.frame.width / 2) / 0.261//0.61 is the radians for 35 degrees
+        if self.fUser!.Element == "fire"{
+            self.card.backgroundColor = .systemRed
+        }
+        if self.fUser!.Element == "air"{
+            self.card.backgroundColor = .systemGray
+        }
+        if self.fUser!.Element == "water"{
+            self.card.backgroundColor = .systemBlue
+        }
+        if self.fUser!.Element == "earth"{
+            self.card.backgroundColor = .systemGreen
+        }
         self.findFirstName(uid: self.fUser!.matches[0]) { (fN) in
             var fullName = fN + " "
             self.findLastName(uid: self.fUser!.matches[0]) { (lastName) in
@@ -64,15 +76,15 @@ class CardViewController: UIViewControllerX {
                 self.nameLabel.text = fullName
                 
                 self.findAnimal(uid: self.fUser!.matches[0]){(animal) in
-                    self.animal.text = animal
+                    self.animal.text = "Animal: " + animal
                     
                     self.findBio(uid: self.fUser!.matches[0]){ (bio) in self.bio.text = bio
                         
-                        self.findJoke(uid:self.fUser!.matches[0]){ (joke) in self.Joke.text = joke
+                        self.findJoke(uid:self.fUser!.matches[0]){ (joke) in self.Joke.text = "Joke: " + joke
                             
-                            self.findContact(uid:self.fUser!.matches[0]){ (contact) in self.contact.text = contact
+                            self.findContact(uid:self.fUser!.matches[0]){ (contact) in self.contact.text = "contact: " + contact
                                 
-                                self.findThree(uid:self.fUser!.matches[0]){ (three) in self.threeWords.text = three
+                                self.findThree(uid:self.fUser!.matches[0]){ (three) in self.threeWords.text = "Three Words: " + three
                                     
                                     self.findImage(uid:self.fUser!.matches[0]){(image) in
                                         self.profilePic.setImage(from: image)
@@ -183,7 +195,7 @@ class CardViewController: UIViewControllerX {
 
                                                     }
 
-                                                    else if(self.fUser!.preferences[0] == "reading")
+                                                    else if(preferences[0] == "reading")
 
                                                     {
 
@@ -413,7 +425,7 @@ class CardViewController: UIViewControllerX {
 
                                                     }
 
-                                                    else if(self.fUser!.preferences[2] == "photography")
+                                                    else if(preferences[2] == "photography")
 
                                                     {
 
@@ -861,6 +873,18 @@ class CardViewController: UIViewControllerX {
     func getNewCard(){
         
         UIView.animate(withDuration: 0.7, animations: {
+            if self.fUser!.Element == "fire"{
+                self.card.backgroundColor = .systemRed
+            }
+            if self.fUser!.Element == "air"{
+                self.card.backgroundColor = .systemGray
+            }
+            if self.fUser!.Element == "water"{
+                self.card.backgroundColor = .systemBlue
+            }
+            if self.fUser!.Element == "earth"{
+                self.card.backgroundColor = .systemGreen
+            }
             let match = self.fUser!.matches[self.index]
             var fullName = ""
             self.findFirstName(uid: match) { (fN) in
@@ -869,15 +893,15 @@ class CardViewController: UIViewControllerX {
                     fullName += lastName
                     self.nameLabel.text = fullName
                     self.findAnimal(uid: match){(animal) in
-                        self.animal.text = animal
+                        self.animal.text = "animal: " + animal
                         
-                        self.findBio(uid: match){ (bio) in self.bio.text = bio
+                        self.findBio(uid: match){ (bio) in self.bio.text = "bio: " + bio
                             
-                            self.findJoke(uid:match){ (joke) in self.Joke.text = joke
+                            self.findJoke(uid:match){ (joke) in self.Joke.text = "joke: " + joke
                                 
-                                self.findContact(uid:match){ (contact) in self.contact.text = contact
+                                self.findContact(uid:match){ (contact) in self.contact.text = "contact: " + contact
                                     
-                                    self.findThree(uid:match){ (three) in self.threeWords.text = three
+                                    self.findThree(uid:match){ (three) in self.threeWords.text = "three words: " + three
                                         
                                         self.findImage(uid:match){(image) in
                                             self.profilePic.setImage(from: image)
@@ -988,7 +1012,7 @@ class CardViewController: UIViewControllerX {
 
                                                         }
 
-                                                        else if(self.fUser!.preferences[0] == "reading")
+                                                        else if(preferences[0] == "reading")
 
                                                         {
 
@@ -1218,7 +1242,7 @@ class CardViewController: UIViewControllerX {
 
                                                         }
 
-                                                        else if(fUser!.preferences[2] == "photography")
+                                                        else if(preferences[2] == "photography")
 
                                                         {
 
