@@ -48,6 +48,9 @@ class NewMatchesViewController: UIViewControllerX, UITableViewDataSource, UITabl
 
    func tableView(  _ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
        let cell = tableView.dequeueReusableCell(withIdentifier: "customUser", for: indexPath) as! CustomTableViewCell
+        cell.contentView.backgroundColor = UIColor.init(red: 255/255, green: 254/255, blue: 242/255, alpha: 1)
+        cell.userName.tintColor = .black
+        cell.userContact.tintColor = .black
       // let cell = tableView.dequeueReusableCell(withIdentifier: "customUser", for: indexPath)
        //can we say "cell.userPicture.image"? (question)
        //cell.userPicture.image = userPictures[indexPath.row]
@@ -58,8 +61,11 @@ class NewMatchesViewController: UIViewControllerX, UITableViewDataSource, UITabl
            self.findLastName(uid: match) { (lastName) in
                fullName += lastName
                cell.userName.text = fullName
-               cell.userContact.text = "510-49494"
-               cell.userName.isHidden = false
+            self.findContact(uid: match){(contact) in
+                cell.userContact.text = contact
+                cell.userName.isHidden = false
+            }
+
            }
            
        }

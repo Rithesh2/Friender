@@ -49,21 +49,35 @@ class HomeViewController: UIViewControllerX {
         self.card.layer.shouldRasterize = true
         self.card.layer.rasterizationScale = UIScreen.main.scale
         var fullName = ""
-        self.findFirstName(uid: match) { (fN) in
+        self.findElement(uid: self.match) { (element) in
+            if element == "fire"{
+                self.card.backgroundColor = .systemRed
+            }
+            if element == "air"{
+                self.card.backgroundColor = .systemGray
+            }
+            if element == "water"{
+                self.card.backgroundColor = .systemBlue
+            }
+            if element == "earth"{
+                self.card.backgroundColor = .systemGreen
+            }
+        
+            self.findFirstName(uid: self.match) { (fN) in
             fullName = fN + " "
             self.findLastName(uid: self.match) { (lastName) in
                 fullName += lastName
                 self.nameLabel.text = fullName
                 self.findAnimal(uid: self.match){(animal) in
-                    self.animal.text = animal
+                    self.animal.text = "Animal: " + animal
                     
-                    self.findBio(uid: self.match){ (bio) in self.bio.text = bio
+                    self.findBio(uid: self.match){ (bio) in self.bio.text = "Bio: " + bio
                         
-                        self.findJoke(uid:self.match){ (joke) in self.Joke.text = joke
+                        self.findJoke(uid:self.match){ (joke) in self.Joke.text = "Joke: " + joke
                             
-                            self.findContact(uid:self.match){ (contact) in self.contact.text = contact
+                            self.findContact(uid:self.match){ (contact) in self.contact.text = "Contact: " + contact
                                 
-                                self.findThree(uid:self.match){ (three) in self.threeWords.text = three
+                                self.findThree(uid:self.match){ (three) in self.threeWords.text = "Three Words: " + three
                                     
                                     self.findImage(uid:self.match){(image) in
                                         self.profilePic.setImage(from: image)
@@ -800,7 +814,7 @@ class HomeViewController: UIViewControllerX {
                                 
                                         }
                                     }
-                                    
+                            }
                                 
                         }
                     }

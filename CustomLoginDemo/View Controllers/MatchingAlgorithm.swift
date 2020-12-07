@@ -259,6 +259,26 @@ extension UIViewController{
          }
       
     }
+    func findElement(uid: String, completion: @escaping (String) -> Void){
+        let db = Firestore.firestore()
+        var fN = ""
+         db.collection("users").document(uid).getDocument { (document, error) in
+             if error == nil{
+                 //Check the document exists
+                 if document != nil && document!.exists == true{
+                     let documentData = document!.data()
+                     let firstName = documentData?["Element"] as! String
+                     fN = firstName
+                    completion(fN)
+                 }
+                 else{
+                     print("error")
+                 }
+             }
+       
+         }
+      
+    }
     func findContact(uid: String, completion: @escaping (String) -> Void){
         let db = Firestore.firestore()
         var fN = ""

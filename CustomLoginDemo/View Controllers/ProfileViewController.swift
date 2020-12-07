@@ -30,6 +30,7 @@ class ProfileViewController: UIViewControllerX {
     @IBOutlet weak var Bio: UITextField!
     @IBOutlet weak var Element: UITextField!
     @IBOutlet weak var Joke: UITextField!
+    @IBOutlet weak var Contact: UITextField!
     
     @IBOutlet weak var threeWords: UITextField!
     @IBOutlet weak var Animal: UITextField!
@@ -63,7 +64,18 @@ class ProfileViewController: UIViewControllerX {
         let tbvc = self.tabBarController  as! CustomTabBarController
 
         fUser = tbvc.fUser
-
+        if self.fUser!.Element == "fire"{
+            self.card.backgroundColor = .systemRed
+        }
+        if self.fUser!.Element == "air"{
+            self.card.backgroundColor = .systemGray
+        }
+        if self.fUser!.Element == "water"{
+            self.card.backgroundColor = .systemBlue
+        }
+        if self.fUser!.Element == "earth"{
+            self.card.backgroundColor = .systemGreen
+        }
         let userFullName = fUser!.firstName + " " + fUser!.lastName
 
         userNameLabel.text = userFullName
@@ -71,6 +83,7 @@ class ProfileViewController: UIViewControllerX {
         Animal.text = "Animal: " + fUser!.Animal
         Joke.text = "Joke: " + fUser!.Joke
         Bio.text = "Bio: " + fUser!.Bio
+        Contact.text = "Contact: " + fUser!.Contact
        // Element.text = "Element: " + fUser!.Element
         threeWords.text = "Three Words: " + fUser!.ThreeWords
         profilePicture.setImage(from: fUser!.image)

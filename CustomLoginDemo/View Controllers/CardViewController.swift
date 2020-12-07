@@ -82,7 +82,7 @@ class CardViewController: UIViewControllerX {
                         
                         self.findJoke(uid:self.fUser!.matches[0]){ (joke) in self.Joke.text = "Joke: " + joke
                             
-                            self.findContact(uid:self.fUser!.matches[0]){ (contact) in self.contact.text = "contact: " + contact
+                            self.findContact(uid:self.fUser!.matches[0]){ (contact) in self.contact.text = "Contact: " + contact
                                 
                                 self.findThree(uid:self.fUser!.matches[0]){ (three) in self.threeWords.text = "Three Words: " + three
                                     
@@ -873,20 +873,23 @@ class CardViewController: UIViewControllerX {
     func getNewCard(){
         
         UIView.animate(withDuration: 0.7, animations: {
-            if self.fUser!.Element == "fire"{
-                self.card.backgroundColor = .systemRed
-            }
-            if self.fUser!.Element == "air"{
-                self.card.backgroundColor = .systemGray
-            }
-            if self.fUser!.Element == "water"{
-                self.card.backgroundColor = .systemBlue
-            }
-            if self.fUser!.Element == "earth"{
-                self.card.backgroundColor = .systemGreen
-            }
+
             let match = self.fUser!.matches[self.index]
             var fullName = ""
+                    self.findElement(uid: match){ (element) in
+                        if element == "fire"{
+                            self.card.backgroundColor = .systemRed
+                        }
+                        if element == "air"{
+                            self.card.backgroundColor = .systemGray
+                        }
+                        if element == "water"{
+                            self.card.backgroundColor = .systemBlue
+                        }
+                        if element == "earth"{
+                            self.card.backgroundColor = .systemGreen
+                        }
+                        
             self.findFirstName(uid: match) { (fN) in
                 fullName = fN + " "
                 self.findLastName(uid: match) { (lastName) in
@@ -895,7 +898,7 @@ class CardViewController: UIViewControllerX {
                     self.findAnimal(uid: match){(animal) in
                         self.animal.text = "animal: " + animal
                         
-                        self.findBio(uid: match){ (bio) in self.bio.text = "bio: " + bio
+                        self.findBio(uid: match){ (bio) in self.bio.text = "Bio: " + bio
                             
                             self.findJoke(uid:match){ (joke) in self.Joke.text = "joke: " + joke
                                 
@@ -1644,7 +1647,7 @@ class CardViewController: UIViewControllerX {
                                         }
                                             }
                                         }
-                                        
+                                }
                                     
                             }
                         }
