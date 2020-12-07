@@ -20,7 +20,7 @@ class NewMatchesViewController: UIViewControllerX, UITableViewDataSource, UITabl
    
    override func viewDidLoad() {
        super.viewDidLoad()
-   
+    
        let tbvc = self.tabBarController  as! CustomTabBarController
        fUser = tbvc.fUser
        //register our custom cell for a tableview
@@ -28,7 +28,7 @@ class NewMatchesViewController: UIViewControllerX, UITableViewDataSource, UITabl
         self.fUser!.pastMatches = pastMatches
     }
       self.tableView.register(UINib(nibName: "CustomUITableViewCell", bundle: nil), forCellReuseIdentifier: "customUser")
-
+    tableView.backgroundColor = UIColor.init(red: 255/255, green: 254/255, blue: 242/255, alpha: 1)
    }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated) // No need for semicolon
@@ -48,7 +48,7 @@ class NewMatchesViewController: UIViewControllerX, UITableViewDataSource, UITabl
 
    func tableView(  _ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
        let cell = tableView.dequeueReusableCell(withIdentifier: "customUser", for: indexPath) as! CustomTableViewCell
-        cell.contentView.backgroundColor = UIColor.init(red: 255/255, green: 254/255, blue: 242/255, alpha: 1)
+        //cell.backgroundColor = UIColor.init(red: 255/255, green: 254/255, blue: 242/255, alpha: 1)
         cell.userName.tintColor = .black
         cell.userContact.tintColor = .black
       // let cell = tableView.dequeueReusableCell(withIdentifier: "customUser", for: indexPath)
